@@ -1,0 +1,52 @@
+{
+    "$type": "groups",
+    "$items": [
+        {
+            "$type": "group",
+            "$typeItems": "layouts",
+            "$items": [
+                {
+                    "$type": "item",
+                    "$title": "Block",
+                    "data": {
+                        "$type": "layout",
+                        "data": {
+                            "$type": "block"
+                        }
+                    }
+                },
+                {
+                    "$type": "item",
+                    "$title": "Row",
+                    "data": {
+                        "$type": "layout",
+                        "data": {
+                            "$type": "row",
+                            "$items": [
+                                {},
+                                {}
+                            ]
+                        }
+                    }
+                },
+                {
+                    "$type": "item",
+                    "$title": "Accordion",
+                    "data": {
+                        "$type": "layout",
+                        "data": {
+                            "$type": "accordion",
+                            "$widget": "tabs",
+                            "$items": [
+                                {
+                                    "opened": true
+                                },
+                                {}
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+	"locales": {
+		"login": {
+			"fr": {
+				"titlePage": "Bienvenue dans le portail ERGO",
+				"title": " "
+			}
+		}
+	},
+	"header": {
+		"alwaysShow": false,
+		"authLeftMenu": false,
+		"uppercase": true,
+		"align": "center"
+	},
+	"preferences": {},
+	"homes": {
+		"ergo": "ergo/titles"
+	},
+	"authentication": {
+		"autoLogon": {
+			"login": "john",
+			"password": "doe",
+			"force": true
+		}
+	},
+	"portailName": "ergo"
+}

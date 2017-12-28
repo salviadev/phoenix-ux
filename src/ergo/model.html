@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../libs/phoenix-app/dist/img/favicon.png" />
+    <title></title>
+    <!-- build:style phoenix_fonts -->
+    <!-- /build -->
+    <!-- build:style third_party -->
+    <!-- /build -->
+    <!-- build:style application_plugins -->
+    <!-- /build -->
+    <!-- build:style core -->
+    <!-- /build -->
+    <!-- build:style phoenix -->
+    <!-- /build -->
+    <!-- build:style application -->
+    <!-- /build -->
+    <!-- build:script jquery -->
+    <!-- /build -->
+    <!-- build:script third_party -->
+    <!-- /build -->
+    <!-- build:script angular -->
+    <!-- /build -->
+    <!-- build:script application_plugins_before -->
+    <!-- /build -->
+    <!-- build:script phoenix -->
+    <!-- /build -->
+    <!-- build:process -->
+    <script type="text/javascript">
+        (function ($p) { 
+            $p.build.release = "<%= deploy.release %>" === "true";  
+            $p.build.authMode = "<%= deploy.authMode %>";
+        })(this.Phoenix);
+    </script>
+    <!-- /build -->
+    <!-- build:script application_plugins -->
+    <!-- /build -->
+    <!-- build:script application -->
+    <!-- /build -->
+    <!-- build:script core -->
+    <!-- /build -->
+</head>
+
+<body>
+    <div class="bs-content">
+        <header-menu back-button="true" left-menu-button="true" top-menu-button="true" logout-button="true" left-menu-place="menu_left"
+        top-menu-place="menu_top" body-place="bs-page-content"></header-menu>
+        <div id="error_box"></div>
+        <div id="menu_top"></div>
+        <div id="bs-page-content">
+            <div ng-view autoscroll="true"></div>
+        </div>
+    </div>
+    <div id="menu_left"></div>
+</body>
+
+</html>

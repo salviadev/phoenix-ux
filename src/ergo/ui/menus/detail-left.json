@@ -1,0 +1,126 @@
+{
+	"name": "detail-left.json",
+	"$moduleTitle": "Types de pages",
+	"$groups": [
+		{
+			"$title": "Types de pages",
+			"$items": [
+				{
+					"$title": "Titres dans une page",
+					"$link": {
+						"$page": "ergo/titles"
+					}
+				},
+				{
+					"$title": "Exemples de champs",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Formulaires et listes",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Tableaux",
+					"$items": [
+						{
+							"$title": "Tableau simple",
+							"$link": {
+								"$page": "fi-rev-list"
+							}
+						},
+						{
+							"$title": "Totaux dans tableau",
+							"$link": {
+								"$page": "fi-rev-sel"
+							}
+						},
+						{
+							"$title": "Détail dans tableau",
+							"$link": {
+								"$page": "fi-rev-mod"
+							}
+						}
+					]
+				},
+				{
+					"$title": "Master detail",
+					"$items": [
+						{
+							"$title": "Master detail",
+							"$link": {
+								"$page": "fi-couv-list"
+							}
+						}
+					]
+				},
+				{
+					"$title": "Tableaux de bord (widgets)",
+					"$items": [
+						{
+							"$title": "Tableaux",
+							"$link": {
+								"$page": "fi-couv-list"
+							}
+						}
+					]
+				},
+				{
+					"$title": "Paramétrage",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Accessoires de navigation",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Boutons et Iconographie",
+					"$items": [
+						{
+							"$title": "Boutons",
+							"$link": {
+								"$page": "fi-couv-list"
+							}
+						}
+					]
+				},
+				{
+					"$title": "Filtres",
+					"$items": [
+						{
+							"$title": "Filtres",
+							"$link": {
+								"$page": "fi-couv-list"
+							}
+						}
+					]
+				},
+				{
+					"$title": "Assistants ou onglets",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Fenêtres modales",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Menus",
+					"$link": {
+						"$page": "xxxx"
+					}
+				}
+			]
+		}
+	]
+}

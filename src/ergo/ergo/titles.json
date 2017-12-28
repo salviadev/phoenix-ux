@@ -1,0 +1,27 @@
+{
+	"name": "titles",
+	"$menus": {
+		"left": "detail"
+	},	
+
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": false,
+				"$title": "Exemple de titre de page",
+				"form": {
+					"name": "/ergo/forms/titles",
+					"meta": "/ergo/metas/titles",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form",
+				"links": {
+					"create-tiers": {
+						"$page": "tiers/famille-tiers"
+					}
+				}
+			}
+		}
+	],
+	"$type": "block"
+}
