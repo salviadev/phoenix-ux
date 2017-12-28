@@ -1,0 +1,136 @@
+{
+	"datasets": {
+		"main": {
+			"$type": "basic",
+			"$data": {
+				"libelle1": "xxx",
+				"checkbox": ["1"],
+				"$states": {
+					"libelle1" :{
+						"isMandatory" :true
+					}
+				}
+			},
+			"$output": "$data"
+		}
+	},
+	"name": "champs",
+	"$type": "block",
+	"$items": [
+		{
+			"$type": "row",
+			"$items": [
+				{
+					"$title": {
+						"value": "Exemple de champs",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "libelle1"
+						},
+						{
+							"$bind": "libelle2"
+						},
+						{
+							"$bind": "libelle3"
+						},
+						{
+							"$bind": "money"
+						},
+						{
+							"$bind": "date"
+						}
+					]
+				},
+				{
+					"$title": {
+						"value": "Pendant la saisie",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "libelle1"
+						},
+						{
+							"$bind": "libelle2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "row",
+			"$items": [
+				{
+					"$title": {
+						"value": "Menu déroulant",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "deroulant"
+						},
+						{
+							"$bind": "deroulant"
+						}
+					]
+				},
+				{
+					"$title": {
+						"value": "Menu déroulant avec filtre à thème",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "deroulant"
+						},
+						{
+							"$bind": "deroulant"
+						}
+					]
+				}
+			]
+		},
+		{
+			"$title": {
+				"value": "Activer plusieurs options",
+				"$style": "$spo-h3",
+				"size": 5
+			},
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "checkbox",
+					"$widget": "enums-list"
+				}
+			]
+		},
+		{
+			"$title": {
+				"value": "Choix unique",
+				"$style": "$spo-h3",
+				"size": 5
+			},
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "radio",
+					"$widget": "radio",
+					"options": {
+						"horizontal": true
+					}
+				}
+			]
+		}
+	],
+	"form": true
+}

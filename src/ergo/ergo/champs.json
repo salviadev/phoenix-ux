@@ -1,0 +1,27 @@
+{
+	"name": "champs",
+	"$menus": {
+		"left": "detail"
+	},	
+
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": false,
+				"$title": "Types de champs",
+				"form": {
+					"name": "/ergo/forms/champs",
+					"meta": "/ergo/metas/champs",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form",
+				"links": {
+					"create-tiers": {
+						"$page": "tiers/famille-tiers"
+					}
+				}
+			}
+		}
+	],
+	"$type": "block"
+}

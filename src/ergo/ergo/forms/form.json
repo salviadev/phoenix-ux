@@ -1,0 +1,229 @@
+{
+	"name": "form",
+	"$type": "block",
+	"$items": [
+		{
+			"$title": {
+				"value": "Formulaire simple 1",
+				"$style": "$spo-h2",
+				"size": 4
+			},
+			"$type": "block",
+			"$items": [
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "radio",
+							"options": {}
+						}
+					]
+				},
+				{
+					"$type": "row",
+					"$items": [
+						{
+							"$items": [
+								{
+									"$bind": "libelle2",
+									"options": {}
+								},
+								{
+									"$bind": "libelle3",
+									"options": {}
+								},
+								{
+									"$bind": "libelle4",
+									"options": {}
+								}
+							],
+							"$colSize": 6
+						},
+						{
+							"$items": [
+								{
+									"$bind": "libelle2",
+									"options": {}
+								},
+								{
+									"$bind": "libelle5",
+									"options": {}
+								},
+								{
+									"$bind": "libelle5",
+									"options": {}
+								}
+							],
+							"$colSize": 6
+						}
+					]
+				}
+			]
+		},
+		{
+			"$title": {
+				"value": "Formulaire avec rubriques",
+				"$style": "$spo-h2",
+				"size": 4
+			},
+			"$type": "block",
+			"$items": [
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$type": "row",
+							"$items": [
+								{
+									"$items": [
+										{
+											"$bind": "nom",
+											"options": {}
+										}
+									],
+									"$colSize": 6
+								},
+								{
+									"$items": [
+										{
+											"$bind": "prenom",
+											"options": {}
+										}
+									],
+									"$colSize": 6
+								}
+							]
+						}
+					],
+					"$title": {
+						"value": "Identité",
+						"size": 5,
+						"$style": "$spo-h3"
+					}
+				},
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$type": "row",
+							"$items": [
+								{
+									"$items": [
+										{
+											"$bind": "telephone1",
+											"options": {}
+										}
+									],
+									"$colSize": 6
+								},
+								{
+									"$items": [
+										{
+											"$bind": "telephone2",
+											"options": {}
+										}
+									],
+									"$colSize": 6
+								}
+							]
+						},
+						{
+							"$type": "block",
+							"$items": [
+								{
+									"$bind": "email",
+									"options": {}
+								}
+							]
+						}
+					],
+					"$title": {
+						"value": "Coordonnées",
+						"size": 5,
+						"$style": "$spo-h3"
+					}
+				},
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$type": "block",
+							"$items": [
+								{
+									"$bind": "deroulant",
+									"options": {}
+								},
+								{
+									"$bind": "adresse1",
+									"options": {}
+								},
+								{
+									"$bind": "adresse2",
+									"options": {}
+								},
+								{
+									"$bind": "adresse3",
+									"options": {}
+								}
+							]
+						},
+						{
+							"$type": "row",
+							"$items": [
+								{
+									"$items": [
+										{
+											"$bind": "codepostal",
+											"options": {}
+										}
+									],
+									"$colSize": 4
+								},
+								{
+									"$items": [
+										{
+											"$type": "block",
+											"$items": [
+												{
+													"$bind": "ville",
+													"options": {}
+												}
+											],
+											"$origin": "row"
+										}
+									],
+									"$auto": true,
+									"$colSize": 4
+								},
+								{
+									"$items": [
+										{
+											"$bind": "pays",
+											"options": {}
+										}
+									],
+									"$colSize": 4
+								}
+							]
+						}
+					],
+					"$title": {
+						"value": "Adresses",
+						"size": 5,
+						"$style": "$spo-h3"
+					}
+				}
+			]
+		},
+		{
+			"$type": "block",
+			"$items": [],
+			"$title": {
+				"value": "Listes",
+				"size": 4,
+				"$style": "$spo-h2"
+			}
+		}
+	],
+	"form": true
+}

@@ -1,0 +1,120 @@
+{
+	"type": "object",
+	"properties": {
+		"libelle1": {
+			"title": "Libellé",
+			"type": "string"
+		},
+		"libelle2": {
+			"title": "Libellé",
+			"type": "string"
+		},
+		"libelle3": {
+			"title": "Libellé",
+			"type": "string"
+		},
+		"libelle4": {
+			"title": "Libellé",
+			"type": "string",
+			"format": "email"
+		},
+		"libelle5": {
+			"title": "Libellé",
+			"type": "number"
+		},
+		"deroulant": {
+			"title": "Recopier l'adresse de",
+			"type": "string",
+			"enum": [
+				"choix1",
+				"choix2",
+				"choix3"
+			],
+			"enumNames": [
+				"David",
+				"Jean",
+				"Louis"
+			]
+		},
+		"radio": {
+			"type": "string",
+			"enum": [
+				"oui",
+				"non"
+			],
+			"enumNames": [
+				"oui",
+				"non"
+			]
+		},
+		"nom": {
+			"title": "Nom",
+			"type": "string"
+		},
+		"prenom": {
+			"title": "Prénom",
+			"type": "string"
+		},
+		"telephone1": {
+			"title": "Téléphone 1",
+			"type": "string"
+		},
+		"telephone2": {
+			"title": "Téléphone 2",
+			"type": "string"
+		},
+		"email": {
+			"title": "Email",
+			"type": "string",
+			"format": "email"
+		},
+		"adresse1": {
+			"title": "Adresse 1",
+			"type": "string"
+		},
+		"adresse2": {
+			"title": "Adresse 2",
+			"type": "string"
+		},
+		"adresse3": {
+			"title": "Adresse 3",
+			"type": "string"
+		},
+		"codepostal": {
+			"title": "Code postal",
+			"type": "string"
+		},
+		"ville": {
+			"title": "Ville",
+			"type": "string"
+		},
+		"pays": {
+			"title": "Pays",
+			"type": "string"
+		}
+	},
+	"states": {
+		"libelle3": {
+			"isReadOnly": true
+		},
+		"libelle2":{
+			"isRequired": true
+		},
+		"nom":{
+			"isRequired": true
+		},
+		"prenom":{
+			"isRequired": true
+		},
+		"adresse1":{
+			"isRequired": true
+		},
+		"codepostal":{
+			"isRequired": true
+		},
+		"ville":{
+			"isRequired": true
+		}
+	},
+	"links": {}
+}

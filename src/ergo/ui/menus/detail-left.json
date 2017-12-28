@@ -14,13 +14,13 @@
 				{
 					"$title": "Exemples de champs",
 					"$link": {
-						"$page": "xxxx"
+						"$page": "ergo/champs"
 					}
 				},
 				{
 					"$title": "Formulaires et listes",
 					"$link": {
-						"$page": "xxxx"
+						"$page": "ergo/form"
 					}
 				},
 				{

@@ -1,0 +1,81 @@
+{
+	"type": "object",
+	"properties": {
+		"libelle1": {
+			"title": "Libellé",
+			"type": "string"
+		},
+		"libelle2": {
+			"title": "Libellé",
+			"type": "string"
+		},
+		"libelle3": {
+			"title": "Libellé",
+			"type": "string",
+			"description": "Read only field"
+		},
+		"money": {
+			"title": "Montants",
+			"type": "number",
+			"format": "money"
+		},
+		"date": {
+			"title": "Choix date",
+			"type": "string",
+			"format": "date"
+		},
+		"deroulant": {
+			"type": "string",
+			"enum": [
+				"choix1",
+				"choix2",
+				"choix3"
+			],
+			"enumNames": [
+				"choix1",
+				"choix2",
+				"choix3"
+			]
+		},
+		"checkbox": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"enums": {
+					"choices": {
+						"type": "default",
+						"enum": [
+							"1",
+							"2"
+						],
+						"enumNames": [
+							"Option activée",
+							"Option désactivée"
+						]
+					}
+				},
+				"$enumref": "choices"
+			}
+		},
+		"radio": {
+			"type": "string",
+			"enum": [
+				"oui",
+				"non"
+			],
+			"enumNames": [
+				"oui",
+				"non"
+			]
+		}
+	},
+	"states": {
+		"libelle3": {
+			"isReadOnly": true
+		},
+		"libelle1": {
+			"isRequired": true
+		}
+	},
+	"links": {}
+}
