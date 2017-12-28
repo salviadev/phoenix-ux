@@ -1,5 +1,9 @@
 {
 	"type": "object",
 	"properties": {},
-	"links": {}
+	"links": {
+		"tuile": {
+			"title": "Exemple de titre de page à partir d'un tableau de bord ou tuile"
+		}
+	}
 }

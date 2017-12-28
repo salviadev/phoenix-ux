@@ -6,10 +6,13 @@
 			"$type": "block",
 			"$items": [
 				{
-					"$type": "html",
-					"$html": "Exemple de titre de page à partir d'un tableau de bord ou tuile",
-					"$style": "bs-widget-title accession-h1",
-					"$items": []
+					"$bind": "$links.tuile",
+					"$widget": "title-button",
+					"options": {
+						"size": "lg",
+						"icon": "arrow-left",
+						"styles": "bs-widget-title no-x-padding"
+					}
 				}
 			]
 		},
@@ -45,8 +48,7 @@
 						"size": 5
 					},
 					"$type": "block",
-					"$items": [
-					]
+					"$items": []
 				},
 				{
 					"$title": {
@@ -55,10 +57,8 @@
 						"size": 5
 					},
 					"$type": "block",
-					"$items": [
-					]
-				}
-				,
+					"$items": []
+				},
 				{
 					"$title": {
 						"value": "Rubrique 3",
@@ -66,11 +66,48 @@
 						"size": 5
 					},
 					"$type": "block",
-					"$items": [
-					]
+					"$items": []
+				}
+			]
+		},
+		{
+			"$title": {
+				"value": "Sous titres 2",
+				"$style": "$spo-h2",
+				"size": 4
+			},
+			"$type": "block",
+			"$items": [
+				{
+					"$title": {
+						"value": "Rubrique 1",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": []
+				},
+				{
+					"$title": {
+						"value": "Rubrique 2",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": []
+				},
+				{
+					"$title": {
+						"value": "Rubrique 3",
+						"$style": "$spo-h3",
+						"size": 5
+					},
+					"$type": "block",
+					"$items": []
 				}
 			]
 		}
+		
 	],
 	"form": true
 }

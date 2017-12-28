@@ -3013,7 +3013,7 @@ performance-now@^2.1.0:
 
 "phoenix-cli@git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-cli#master":
   version "1.0.0"
-  resolved "git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-cli#ecfa7fcf6b1f6d5283616edc8d0067971c797ec4"
+  resolved "git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-cli#b5ab9fe2b3262c7824e260efca132d82a71c00e0"
   dependencies:
     gulp latest
 
