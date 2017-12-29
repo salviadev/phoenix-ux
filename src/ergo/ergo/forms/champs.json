@@ -4,12 +4,8 @@
 			"$type": "basic",
 			"$data": {
 				"libelle1": "xxx",
-				"checkbox": ["1"],
-				"$states": {
-					"libelle1" :{
-						"isMandatory" :true
-					}
-				}
+				"checkbox": ["1"]
+				
 			},
 			"$output": "$data"
 		}
@@ -26,8 +22,15 @@
 						"$style": "$spo-h3",
 						"size": 5
 					},
+					"$fieldsOptions": {
+						"columns": true,
+						"labelCol": 2
+					},
 					"$type": "block",
 					"$items": [
+						{
+							"$bind": "libelle1"
+						},	
 						{
 							"$bind": "libelle1"
 						},
@@ -44,23 +47,8 @@
 							"$bind": "date"
 						}
 					]
-				},
-				{
-					"$title": {
-						"value": "Pendant la saisie",
-						"$style": "$spo-h3",
-						"size": 5
-					},
-					"$type": "block",
-					"$items": [
-						{
-							"$bind": "libelle1"
-						},
-						{
-							"$bind": "libelle2"
-						}
-					]
 				}
+				
 			]
 		},
 		{
@@ -76,27 +64,12 @@
 					"$items": [
 						{
 							"$bind": "deroulant"
-						},
-						{
-							"$bind": "deroulant"
 						}
-					]
-				},
-				{
-					"$title": {
-						"value": "Menu déroulant avec filtre à thème",
-						"$style": "$spo-h3",
-						"size": 5
-					},
-					"$type": "block",
-					"$items": [
-						{
-							"$bind": "deroulant"
-						},
-						{
-							"$bind": "deroulant"
-						}
-					]
+					],
+					"$fieldsOptions": {
+						"columns": true,
+						"labelCol": 2
+					}
 				}
 			]
 		},
@@ -112,7 +85,11 @@
 					"$bind": "checkbox",
 					"$widget": "enums-list"
 				}
-			]
+			],
+			"$fieldsOptions": {
+				"columns": true,
+				"labelCol": 2
+			}
 		},
 		{
 			"$title": {
@@ -129,7 +106,11 @@
 						"horizontal": true
 					}
 				}
-			]
+			],
+			"$fieldsOptions": {
+				"columns": true,
+				"labelCol": 2
+			}
 		}
 	],
 	"form": true

@@ -1,4 +1,97 @@
 {
+	"datasets": {
+		"data": {
+			"$type": "basic",
+			"$data": {
+				"liste": {
+					"entree": [
+						{
+							"name": "groupea",
+							"title": "Groupe A",
+							"items": [
+								{
+									"name": "groupec",
+									"title": "Groupe C",
+									"items": [
+										{
+											"name": "item9",
+											"title": "Item 9"
+										},
+										{
+											"name": "item10",
+											"title": "Item 10"
+										}
+									]
+								},
+								{
+									"name": "item4",
+									"title": "Item 4"
+								},
+								{
+									"name": "item5",
+									"title": "Item 5"
+								}
+							]
+						},
+						{
+							"name": "groupeb",
+							"title": "Groupe B",
+							"items": [
+								{
+									"name": "item6",
+									"title": "Item 6"
+								},
+								{
+									"name": "item7",
+									"title": "Item 7"
+								},
+								{
+									"name": "item8",
+									"title": "Item 8"
+								}
+							]
+						},
+						{
+							"name": "item1",
+							"title": "Item 1"
+						},
+						{
+							"name": "item2",
+							"title": "Item 2"
+						},
+						{
+							"name": "item3",
+							"title": "Item 3"
+						}
+					],
+					"sortie": [],
+					"_schema_initialized": true,
+					"$create": false,
+					"$states": {
+						"entree": {
+							"isHidden": false,
+							"isDisabled": false,
+							"isReadOnly": false,
+							"isMandatory": false,
+							"style": false
+						},
+						"sortie": {
+							"isHidden": false,
+							"isDisabled": false,
+							"isReadOnly": false,
+							"isMandatory": false,
+							"style": false
+						}
+					},
+					"$links": {},
+					"$errors": {
+						"entree": [],
+						"sortie": []
+					}
+				}
+			}
+		}
+	},
 	"name": "form",
 	"$type": "block",
 	"$items": [
@@ -15,6 +108,7 @@
 					"$items": [
 						{
 							"$bind": "radio",
+							"$widget": "radio",
 							"options": {}
 						}
 					]
@@ -37,6 +131,10 @@
 									"options": {}
 								}
 							],
+							"$fieldsOptions": {
+								"columns": true,
+								"labelCol": 1
+							},
 							"$colSize": 6
 						},
 						{
@@ -54,9 +152,29 @@
 									"options": {}
 								}
 							],
+							"$fieldsOptions": {
+								"columns": true,
+								"labelCol": 2
+							},
 							"$colSize": 6
 						}
 					]
+				},
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "$links.valide",
+							"options": {
+								"button": true,
+								"right": true,
+								"type": "success",
+								"inline": true
+							}
+						}
+					],
+					
+					"$colSize": 12
 				}
 			]
 		},
@@ -81,7 +199,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 6
+									"$colSize": 6,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								},
 								{
 									"$items": [
@@ -90,7 +212,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 6
+									"$colSize": 6,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								}
 							]
 						}
@@ -114,7 +240,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 6
+									"$colSize": 6,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								},
 								{
 									"$items": [
@@ -123,7 +253,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 6
+									"$colSize": 6,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								}
 							]
 						},
@@ -134,7 +268,11 @@
 									"$bind": "email",
 									"options": {}
 								}
-							]
+							],
+							"$fieldsOptions": {
+								"columns": true,
+								"labelCol": 1
+							}
 						}
 					],
 					"$title": {
@@ -165,7 +303,11 @@
 									"$bind": "adresse3",
 									"options": {}
 								}
-							]
+							],
+							"$fieldsOptions": {
+								"columns": true,
+								"labelCol": 1
+							}
 						},
 						{
 							"$type": "row",
@@ -177,7 +319,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 4
+									"$colSize": 4,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								},
 								{
 									"$items": [
@@ -188,11 +334,9 @@
 													"$bind": "ville",
 													"options": {}
 												}
-											],
-											"$origin": "row"
+											]
 										}
 									],
-									"$auto": true,
 									"$colSize": 4
 								},
 								{
@@ -202,7 +346,11 @@
 											"options": {}
 										}
 									],
-									"$colSize": 4
+									"$colSize": 4,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								}
 							]
 						}
@@ -217,7 +365,22 @@
 		},
 		{
 			"$type": "block",
-			"$items": [],
+			"$items": [
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "liste",
+							"$widget": "multiselectlist",
+							"options": {
+								"multiSelect": true,
+								"showTags": true,
+								"renderModel": "right"
+							}
+						}
+					]
+				}
+			],
 			"$title": {
 				"value": "Listes",
 				"size": 4,

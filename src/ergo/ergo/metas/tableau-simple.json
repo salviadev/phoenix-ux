@@ -1,0 +1,218 @@
+{
+	"type": "object",
+	"properties": {
+		"OAT": {
+			"title": "OAT",
+			"type": "boolean"
+		},
+		"SWAP": {
+			"title": "SWAP",
+			"type": "boolean"
+		},
+		"Name": {
+			"title": "Nom",
+			"type": "string"
+		},
+		"Offres": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Item"
+			},
+			"links": {
+				"$new": {
+					"title": "Add"
+				},
+				"$remove": {
+					"title": "Remove",
+					"select": {
+						"multiselect": false
+					}
+				},
+				"move": {
+					"title": "Disable date (Currrent line)",
+					"select": {
+						"multiselect": false
+					}
+				},
+				"addstar": {
+					"title": "Add Star",
+					"select": {
+						"multiselect": true
+					}
+				},
+				"changelabels": {
+					"title": "Change Labels",
+					"select": {
+						"multiselect": true
+					}
+				},
+				"mute": {
+					"title": "Mute",
+					"select": {
+						"multiselect": true
+					}
+				},
+				"spam": {
+					"title": "Report as spam",
+					"select": {
+						"multiselect": true
+					}
+				}
+			}
+		},
+		"total": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Item"
+			}
+		}
+	},
+	"states": {
+		"Name": {
+			"isMandatory": true
+		}
+	},
+	"links": {
+		"add": {
+			"title": "{{add}}"
+		},
+		"editor": {
+			"title": "Open Column Editor"
+		}
+	},
+	"definitions": {
+		"Item": {
+			"name": "Item",
+			"type": "object",
+			"primaryKey": [
+				"id"
+			],
+			"lookups": {
+				"OdataCountry": {
+					"data": {
+						"$type": "odata",
+						"$params": {
+							"$entity": "Country",
+							"$filter": {
+								"$left": "code",
+								"$op": "eq",
+								"$right": "$context.country",
+								"$nulls": "ignore"
+							}
+						}
+					},
+					"schema": {
+						"type": "object",
+						"name": "Country",
+						"properties": {
+							"documents": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"code": {
+											"type": "string",
+											"title": "Code",
+											"capabilities": "searchable,sortable,filtrable"
+										},
+										"title": {
+											"type": "string",
+											"title": "Description",
+											"capabilities": "searchable,sortable,filtrable"
+										}
+									}
+								}
+							}
+						}
+					},
+					"primaryKey": "code",
+					"mapping": {
+						"country": "code",
+						"countryTitle": "title"
+					}
+				}
+			},
+			"properties": {
+				"id": {
+					"type": "integer",
+					"title": "Id"
+				},
+				"Type": {
+					"type": "string",
+					"title": "Type",
+					"enum": [
+						"oat",
+						"swap"
+					],
+					"enumNames": [
+						"OAT",
+						"SWAP"
+					],
+					"default": "oat"
+				},
+				"Price": {
+					"type": "number",
+					"title": "Price",
+					"format": "money",
+					"maximum": 100000
+				},
+				"idCountry": {
+					"type": "integer",
+					"title": "Id Code"
+				},
+				"country": {
+					"type": "string",
+					"title": "Country Code"
+				},
+				"countryTitle": {
+					"type": "string",
+					"title": "Country Title"
+				},
+				"Imported": {
+					"type": "boolean",
+					"title": "Imported"
+				},
+				"Date": {
+					"type": "string",
+					"title": "Date",
+					"format": "date"
+				},
+				"Libelle": {
+					"type": "string",
+					"title": "Libelle",
+					"maxLength": 50
+				},
+				"VAT": {
+					"type": "number",
+					"title": "VAT",
+					"decimals": 2
+				},
+				"Selected": {
+					"type": "boolean",
+					"title": "Selected"
+				},
+				"tva": {
+					"type": "number",
+					"title": "TVA",
+					"enum": [
+						5,
+						10,
+						15,
+						20
+					],
+					"enumNames": [
+						"5.00",
+						"10.00",
+						"15.00",
+						"20.00"
+					]
+				}
+			},
+			"states": {
+				"Imported": {
+					"isReadOnly": false
+				}
+			}
+		}
+	}
+}

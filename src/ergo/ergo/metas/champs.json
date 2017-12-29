@@ -73,8 +73,8 @@
 		"libelle3": {
 			"isReadOnly": true
 		},
-		"libelle1": {
-			"isRequired": true
+		"libelle2": {
+			"isMandatory": true
 		}
 	},
 	"links": {}

@@ -91,30 +91,54 @@
 		"pays": {
 			"title": "Pays",
 			"type": "string"
+		},
+		"liste": {
+			"type": "object",
+			"properties": {
+				
+				"entree": [
+					
+					{
+						"name": "item1",
+						"title": "Item 1"
+					},
+					{
+						"name": "item2",
+						"title": "Item 2"
+					},
+					{
+						"name": "item3",
+						"title": "Item 3"
+					}
+				],
+				"sortie": []
+				
+			}
 		}
 	},
 	"states": {
 		"libelle3": {
 			"isReadOnly": true
 		},
-		"libelle2":{
-			"isRequired": true
+		"libelle2": {
+			"isMandatory": true
 		},
-		"nom":{
-			"isRequired": true
+		"nom": {
+			"isMandatory": true
 		},
-		"prenom":{
-			"isRequired": true
+		"adresse1": {
+			"isMandatory": true
 		},
-		"adresse1":{
-			"isRequired": true
+		"codepostal": {
+			"isMandatory": true
 		},
-		"codepostal":{
-			"isRequired": true
-		},
-		"ville":{
-			"isRequired": true
+		"ville": {
+			"isMandatory": true
 		}
 	},
-	"links": {}
+	"links": {
+		"valide": {
+			"title": "Valider"
+		}
+	}
 }
