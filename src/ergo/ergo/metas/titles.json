@@ -1,9 +1,14 @@
 {
 	"type": "object",
-	"properties": {},
+	"properties": {
+		"image": {
+			"type": "string"
+		}
+	},
 	"links": {
 		"tuile": {
 			"title": "Exemple de titre de page à partir d'un tableau de bord ou tuile"
 		}
+		
 	}
 }

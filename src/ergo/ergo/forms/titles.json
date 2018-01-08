@@ -23,23 +23,6 @@
 				"size": 4
 			},
 			"$type": "block",
-			"$items": []
-		},{
-			"$title": {
-				"value": "Sous titres 2",
-				"$style": "$spo-h2",
-				"size": 4
-			},
-			"$type": "block",
-			"$items": []
-		},
-		{
-			"$title": {
-				"value": "Sous titres 3",
-				"$style": "$spo-h2",
-				"size": 4
-			},
-			"$type": "block",
 			"$items": [
 				{
 					"$title": {
@@ -104,10 +87,22 @@
 					},
 					"$type": "block",
 					"$items": []
+				}
+			]
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "image",
+					"$widget": "imageurl",
+					"options": {
+						"titleIsHidden": true
+					}
+
 				}
 			]
 		}
-		
 	],
 	"form": true
 }
