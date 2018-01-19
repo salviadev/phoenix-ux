@@ -6,22 +6,27 @@
 			"$title": "Types de pages",
 			"$items": [
 				{
-					"$title": "Titres dans une page",
-					"$link": {
-						"$page": "ergo/titles"
-					}
-				},
-				{
-					"$title": "Exemples de champs",
-					"$link": {
-						"$page": "ergo/champs"
-					}
-				},
-				{
-					"$title": "Formulaires et listes",
-					"$link": {
-						"$page": "ergo/form"
-					}
+					"$title": "Formulaires",
+					"$items": [
+						{
+							"$title": "Titres dans une page",
+							"$link": {
+								"$page": "ergo/titles"
+							}
+						},
+						{
+							"$title": "Exemples de champs",
+							"$link": {
+								"$page": "ergo/champs"
+							}
+						},
+						{
+							"$title": "Formulaires et listes",
+							"$link": {
+								"$page": "ergo/form"
+							}
+						}
+					]
 				},
 				{
 					"$title": "Tableaux",

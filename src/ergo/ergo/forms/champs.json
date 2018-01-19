@@ -113,5 +113,6 @@
 			}
 		}
 	],
-	"form": true
+	"form": true,
+	"name": "champs"
 }

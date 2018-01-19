@@ -257,6 +257,12 @@ module.exports = function (grunt) {
                         cwd: '<%= srcLibRootPath %>/img',
                         src: ['**/*'],
                         dest: '<%= distPath %>/shared/img'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= srcLibRootPath %>/html',
+                        src: ['**/*'],
+                        dest: '<%= distPath %>/shared/html'
                     }
                 ]
             },

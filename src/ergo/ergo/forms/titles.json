@@ -1,6 +1,15 @@
 {
 	"name": "titles",
 	"$type": "block",
+	"datasets": {
+		"main": {
+			"$type": "basic",
+			"$data": {
+				"image": "../shared/img/Creation_2ieme_tiers.png"
+			},
+			"$output": "$data"
+		}
+	},
 	"$items": [
 		{
 			"$type": "block",
@@ -99,7 +108,6 @@
 					"options": {
 						"titleIsHidden": true
 					}
-
 				}
 			]
 		}
