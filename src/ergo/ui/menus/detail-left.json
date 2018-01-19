@@ -91,7 +91,7 @@
 						{
 							"$title": "Boutons",
 							"$link": {
-								"$page": "fi-couv-list"
+								"$page": "ergo/buttons"
 							}
 						}
 					]
