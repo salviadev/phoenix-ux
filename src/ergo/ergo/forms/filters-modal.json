@@ -1,0 +1,28 @@
+{
+    "name": "filters-modal",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/filters_modal.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "image",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                }
+            ]
+        }
+    ],
+    "form": true
+}

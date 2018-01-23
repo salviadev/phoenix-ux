@@ -1,0 +1,20 @@
+{
+	"name": "tile-view",
+	"$menus": {
+		"left": "detail"
+	},
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "ergo/forms/tile-view",
+					"meta": "ergo/metas/tile-view",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

@@ -1,6 +1,5 @@
 {
     "form": true,
-    "name": "tableau-simple",
     "datasets": {
         "data": {
             "$type": "basic",
@@ -128,7 +127,7 @@
                         "Selected": false,
                         "Price": 9999.77
                     }
-                ],
+                ], 
                 "total": [
                     {
                         "Libelle": "total 1",
@@ -173,185 +172,8 @@
     "name": "tableau-simple",
     "$type": "block",
     "$items": [
-        {
-            "$type": "block",
-            "$items": [
-                {
-                    "$title": {
-                        "value": "Tableau avec bandeau actions et bandeau filtres métier",
-                        "$style": "$spo-h2",
-                        "size": 4
-                    },
-                    "$type": "block",
-                    "$items": [
-                        {
-                            "$type": "html",
-                            "$html": "Possibilités dans le tableau: filtres métier, faire une recherche dans le tableau, ajouter des lots ou autre, icônes de filtre et masquer colonnes.<br><br>",
-                            "$style": "bs-widget-p accession-p",
-                            "$items": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "$type": "block",
-            "$items": [
-                {
-                    "$type": "block",
-                    "$items": [
-                        {
-                            "$bind": "Offres",
-                            "$widget": "basicgrid",
-                            "$name": "g112",
-                            "options": {
-                                "allowColumnMove": false,
-                                "autofocus": true,
-                                "selecting": {
-                                    "cell": true,
-                                    "row": true,
-                                    "multiselect": true
-                                },
-                                "height": "250px",
-                                "align": "middle",
-                                "border": true,
-                                "striped": false,
-                                "allowColumnResize": true,
-                                "headerIsHidden": false,
-                                "scrolling": {
-                                    "horizontal": true,
-                                    "vertical": true
-                                },
-                                "editing": true,
-                                "toolbar": {
-                                    "parentName": "toolbar",
-                                    "items": [
-                                        {
-                                            "type": "select",
-                                            "title": "Programme",
-                                            "value": {
-                                                "default": "OP0001|VEFA",
-                                                "items": [
-                                                    {
-                                                        "code": "OP0001|VEFA",
-                                                        "lib": "Accession VEFA"
-                                                    },
-                                                    {
-                                                        "code": "OP0001|PSLA",
-                                                        "lib": "PSLA"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "select",
-                                            "name": "grilledeprix",
-                                            "title": "Nature",
-                                            "value": {
-                                                "default": "nature1",
-                                                "items": [
-                                                    {
-                                                        "code": "nature1",
-                                                        "lib": "Immeuble"
-                                                    },
-                                                    {
-                                                        "code": "nature2",
-                                                        "lib": "Parking"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "filterexpress",
-                                            "name": "filterexpress"
-                                        },
-                                        {
-                                            "type": "links",
-                                            "options": {
-                                                "icon": "bars",
-                                                "titleIsHidden": false
-                                            },
-                                            "links": [
-                                                {
-                                                    "name": "$new",
-                                                    "options": {
-                                                        "icon": "plus-circle",
-                                                        "type": "info"
-                                                    },
-                                                    "important": true
-                                                },
-                                                {
-                                                    "name": "$remove",
-                                                    "options": {
-                                                        "icon": "trash",
-                                                        "titleIsHidden": true,
-                                                        "type": "danger"
-                                                    },
-                                                    "important": true
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "count"
-                                        }
-                                    ]
-                                },
-                                "columns": [
-                                    {
-                                        "$bind": "Type",
-                                        "options": {
-                                            "editing": false,
-                                            "selecting": false,
-                                            "width": 120,
-                                            "frozen": false
-                                        }
-                                    },
-                                    {
-                                        "$bind": "Libelle",
-                                        "options": {
-                                            "width": 200,
-                                            "frozen": false
-                                        }
-                                    },
-                                    {
-                                        "$bind": "Date",
-                                        "options": {
-                                            "width": "8em"
-                                        }
-                                    },
-                                    {
-                                        "$bind": "tva",
-                                        "options": {
-                                            "width": "6em"
-                                        }
-                                    },
-                                    {
-                                        "$bind": "Price",
-                                        "options": {
-                                            "width": "10em",
-                                            "align": "right"
-                                        }
-                                    },
-                                    {
-                                        "$bind": "VAT",
-                                        "options": {
-                                            "width": "10em",
-                                            "align": "right"
-                                        }
-                                    },
-                                    {
-                                        "$bind": "Imported",
-                                        "options": {
-                                            "width": "4em"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
+        
+       
         {
             "$type": "block",
             "$items": [
@@ -443,6 +265,193 @@
                                         }
                                     ]
                                 },
+                                "columns": [
+                                    {
+                                        "$bind": "Type",
+                                        "options": {
+                                            "editing": false,
+                                            "selecting": false,
+                                            "width": 120,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Libelle",
+                                        "options": {
+                                            "width": 200,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Date",
+                                        "options": {
+                                            "width": "8em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "tva",
+                                        "options": {
+                                            "width": "6em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Price",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "VAT",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Imported",
+                                        "options": {
+                                            "width": "4em"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$title": {
+                        "value": "Tableau avec plusieurs ligne de TOTAUX",
+                        "$style": "$spo-h2",
+                        "size": 4
+                    },
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "Offres",
+                            "$widget": "basicgrid",
+                            "$name": "g112",
+                            "options": {
+                                "allowColumnMove": false,
+                                "autofocus": true,
+                                "selecting": {
+                                    "cell": true,
+                                    "row": true,
+                                    "multiselect": true
+                                },
+                                "total": {
+                                    "property": "total2",
+                                    "field": "Libelle"
+                                },
+                                "height": "250px",
+                                "align": "middle",
+                                "border": true,
+                                "striped": false,
+                                "allowColumnResize": true,
+                                "headerIsHidden": false,
+                                "scrolling": {
+                                    "horizontal": true,
+                                    "vertical": true
+                                },
+                                "editing": true,
+                                "columns": [
+                                    {
+                                        "$bind": "Type",
+                                        "options": {
+                                            "editing": false,
+                                            "selecting": false,
+                                            "width": 120,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Libelle",
+                                        "options": {
+                                            "width": 200,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Date",
+                                        "options": {
+                                            "width": "8em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "tva",
+                                        "options": {
+                                            "width": "6em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Price",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "VAT",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Imported",
+                                        "options": {
+                                            "width": "4em"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },{
+            "$type": "block",
+            "$items": [
+                {
+                    "$title": {
+                        "value": "Tableau avec plusieurs ligne de TOTAUX",
+                        "$style": "$spo-h2",
+                        "size": 4
+                    },
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "Offres",
+                            "$widget": "basicgrid",
+                            "$name": "g112",
+                            "options": {
+                                "allowColumnMove": false,
+                                "autofocus": true,
+                                "selecting": {
+                                    "cell": true,
+                                    "row": true,
+                                    "multiselect": true
+                                },
+                                "total": {
+                                    "property": "total2",
+                                    "field": "Libelle"
+                                },
+                                "height": "250px",
+                                "align": "middle",
+                                "border": true,
+                                "striped": false,
+                                "allowColumnResize": true,
+                                "headerIsHidden": false,
+                                "scrolling": {
+                                    "horizontal": true,
+                                    "vertical": true
+                                },
+                                "editing": true,
                                 "columns": [
                                     {
                                         "$bind": "Type",

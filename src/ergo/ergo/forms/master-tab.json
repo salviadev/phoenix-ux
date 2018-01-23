@@ -1,0 +1,28 @@
+{
+    "name": "master-tab",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/master_tab_detail.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "image",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                }
+            ]
+        }
+    ],
+    "form": true
+}

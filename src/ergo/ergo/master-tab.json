@@ -1,0 +1,20 @@
+{
+	"name": "master-tab",
+	"$menus": {
+		"left": "detail"
+	},
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "ergo/forms/master-tab",
+					"meta": "ergo/metas/master-tab",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

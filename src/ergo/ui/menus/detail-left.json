@@ -40,7 +40,7 @@
 						{
 							"$title": "Totaux dans tableau",
 							"$link": {
-								"$page": "fi-rev-sel"
+								"$page": "ergo/tableau-totaux"
 							}
 						},
 						{

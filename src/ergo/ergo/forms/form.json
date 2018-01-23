@@ -6,10 +6,7 @@
 				"libelle1": "Champs saississable",
 				"libelle2": "Champs obligatoire",
 				"libelle3": "Champs lecture seule",
-				"checkbox": [
-					"1",
-					"2"
-				],
+				"libelle4": "Adresse mail",
 				"Filters": [
 					{ "Title": "Titre de la liste 1"},
 					{ "Title": "Titre de la liste 2"},
@@ -46,7 +43,12 @@
 								"horizontal": true
 							}
 						}
-					]
+					],
+					"$fieldsOptions": {
+						"columns": true,
+						"labelCol": 1
+					},
+					"$colSize": 4
 				},
 				{
 					"$type": "row",
@@ -55,20 +57,26 @@
 							"$items": [
 								{
 									"$bind": "libelle2",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								},
 								{
 									"$bind": "libelle3",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								},
 								{
 									"$bind": "libelle4",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								}
 							],
 							"$fieldsOptions": {
 								"columns": true,
-								"labelCol": 1
+								"labelCol": 2
 							},
 							"$colSize": 6
 						},
@@ -76,15 +84,21 @@
 							"$items": [
 								{
 									"$bind": "libelle2",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								},
 								{
 									"$bind": "libelle5",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								},
 								{
 									"$bind": "libelle5",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								}
 							],
 							"$fieldsOptions": {
@@ -130,7 +144,9 @@
 									"$items": [
 										{
 											"$bind": "nom",
-											"options": {}
+											"options":{
+												"maxWidth": "40em"
+											}
 										}
 									],
 									"$colSize": 6,
@@ -143,7 +159,9 @@
 									"$items": [
 										{
 											"$bind": "prenom",
-											"options": {}
+											"options":{
+												"maxWidth": "40em"
+											}
 										}
 									],
 									"$colSize": 6,
@@ -171,7 +189,9 @@
 									"$items": [
 										{
 											"$bind": "telephone1",
-											"options": {}
+											"options":{
+												"maxWidth": "40em"
+											}
 										}
 									],
 									"$colSize": 6,
@@ -184,7 +204,9 @@
 									"$items": [
 										{
 											"$bind": "telephone2",
-											"options": {}
+											"options":{
+												"maxWidth": "40em"
+											}
 										}
 									],
 									"$colSize": 6,
@@ -200,7 +222,9 @@
 							"$items": [
 								{
 									"$bind": "email",
-									"options": {}
+									"options":{
+										"maxWidth": "100em"
+									}
 								}
 							],
 							"$fieldsOptions": {
@@ -223,19 +247,27 @@
 							"$items": [
 								{
 									"$bind": "deroulant",
-									"options": {}
+									"options":{
+										"maxWidth": "40em"
+									}
 								},
 								{
 									"$bind": "adresse1",
-									"options": {}
+									"options":{
+										"maxWidth": "60em"
+									}
 								},
 								{
 									"$bind": "adresse2",
-									"options": {}
+									"options":{
+										"maxWidth": "60em"
+									}
 								},
 								{
 									"$bind": "adresse3",
-									"options": {}
+									"options":{
+										"maxWidth": "60em"
+									}
 								}
 							],
 							"$fieldsOptions": {
@@ -250,20 +282,24 @@
 									"$items": [
 										{
 											"$bind": "codepostal",
-											"options": {}
+											"options":{
+												"maxWidth": "20em"
+											}
 										}
 									],
 									"$colSize": 4,
 									"$fieldsOptions": {
 										"columns": true,
-										"labelCol": 2
+										"labelCol": 3
 									}
 								},
 								{
 									"$items": [
 										{
 											"$bind": "ville",
-											"options": {}
+											"options":{
+												"maxWidth": "20em"
+											}
 										}
 									],
 									"$colSize": 4,
@@ -276,7 +312,9 @@
 									"$items": [
 										{
 											"$bind": "pays",
-											"options": {}
+											"options":{
+												"maxWidth": "20em"
+											}
 										}
 									],
 									"$colSize": 4,

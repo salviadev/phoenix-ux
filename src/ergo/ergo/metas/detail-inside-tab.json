@@ -1,0 +1,50 @@
+{
+	"type": "object",
+	"properties": {
+		"documents": {
+			"type": "array",
+			"children": "children",
+			"items": { "$ref": "#/definitions/Population" }
+		},
+		"totals": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/Population" }
+		}
+
+	},
+	"links": {
+		"cancel": { "title": "Annuler" },
+		"valid": {"title": "Valider" }
+	},
+	"definitions": {
+		"Population": {
+			"name": "Population",
+			"type": "object",
+			"properties": {
+				"Name": { "type": "string", "title": "Name" },
+				"Description": { "type": "string", "title": "Description" },
+				"Area": { "type": "integer", "title": "Area" },
+				"Population": { "type": "integer", "title": "Population" },
+				"TimeZone": { "type": "string", "title": "Time Zone" },
+				"children": {
+					"type": "array",
+					"children": "children",
+					"items": { "$ref": "#/definitions/Population" }
+
+				},
+				"details": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"code": { "type": "string", "title": "Code" },
+							"title": { "type": "string", "title": "Title" },
+							"value": { "type": "number", "title": "Value", "default": 50 }
+						}
+
+					}
+				}
+			}
+		}
+	}
+}

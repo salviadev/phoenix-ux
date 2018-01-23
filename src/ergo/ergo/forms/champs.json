@@ -6,7 +6,7 @@
 				"libelle1": "Champs saississable",
 				"libelle2": "Champs obligatoire",
 				"libelle3": "Champs lecture seule",
-				"checkbox": ["1", "2"]
+				"checkbox": ["1"]
 				
 			},
 			"$output": "$data"
@@ -31,16 +31,28 @@
 					"$type": "block",
 					"$items": [
 						{
-							"$bind": "libelle1"
+							"$bind": "libelle1",
+							"options":{
+								"maxWidth": "40em"
+							}
 						},	
 						{
-							"$bind": "libelle1"
+							"$bind": "libelle1",
+							"options":{
+								"maxWidth": "40em"
+							}
 						},
 						{
-							"$bind": "libelle2"
+							"$bind": "libelle2",
+							"options":{
+								"maxWidth": "40em"
+							}
 						},
 						{
-							"$bind": "libelle3"
+							"$bind": "libelle3",
+							"options":{
+								"maxWidth": "40em"
+							}
 						},
 						{
 							"$bind": "money"
@@ -65,7 +77,10 @@
 					"$type": "block",
 					"$items": [
 						{
-							"$bind": "deroulant"
+							"$bind": "deroulant",
+							"options":{
+								"maxWidth": "40em"
+							}
 						}
 					],
 					"$fieldsOptions": {
@@ -115,6 +130,5 @@
 			}
 		}
 	],
-	"form": true,
-	"name": "champs"
+	"form": true
 }

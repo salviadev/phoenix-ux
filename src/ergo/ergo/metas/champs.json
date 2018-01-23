@@ -46,12 +46,10 @@
 						"type": "default",
 						"enum": [
 							"1",
-							"2", 
-							"3"
+							"2"
 						],
 						"enumNames": [
 							"Option activée",
-							"Option activée bloquée",
 							"Option désactivée"
 						]
 					}

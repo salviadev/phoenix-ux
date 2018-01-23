@@ -1,0 +1,26 @@
+{
+    "name": "tableau-simple",
+    "$menus": {
+        "left": "detail"
+    },
+    "$items": [
+        {
+            "$config": {
+                "$titleIsHidden": false,
+                "$title": "Tableaux Totaux",
+                "form": {
+                    "name": "/ergo/forms/tableau-totaux",
+                    "meta": "/ergo/metas/tableau-totaux",
+                    "controller": "phoenix.empty.controller"
+                },
+                "$type": "form",
+                "links": {
+                    "create-tiers": {
+                        "$page": "tiers/famille-tiers"
+                    }
+                }
+            }
+        }
+    ],
+    "$type": "block"
+}
