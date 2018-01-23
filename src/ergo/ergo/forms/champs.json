@@ -3,8 +3,10 @@
 		"main": {
 			"$type": "basic",
 			"$data": {
-				"libelle1": "xxx",
-				"checkbox": ["1"]
+				"libelle1": "Champs saississable",
+				"libelle2": "Champs obligatoire",
+				"libelle3": "Champs lecture seule",
+				"checkbox": ["1", "2"]
 				
 			},
 			"$output": "$data"

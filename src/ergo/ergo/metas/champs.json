@@ -46,10 +46,12 @@
 						"type": "default",
 						"enum": [
 							"1",
-							"2"
+							"2", 
+							"3"
 						],
 						"enumNames": [
 							"Option activée",
+							"Option activée bloquée",
 							"Option désactivée"
 						]
 					}
@@ -64,8 +66,8 @@
 				"non"
 			],
 			"enumNames": [
-				"oui",
-				"non"
+				"Oui",
+				"Non"
 			]
 		}
 	},

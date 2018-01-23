@@ -1,96 +1,29 @@
 {
 	"datasets": {
-		"data": {
+		"main": {
 			"$type": "basic",
 			"$data": {
-				"liste": {
-					"entree": [
-						{
-							"name": "groupea",
-							"title": "Groupe A",
-							"items": [
-								{
-									"name": "groupec",
-									"title": "Groupe C",
-									"items": [
-										{
-											"name": "item9",
-											"title": "Item 9"
-										},
-										{
-											"name": "item10",
-											"title": "Item 10"
-										}
-									]
-								},
-								{
-									"name": "item4",
-									"title": "Item 4"
-								},
-								{
-									"name": "item5",
-									"title": "Item 5"
-								}
-							]
-						},
-						{
-							"name": "groupeb",
-							"title": "Groupe B",
-							"items": [
-								{
-									"name": "item6",
-									"title": "Item 6"
-								},
-								{
-									"name": "item7",
-									"title": "Item 7"
-								},
-								{
-									"name": "item8",
-									"title": "Item 8"
-								}
-							]
-						},
-						{
-							"name": "item1",
-							"title": "Item 1"
-						},
-						{
-							"name": "item2",
-							"title": "Item 2"
-						},
-						{
-							"name": "item3",
-							"title": "Item 3"
-						}
-					],
-					"sortie": [],
-					"_schema_initialized": true,
-					"$create": false,
-					"$states": {
-						"entree": {
-							"isHidden": false,
-							"isDisabled": false,
-							"isReadOnly": false,
-							"isMandatory": false,
-							"style": false
-						},
-						"sortie": {
-							"isHidden": false,
-							"isDisabled": false,
-							"isReadOnly": false,
-							"isMandatory": false,
-							"style": false
-						}
-					},
-					"$links": {},
-					"$errors": {
-						"entree": [],
-						"sortie": []
-					}
-				}
-			}
-		}
+				"libelle1": "Champs saississable",
+				"libelle2": "Champs obligatoire",
+				"libelle3": "Champs lecture seule",
+				"checkbox": [
+					"1",
+					"2"
+				],
+				"Filters": [
+					{ "Title": "Titre de la liste 1"},
+					{ "Title": "Titre de la liste 2"},
+					{ "Title": "Titre de la liste 3"},
+					{ "Title": "Titre de la liste 4"},
+					{ "Title": "Titre de la liste 5"},
+					{ "Title": "Titre de la liste 6"},
+					{ "Title": "Titre de la liste 7"},
+					{ "Title": "Titre de la liste 8"},
+					{ "Title": "Titre de la liste 9"}
+				]
+			},
+			"$output": "$data"
+		}	
 	},
 	"name": "form",
 	"$type": "block",
@@ -109,7 +42,9 @@
 						{
 							"$bind": "radio",
 							"$widget": "radio",
-							"options": {}
+							"options": {
+								"horizontal": true
+							}
 						}
 					]
 				},
@@ -173,7 +108,6 @@
 							}
 						}
 					],
-					
 					"$colSize": 12
 				}
 			]
@@ -328,16 +262,15 @@
 								{
 									"$items": [
 										{
-											"$type": "block",
-											"$items": [
-												{
-													"$bind": "ville",
-													"options": {}
-												}
-											]
+											"$bind": "ville",
+											"options": {}
 										}
 									],
-									"$colSize": 4
+									"$colSize": 4,
+									"$fieldsOptions": {
+										"columns": true,
+										"labelCol": 2
+									}
 								},
 								{
 									"$items": [
@@ -360,34 +293,47 @@
 						"size": 5,
 						"$style": "$spo-h3"
 					}
-				}
-			]
-		},
-		{
-			"$type": "block",
-			"$items": [
+				},
 				{
 					"$type": "block",
+					"$title": {
+						"value": "Listes",
+						"size": 5,
+						"$style": "$spo-h3"
+					},
 					"$items": [
 						{
-							"$bind": "liste",
-							"$widget": "multiselectlist",
-							"options": {
-								"multiSelect": true,
-								"showTags": true,
-								"renderModel": "right"
-							}
+							"$type": "block",
+							"$items": [
+								{
+									"$bind": "Filters",
+									"$widget": "basicgrid",
+									"options": {
+										"editing": true,
+										"selecting": {
+											"row": "true",
+											"multiselect": "true"
+										},
+										"align": "middle",
+										"border": true,
+										"headerIsHidden": false,
+										"scrolling": {
+											"horizontal": true
+										},
+										"columns": [
+											{ "$bind": "Title", "options": { "width": "15em", "selectable": true, "editable": false } }
+										
+										]
+			
+									}
+								}
+			
+							]
 						}
 					]
 				}
-			],
-			"$title": {
-				"value": "Listes",
-				"size": 4,
-				"$style": "$spo-h2"
-			}
+			]
 		}
 	],
-	"form": true,
-	"name": "form"
+	"form": true
 }

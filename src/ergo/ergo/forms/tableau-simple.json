@@ -255,7 +255,7 @@
         {
             "$type": "html",
             "$html": "Tableau avec bandeau actions et bandeau filtres métier",
-            "$style": "bs-widget-title accession-h1",
+            "$style": "bs-widget-title accession-h2",
             "$items": []
         },
         {

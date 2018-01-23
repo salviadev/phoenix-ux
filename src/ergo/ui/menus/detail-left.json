@@ -46,7 +46,7 @@
 						{
 							"$title": "Détail dans tableau",
 							"$link": {
-								"$page": "fi-rev-mod"
+								"$page": "ergo/detail-inside-tab"
 							}
 						}
 					]
@@ -55,9 +55,15 @@
 					"$title": "Master detail",
 					"$items": [
 						{
-							"$title": "Master detail",
+							"$title": "Tuile avec son detail",
 							"$link": {
-								"$page": "fi-couv-list"
+								"$page": "ergo/master-tile"
+							}
+						},
+						{
+							"$title": "Tableau avec son detail",
+							"$link": {
+								"$page": "ergo/master-tab"
 							}
 						}
 					]
@@ -68,7 +74,7 @@
 						{
 							"$title": "Tableaux",
 							"$link": {
-								"$page": "fi-couv-list"
+								"$page": "ergo/tile-view"
 							}
 						}
 					]
@@ -102,7 +108,13 @@
 						{
 							"$title": "Filtres",
 							"$link": {
-								"$page": "fi-couv-list"
+								"$page": "ergo/filters"
+							}
+						},
+						{
+							"$title": "Filtres Modal",
+							"$link": {
+								"$page": "ergo/filters-modal"
 							}
 						}
 					]
@@ -110,7 +122,7 @@
 				{
 					"$title": "Assistants ou onglets",
 					"$link": {
-						"$page": "xxxx"
+						"$page": "ergo/wizard"
 					}
 				},
 				{

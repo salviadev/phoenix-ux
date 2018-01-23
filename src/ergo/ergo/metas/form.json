@@ -43,8 +43,8 @@
 				"non"
 			],
 			"enumNames": [
-				"oui",
-				"non"
+				"Oui",
+				"Non"
 			]
 		},
 		"nom": {
@@ -92,27 +92,13 @@
 			"title": "Pays",
 			"type": "string"
 		},
-		"liste": {
-			"type": "object",
-			"properties": {
-				
-				"entree": [
-					
-					{
-						"name": "item1",
-						"title": "Item 1"
-					},
-					{
-						"name": "item2",
-						"title": "Item 2"
-					},
-					{
-						"name": "item3",
-						"title": "Item 3"
-					}
-				],
-				"sortie": []
-				
+		"Filters": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"Title": { "type": "string", "title": "Nom / Titre de la liste" }
+				}
 			}
 		}
 	},
