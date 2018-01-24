@@ -5,12 +5,13 @@
 	},
 	"$items": [
 		{
-			"$config": {
-				"$titleIsHidden": true,
+			"$config": { 
+				"$titleIsHidden": false,
+                "$title": "Détails dans les tableaux",
 				"form": {
 					"name": "ergo/forms/detail-inside-tab",
 					"meta": "ergo/metas/detail-inside-tab",
-					"controller": "phoenix.empty.controller"
+					"controller": "ergo.detail-inside-tab.controller"
 				},
 				"$type": "form"
 			}

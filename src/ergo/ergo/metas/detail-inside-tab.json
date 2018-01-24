@@ -4,44 +4,161 @@
 		"documents": {
 			"type": "array",
 			"children": "children",
-			"items": { "$ref": "#/definitions/Population" }
+			"items": {
+				"$ref": "#/definitions/Population"
+			}
 		},
 		"totals": {
 			"type": "array",
-			"items": { "$ref": "#/definitions/Population" }
+			"items": {
+				"$ref": "#/definitions/Population"
+			}
+		},
+		"OAT": {
+			"title": "OAT",
+			"type": "boolean"
+		},
+		"SWAP": {
+			"title": "SWAP",
+			"type": "boolean"
+		},
+		"Name": {
+			"title": "Nom",
+			"type": "string"
+		},
+		"Offres": {
+			"type": "array",
+			"description": "This is a table",
+			"items": {
+				"type": "object",
+				"primaryKey": "Type,Date",
+				"properties": {
+					"Type": {
+						"type": "string",
+						"title": "Type",
+						"enum": [
+							"oat",
+							"swap"
+						],
+						"enumNames": [
+							"OAT",
+							"SWAP"
+						],
+						"default": "oat"
+					},
+					"caracTA": {
+						"type": "object",
+						"properties": {
+							"Price": {
+								"type": "number",
+								"title": "Price",
+								"format": "money"
+							}
+						}
+					},
+					"Date": {
+						"type": "string",
+						"title": "Date",
+						"format": "date"
+					},
+					"Libelle": {
+						"type": "string",
+						"title": "Libelle"
+					},
+					"VAT": {
+						"type": "number",
+						"title": "VAT",
+						"decimals": 2
+					},
+					"Selected": {
+						"type": "boolean",
+						"title": "Selected"
+					}
+				},
+				"links": {
+					"$detail": {
+						"$widgetAction": "editDetail"
+					},
+					"remove": {}
+				},
+				"states": {
+					"Libelle": {
+						"isMandatory": true
+					},
+					"Type": {
+						"isMandatory": true
+					},
+					"Date": {
+						"isMandatory": true
+					}
+				}
+			}
 		}
-
 	},
 	"links": {
-		"cancel": { "title": "Annuler" },
-		"valid": {"title": "Valider" }
+		"cancel": {
+			"title": "Annuler"
+		},
+		"valid": {
+			"title": "Valider"
+		}
+	},
+	"states": {
+		"Name": {
+			"isMandatory": true
+		}
 	},
 	"definitions": {
 		"Population": {
 			"name": "Population",
 			"type": "object",
 			"properties": {
-				"Name": { "type": "string", "title": "Name" },
-				"Description": { "type": "string", "title": "Description" },
-				"Area": { "type": "integer", "title": "Area" },
-				"Population": { "type": "integer", "title": "Population" },
-				"TimeZone": { "type": "string", "title": "Time Zone" },
+				"Name": {
+					"type": "string",
+					"title": "Name"
+				},
+				"Description": {
+					"type": "string",
+					"title": "Description"
+				},
+				"Area": {
+					"type": "integer",
+					"title": "Area"
+				},
+				"Population": {
+					"type": "integer",
+					"title": "Population"
+				},
+				"TimeZone": {
+					"type": "string",
+					"title": "Time Zone"
+				},
 				"children": {
 					"type": "array",
 					"children": "children",
-					"items": { "$ref": "#/definitions/Population" }
-
+					"items": {
+						"$ref": "#/definitions/Population"
+					}
 				},
 				"details": {
 					"type": "array",
 					"items": {
 						"type": "object",
 						"properties": {
-							"code": { "type": "string", "title": "Code" },
-							"title": { "type": "string", "title": "Title" },
-							"value": { "type": "number", "title": "Value", "default": 50 }
+							"code": {
+								"type": "string",
+								"title": "Code"
+							},
+							"title": {
+								"type": "string",
+								"title": "Title"
+							},
+							"value": {
+								"type": "number",
+								"title": "Value",
+								"default": 50
+							}
 						}
-
 					}
 				}
 			}

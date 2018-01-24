@@ -87,6 +87,12 @@
 		},
 		"editor": {
 			"title": "Open Column Editor"
+		},
+		"cancel": {
+			"title": "Annuler"
+		},
+		"valid": {
+			"title": "Enregistrer"
 		}
 	},
 	"definitions": {

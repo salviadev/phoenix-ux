@@ -498,6 +498,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "$type": "block",
+            "$inline": true,
+            "$items": [
+                {
+                    "$bind": "$links.valid",
+                    "options": {
+                        "right": true
+                    }
+                },
+                {
+                    "$bind": "$links.cancel",
+                    "options": {
+                        "right": true
+                    }
+                }
+            ]
         }
     ]
 }

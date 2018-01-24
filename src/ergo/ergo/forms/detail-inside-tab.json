@@ -4,6 +4,40 @@
         "main": {
             "$type": "basic",
             "$data": {
+                "Offres": [
+                    {
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "Date": "2001-05-11",
+                        "VAT": 99999999.253,
+                        "caracTA": {
+                            "Price": 9999999888.77
+                        }
+                    },
+                    {
+                        "Libelle": "Offre CL",
+                        "Type": "swap",
+                        "Date": "2001-05-11",
+                        "VAT": 33,
+                        "Selected": true,
+                        "caracTA": {
+                            "Price": 102.5
+                        }
+                    },
+                    {
+                        "Libelle": "Offre CE",
+                        "Type": "oat",
+                        "Date": "2016-05-11",
+                        "VAT": 45.22,
+                        "caracTA": {
+                            "$states": {
+                                "Price": {
+                                    "isReadOnly": true
+                                }
+                            }
+                        }
+                    }
+                ],
                 "documents": [
                     {
                         "Name": "United States of America",
@@ -252,7 +286,7 @@
             "$output": "$data"
         }
     },
-    "name": "form",
+    "name": "detail-inside-tab",
     "$type": "block",
     "$items": [
         {
@@ -341,6 +375,119 @@
                     "options": {
                         "right": true
                     }
+                }
+            ]
+        },
+        {
+            "name": "form",
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "Offres",
+                            "$widget": "basicgrid",
+                            "options": {
+                                "align": "middle",
+                                "border": true,
+                                "width": "50em",
+                                "layouts": {
+                                    "edit": {
+                                        "$type": "block",
+                                        "$items": [
+                                            {
+                                                "$type": "block",
+                                                "$items": [
+                                                    {
+                                                        "$bind": "Type"
+                                                    },
+                                                    {
+                                                        "$bind": "Date"
+                                                    },
+                                                    {
+                                                        "$bind": "Libelle"
+                                                    },
+                                                    {
+                                                        "$bind": "caracTA.Price"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "$type": "block",
+                                                "$inline": true,
+                                                "$items": [
+                                                    {
+                                                        "$bind": "$links.$updateChanges",
+                                                        "options": {
+                                                            "type": "primary",
+                                                            "right": true
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                "rows": {
+                                    "detail": {
+                                        "layout": "edit"
+                                    }
+                                },
+                                "headerIsHidden": false,
+                                "scrolling": {
+                                    "horizontal": true
+                                },
+                                "columns": [
+                                    {
+                                        "$bind": "Type",
+                                        "options": {
+                                            "width": "100%",
+                                            "$link": {
+                                                "$page": "edit-user",
+                                                "$module": "admin",
+                                                "$search": [
+                                                    {
+                                                        "left": "id",
+                                                        "right": "$item.Type"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$bind": "caracTA.Price",
+                                        "options": {
+                                            "width": "12em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "$links.$detail",
+                                        "options": {
+                                            "minWidth": "4em",
+                                            "button": true,
+                                            "size": "normal",
+                                            "icon": "pencil",
+                                            "type": "default"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "$links.remove",
+                                        "options": {
+                                            "width": "4em",
+                                            "button": false,
+                                            "icon": "remove"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "$type": "block",
+                    "$items": []
                 }
             ]
         }

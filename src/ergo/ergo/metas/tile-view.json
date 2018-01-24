@@ -1,8 +1,18 @@
 {
-	"type": "object",
-	"properties": {
-		"image": {
-			"type": "string"
-		}
-	}
+    "type": "object",
+    "name": "LotTiles",
+    "title": "Tuiles lot",
+    "primaryKey": "id",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "tiles": {
+            "type": "array",
+            "primaryKey": "id",
+            "items": {
+                "properties": {}
+            }
+        }
+    }
 }

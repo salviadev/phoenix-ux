@@ -1,24 +1,257 @@
 {
-    "name": "tile-view",
-    "$type": "block",
     "datasets": {
-        "main": {
+        "lots": {
             "$type": "basic",
-            "$data": {
-                "image": "../shared/img/tile-view.png"
+            "name": "initLots",
+            "$params": {
+                "$entity": "LotTiles",
+                "$data": {
+                    "data": {
+                        "$states": {
+                            "tiles": {
+                                "pageNumber": 1,
+                                "pageSize": 0,
+                                "totalCount": 11
+                            }
+                        },
+                        "id": 4,
+                        "tiles": [
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 3
+                                    }
+                                },
+                                "id": 3,
+                                "title": "Description",
+                                "infos": [
+                                    {
+                                        "id": 4,
+                                        "title": "Nature",
+                                        "value": "Appartement"
+                                    },
+                                    {
+                                        "id": 5,
+                                        "title": "Type",
+                                        "value": "T2"
+                                    },
+                                    {
+                                        "id": 6,
+                                        "title": "Numéro copro",
+                                        "value": "5"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 2
+                                    }
+                                },
+                                "id": 7,
+                                "title": "Surfaces",
+                                "infos": [
+                                    {
+                                        "id": 8,
+                                        "title": "Habitable",
+                                        "value": "nullm²"
+                                    },
+                                    {
+                                        "id": 9,
+                                        "title": "Annexes",
+                                        "value": "0m²"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 2
+                                    }
+                                },
+                                "id": 10,
+                                "title": "Dates",
+                                "infos": [
+                                    {
+                                        "id": 11,
+                                        "title": "Mise en stock"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "title": "Pose d'option",
+                                        "value": "2018-01-18T11:08:17.000Z"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 1
+                                    }
+                                },
+                                "id": 13,
+                                "title": "Prix",
+                                "infos": [
+                                    {
+                                        "id": 14,
+                                        "value": "180000"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 1
+                                    }
+                                },
+                                "id": 15,
+                                "title": "Vendeur",
+                                "infos": [
+                                    {
+                                        "id": 16,
+                                        "value": "Alain Bates"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 0
+                                    }
+                                },
+                                "id": 17,
+                                "title": "Client",
+                                "infos": []
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 0
+                                    }
+                                },
+                                "id": 18,
+                                "title": "Echéancier",
+                                "infos": []
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 0
+                                    }
+                                },
+                                "id": 19,
+                                "title": "Localisation",
+                                "infos": []
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 0
+                                    }
+                                },
+                                "id": 20,
+                                "title": "Historique",
+                                "infos": []
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 1
+                                    }
+                                },
+                                "id": 21,
+                                "title": "Commentaires",
+                                "infos": [
+                                    {
+                                        "id": 22,
+                                        "value": "0 Commentaire"
+                                    }
+                                ]
+                            },
+                            {
+                                "$states": {
+                                    "infos": {
+                                        "pageNumber": 1,
+                                        "pageSize": 0,
+                                        "totalCount": 1
+                                    }
+                                },
+                                "id": 23,
+                                "title": "Documents",
+                                "infos": [
+                                    {
+                                        "id": 24,
+                                        "value": "0 Document"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "id": "c0009535-3f7a-48cc-9a24-aa965cfbc714",
+                    "idSession": "67f7c7bb3467913af9e94e35dd1b84d6"
+                }
             },
             "$output": "$data"
         }
     },
+    "name": "tile-view",
+    "$type": "block",
     "$items": [
         {
             "$type": "block",
             "$items": [
                 {
-                    "$bind": "image",
-                    "$widget": "imageurl",
+                    "$bind": "tiles",
+                    "$widget": "array-control",
                     "options": {
-                        "titleIsHidden": true
+                        "style": "accession-tile-root",
+                        "item": {
+                            "render": "accession-resume-lot-render"
+                        },
+                        "layout": {
+                            "type": "grid",
+                            "columns": 4
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "tiles",
+                    "$widget": "tile",
+                    "options": {
+                        "striped": true,
+                        "allowColumnMove": true,
+                        "align": "middle",
+                        "columns": [
+                            {
+                                "$bind": "$index",
+                                "options": {}
+                            }
+                        ]
                     }
                 }
             ]
