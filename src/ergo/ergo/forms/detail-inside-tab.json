@@ -291,7 +291,7 @@
     "$items": [
         {
             "$title": {
-                "value": "Exemple de détails consultable dans le tableau; acccés au click sur une ligne",
+                "value": "Exemple de détails consultable dans le tableau, ainsi qu'un tableau de regroupement",
                 "$style": "$spo-h2",
                 "size": 4
             },

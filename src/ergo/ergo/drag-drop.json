@@ -1,0 +1,20 @@
+{
+	"name": "drag-drop",
+	"$menus": {
+		"left": "detail"
+	},
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "ergo/forms/drag-drop",
+					"meta": "ergo/metas/drag-drop",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

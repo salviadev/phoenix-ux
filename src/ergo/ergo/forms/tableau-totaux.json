@@ -130,7 +130,7 @@
                 ],
                 "total": [
                     {
-                        "Libelle": "total 1",
+                        "Libelle": "Total",
                         "VAT": 9999.253,
                         "caracTA": {
                             "Price": 9999.77
@@ -139,21 +139,21 @@
                 ],
                 "total2": [
                     {
-                        "Libelle": "total 1",
+                        "Libelle": "Total 1",
                         "VAT": 9999.253,
                         "caracTA": {
                             "Price": 9999.77
                         }
                     },
                     {
-                        "Libelle": "total 2",
+                        "Libelle": "Total 2",
                         "VAT": 9999.253,
                         "caracTA": {
                             "Price": 9999.77
                         }
                     },
                     {
-                        "Libelle": "total 3",
+                        "Libelle": "Total 3",
                         "VAT": 9999.253,
                         "caracTA": {
                             "Price": 9999.77

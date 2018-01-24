@@ -1,0 +1,28 @@
+{
+    "name": "drag-drop",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/drag-drop.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "image",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                }
+            ]
+        }
+    ],
+    "form": true
+}

@@ -80,15 +80,9 @@
 					]
 				},
 				{
-					"$title": "Paramétrage",
+					"$title": "Cliquer - glisser dans un tableau",
 					"$link": {
-						"$page": "xxxx"
-					}
-				},
-				{
-					"$title": "Accessoires de navigation",
-					"$link": {
-						"$page": "xxxx"
+						"$page": "ergo/drag-drop"
 					}
 				},
 				{
@@ -133,6 +127,12 @@
 				},
 				{
 					"$title": "Menus",
+					"$link": {
+						"$page": "xxxx"
+					}
+				},
+				{
+					"$title": "Paramétrage",
 					"$link": {
 						"$page": "xxxx"
 					}

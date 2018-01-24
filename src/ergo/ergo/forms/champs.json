@@ -6,7 +6,8 @@
 				"libelle1": "Champs saississable",
 				"libelle2": "Champs obligatoire",
 				"libelle3": "Champs lecture seule",
-				"checkbox": ["1"]
+				"checkbox": true,
+				"checkbox2": true
 				
 			},
 			"$output": "$data"
@@ -99,8 +100,16 @@
 			"$type": "block",
 			"$items": [
 				{
-					"$bind": "checkbox",
-					"$widget": "enums-list"
+					"$bind": "checkbox"
+				},
+				{
+					"$bind": "checkbox2"
+				},
+				{
+					"$bind": "checkbox3"
+				},
+				{
+					"$bind": "checkbox4"
 				}
 			],
 			"$fieldsOptions": {

@@ -37,26 +37,11 @@
 				"choix3"
 			]
 		},
-		"checkbox": {
-			"type": "array",
-			"items": {
-				"type": "string",
-				"enums": {
-					"choices": {
-						"type": "default",
-						"enum": [
-							"1",
-							"2"
-						],
-						"enumNames": [
-							"Option activée",
-							"Option désactivée"
-						]
-					}
-				},
-				"$enumref": "choices"
-			}
-		},
+		"checkbox": { "title": "Option activée", "type": "boolean" },
+		"checkbox2": { "title": "Option activé bloqué", "type": "boolean" },
+		"checkbox3": { "title": "Option désactivée", "type": "boolean" },
+		"checkbox4": { "title": "Option désactivée bloqué", "type": "boolean" },
+	
 		"radio": {
 			"type": "string",
 			"enum": [
@@ -75,6 +60,12 @@
 		},
 		"libelle2": {
 			"isMandatory": true
+		},
+		"checkbox2": {
+			"isDisabled": true
+		},
+		"checkbox4": {
+			"isDisabled": true
 		}
 	},
 	"links": {}

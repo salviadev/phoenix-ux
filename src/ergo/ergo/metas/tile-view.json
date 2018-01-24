@@ -7,6 +7,9 @@
         "id": {
             "type": "integer"
         },
+        "image": {
+			"type": "string"
+		},
         "tiles": {
             "type": "array",
             "primaryKey": "id",
