@@ -3,6 +3,34 @@
 	"properties": {
 		"image": {
 			"type": "string"
+		},
+		"wizard": {
+			"ux": true,
+			"emitChanging": true,
+			"title": "",
+			"type": "string",
+			"enum": [
+				"T",
+				"L",
+				"P",
+				"D",
+				"C",
+				"R"
+			],
+			"enumNames": [
+				"Tiers",
+				"Lots",
+				"Prix",
+				"Dates",
+				"Commentaire",
+				"Récapitulatif"
+			]
 		}
+
+	},
+	"links": {
+		"link1": { "title": "Toggle disabled" },
+		"link2": { "title": "Toggle hidden" }
+
 	}
 }

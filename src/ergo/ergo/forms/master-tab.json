@@ -1,28 +1,169 @@
 {
-    "name": "master-tab",
-    "$type": "block",
+    "form": true,
     "datasets": {
         "main": {
             "$type": "basic",
+            "OAT": true,
+            "Name": "EEEE",
             "$data": {
-                "image": "../shared/img/master_tab_detail.png"
+                "Offres": [
+                    {
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "Date": "2001-05-11",
+                        "VAT": 400.253,
+                        "caracTA": {
+                            "Price": 300.77,
+                            "$states": {
+                                "Price": {
+                                    "decimals": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "Libelle": "Offre CL",
+                        "Type": "swap",
+                        "Date": "2001-05-11",
+                        "VAT": 33,
+                        "Selected": true,
+                        "caracTA": {
+                            "Price": 102.5,
+                            "$states": {
+                                "Price": {
+                                    "isHidden": true,
+                                    "decimals": 2
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "Libelle": "Offre CE",
+                        "Type": "oat",
+                        "Date": "2016-05-11",
+                        "VAT": 45.22,
+                        "$states": {
+                            "Type": {
+                                "isDisabled": true
+                            }
+                        },
+                        "caracTA": {
+                            "Price": 525.55,
+                            "$states": {
+                                "Price": {
+                                    "isReadOnly": true,
+                                    "decimals": 3
+                                }
+                            }
+                        }
+                    }
+                ]
             },
             "$output": "$data"
         }
     },
+    "name": "master-tab",
+    "$type": "block",
     "$items": [
-        {
+        { 
+            "$title": {
+            "value": "Master panel",
+            "$style": "$spo-h2",
+            "size": 4
+            },
             "$type": "block",
             "$items": [
                 {
-                    "$bind": "image",
-                    "$widget": "imageurl",
+                    "$bind": "Offres",
+                    "$widget": "basicgrid",
                     "options": {
-                        "titleIsHidden": true
+                        "align": "middle",
+                        "border": true,
+                        "width": "50em",
+                        "headerIsHidden": false,
+                        "scrolling": {
+                            "horizontal": true
+                        },
+                        "selecting": {
+                            "row": true
+                        },
+                        "columns": [
+                            {
+                                "$bind": "Type",
+                                "options": {
+                                    "width": "100%",
+                                    "$link": {
+                                        "$page": "edit-user",
+                                        "$module": "admin",
+                                        "$search": [
+                                            {
+                                                "left": "id",
+                                                "right": "$item.Type"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "$bind": "caracTA.Price",
+                                "options": {
+                                    "width": "12em",
+                                    "align": "right"
+                                }
+                            },
+                            {
+                                "$bind": "$links.remove",
+                                "options": {
+                                    "width": "4em",
+                                    "button": false,
+                                    "icon": "remove"
+                                }
+                            }
+                        ],
+                        "striped": true,
+                        "allowColumnMove": true
+                    }
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$fieldsOptions": {
+                "columns": true,
+                "labelCol": 1
+            },
+            "$items": [
+                {
+                    "$bind": "Offres.$selected.Type",
+                    "$widget1": "grpbtn",
+                    "options": {}
+                },
+                {
+                    "$bind": "Offres.$selected.Libelle",
+                    "options": {}
+                },
+                {
+                    "$bind": "Offres.$selected.email",
+                    "options": {}
+                },
+                {
+                    "$bind": "Offres.$selected.caracTA.Price",
+                    "options": {}
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$inline": true,
+            "$items": [
+                {
+                    "$bind": "$links.addLine",
+                    "options": {
+                        "right": true,
+                        "type": "sucess"
                     }
                 }
             ]
         }
-    ],
-    "form": true
+    ]
 }

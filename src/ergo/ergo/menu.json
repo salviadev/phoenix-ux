@@ -1,0 +1,1 @@
+{"name":"menu","$menus":{"left":"detail"},"$items":[{"$config":{"$titleIsHidden":true,"form":{"name":"ergo/forms/menu","meta":"ergo/metas/menu","controller":"phoenix.empty.controller"},"$type":"form"}}],"$type":"block"}

@@ -48,6 +48,12 @@
 							"$link": {
 								"$page": "ergo/detail-inside-tab"
 							}
+						},
+						{
+							"$title": "Cliquer - glisser dans un tableau",
+							"$link": {
+								"$page": "ergo/drag-drop"
+							}
 						}
 					]
 				},
@@ -80,12 +86,6 @@
 					]
 				},
 				{
-					"$title": "Cliquer - glisser dans un tableau",
-					"$link": {
-						"$page": "ergo/drag-drop"
-					}
-				},
-				{
 					"$title": "Boutons et Iconographie",
 					"$items": [
 						{
@@ -114,28 +114,48 @@
 					]
 				},
 				{
-					"$title": "Assistants ou onglets",
-					"$link": {
-						"$page": "ergo/wizard"
-					}
+					"$title": "Assistant",
+					"$items": [
+						{
+							"$title": "Assistants ou onglets",
+							"$link": {
+								"$page": "ergo/wizard"
+							}
+						}
+					]
 				},
 				{
-					"$title": "Fenêtres modales",
-					"$link": {
-						"$page": "xxxx"
-					}
+					"$title": "Modales",
+					"$items": [
+						{
+							"$title": "Fenêtres modales",
+							"$link": {
+								"$page": "xxxx"
+							}
+						}
+					]
 				},
 				{
 					"$title": "Menus",
-					"$link": {
-						"$page": "xxxx"
-					}
+					"$items": [
+						{
+							"$title": "Menus",
+							"$link": {
+								"$page": "ergo/menu"
+							}
+						}
+					]
 				},
 				{
 					"$title": "Paramétrage",
-					"$link": {
-						"$page": "xxxx"
-					}
+					"$items": [
+						{
+							"$title": "Paramétrage",
+							"$link": {
+								"$page": "xxxx"
+							}
+						}
+					]
 				}
 			]
 		}

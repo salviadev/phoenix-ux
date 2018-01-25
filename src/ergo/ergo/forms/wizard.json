@@ -1,1 +1,27 @@
-{"name":"wizard","$type":"block","datasets":{"main":{"$type":"basic","$data":{"image":"../shared/img/wizard.png"},"$output":"$data"}},"$items":[{"$type":"block","$items":[{"$bind":"image","$widget":"imageurl","options":{"titleIsHidden":true}}]}],"form":true}
+{
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/wizard.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "name": "wizard",
+    "$type": "block",
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "wizard",
+                    "$widget": "steppers",
+                    "options": {}
+                }
+            ]
+        }
+        
+    ],
+    "form": true
+}

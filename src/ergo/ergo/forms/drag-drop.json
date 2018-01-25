@@ -1,15 +1,177 @@
 {
+    "form": true,
     "name": "drag-drop",
-    "$type": "block",
     "datasets": {
-        "main": {
+        "data": {
             "$type": "basic",
             "$data": {
-                "image": "../shared/img/drag-drop.png"
+                "image": "../shared/img/drag-drop.png",
+                "OAT": true,
+                "Name": "EEEE",
+                "Offres": [
+                    {
+                        "id": 1,
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": false,
+                        "Date": "2001-05-11",
+                        "VAT": 9999.253,
+                        "Selected": false,
+                        "Price": 9999.77,
+                        "$states": {
+                            "Price": {
+                                "isReadOnly": true
+                            }
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "Libelle": "Offre CL",
+                        "Type": "swap",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2001-05-11",
+                        "VAT": 33,
+                        "Selected": true,
+                        "Price": 102.5,
+                        "$states": {
+                            "Price": {
+                                "isDisabled": true
+                            }
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "Libelle": "Offre CE",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2001-05-11",
+                        "VAT": 45.22,
+                        "Selected": false,
+                        "Price": 58.22
+                    },
+                    {
+                        "id": 4,
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": false,
+                        "Date": "2001-05-11",
+                        "VAT": 9999.253,
+                        "Selected": false,
+                        "Price": 9999.77
+                    },
+                    {
+                        "id": 5,
+                        "Libelle": "Offre CL",
+                        "Type": "swap",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2001-05-11",
+                        "VAT": 33,
+                        "Selected": true,
+                        "Price": 102.5
+                    },
+                    {
+                        "id": 6,
+                        "Libelle": "Offre CE",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2001-05-11",
+                        "VAT": 45.22,
+                        "Selected": false,
+                        "Price": 99.22
+                    },
+                    {
+                        "id": 7,
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": false,
+                        "Date": "2001-05-11",
+                        "VAT": 9999.253,
+                        "Selected": false,
+                        "Price": 9999.77
+                    },
+                    {
+                        "id": 8,
+                        "Libelle": "Offre CL",
+                        "Type": "swap",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2012-05-11",
+                        "VAT": 33,
+                        "Selected": true,
+                        "Price": 102.5
+                    },
+                    {
+                        "id": 9,
+                        "Libelle": "Offre CE",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": true,
+                        "Date": "2001-05-11",
+                        "VAT": 45.22,
+                        "Selected": false,
+                        "Price": 958.77
+                    },
+                    {
+                        "id": 10,
+                        "Libelle": "Offre BP",
+                        "Type": "oat",
+                        "tva": 10,
+                        "Imported": false,
+                        "Date": "2001-05-11",
+                        "VAT": 9999.253,
+                        "Selected": false,
+                        "Price": 9999.77
+                    }
+                ],
+                "total": [
+                    {
+                        "Libelle": "Total",
+                        "VAT": 9999.253,
+                        "caracTA": {
+                            "Price": 9999.77
+                        }
+                    }
+                ],
+                "total2": [
+                    {
+                        "Libelle": "Total 1",
+                        "VAT": 9999.253,
+                        "caracTA": {
+                            "Price": 9999.77
+                        }
+                    },
+                    {
+                        "Libelle": "Total 2",
+                        "VAT": 9999.253,
+                        "caracTA": {
+                            "Price": 9999.77
+                        }
+                    },
+                    {
+                        "Libelle": "Total 3",
+                        "VAT": 9999.253,
+                        "caracTA": {
+                            "Price": 9999.77
+                        }
+                    }
+                ],
+                "$states": {
+                    "Offres": {
+                        "selected": "3"
+                    }
+                }
             },
             "$output": "$data"
         }
     },
+    "$type": "block",
     "$items": [
         {
             "$type": "block",
@@ -22,7 +184,222 @@
                     }
                 }
             ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$title": {
+                        "value": "Tableau avec mouvement des colonnes activés",
+                        "$style": "$spo-h2",
+                        "size": 4
+                    },
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$type": "html",
+                            "$html": "Possibilités dans le tableau de pouvoir bouger les colonnes à l'aide du cliquer-déposer, cela ne marche pas sur les lignes pour le moment.<br><br>",
+                            "$style": "bs-widget-p accession-p",
+                            "$items": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "Offres",
+                            "$widget": "basicgrid",
+                            "$name": "g112",
+                            "options": {
+                                "allowColumnMove": true,
+                                "autofocus": true,
+                                "selecting": {
+                                    "cell": true,
+                                    "row": true,
+                                    "multiselect": false
+                                },
+                                "height": "250px",
+                                "align": "middle",
+                                "border": true,
+                                "striped": false,
+                                "allowColumnResize": true,
+                                "headerIsHidden": false,
+                                "scrolling": {
+                                    "horizontal": true,
+                                    "vertical": true
+                                },
+                                "editing": true,
+                                "columns": [
+                                    {
+                                        "$bind": "Type",
+                                        "options": {
+                                            "editing": false,
+                                            "selecting": false,
+                                            "width": 120,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Libelle",
+                                        "options": {
+                                            "width": 200,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Date",
+                                        "options": {
+                                            "width": "8em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "tva",
+                                        "options": {
+                                            "width": "6em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Price",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "VAT",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Imported",
+                                        "options": {
+                                            "width": "4em"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$title": {
+                        "value": "Tableau avec mouvement des Libelle pour faire du multiselecting",
+                        "$style": "$spo-h2",
+                        "size": 4
+                    },
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$type": "html",
+                            "$html": "Possibilités dans le tableau de pouvoir bouger les produits à l'aide du cliquer-déposer pour permettre de faire du multiselect.<br><br>",
+                            "$style": "bs-widget-p accession-p",
+                            "$items": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "Offres",
+                            "$widget": "basicgrid",
+                            "$name": "g112",
+                            "options": {
+                                "rowMove": {
+                                    "expression": "{{Libelle}} ({{Date}})",
+                                    "multiselect": true
+                                },
+                                "allowColumnMove": true,
+                                "autofocus": true,
+                                "selecting": {
+                                    "cell": true,
+                                    "row": true,
+                                    "multiselect": true
+                                },
+                                "height": "250px",
+                                "align": "middle",
+                                "border": true,
+                                "striped": false,
+                                "allowColumnResize": true,
+                                "headerIsHidden": false,
+                                "scrolling": {
+                                    "horizontal": true,
+                                    "vertical": true
+                                },
+                                "editing": true,
+                                "columns": [
+                                    {
+                                        "$bind": "Type",
+                                        "options": {
+                                            "editing": false,
+                                            "selecting": false,
+                                            "width": 120,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Libelle",
+                                        "options": {
+                                            "width": 200,
+                                            "frozen": false
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Date",
+                                        "options": {
+                                            "width": "8em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "tva",
+                                        "options": {
+                                            "width": "6em"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Price",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "VAT",
+                                        "options": {
+                                            "width": "10em",
+                                            "align": "right"
+                                        }
+                                    },
+                                    {
+                                        "$bind": "Imported",
+                                        "options": {
+                                            "width": "4em"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-    ],
-    "form": true
+    ]
 }

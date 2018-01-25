@@ -6,11 +6,12 @@
 	"$items": [
 		{
 			"$config": {
-				"$titleIsHidden": true,
+				"$titleIsHidden": false, 
+				"$title": "Master detail - information par groupe et son détail au click",
 				"form": {
 					"name": "ergo/forms/master-tab",
 					"meta": "ergo/metas/master-tab",
-					"controller": "phoenix.empty.controller"
+					"controller": "ergo.master-tab.controller"
 				},
 				"$type": "form"
 			}
