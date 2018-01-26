@@ -3,7 +3,7 @@
         "main": {
             "$type": "basic",
             "$data": {
-                "image": "../shared/img/wizard.png"
+                "image": "../shared/img/tile-view.png"
             },
             "$output": "$data"
         }
@@ -12,16 +12,246 @@
     "$type": "block",
     "$items": [
         {
-            "$type": "block",
+			"$type": "block",
+			"$bindState": "wizard",
+			"$items": [
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "wizard",
+							"$widget": "steppers",
+							"options": {
+								"bindStep": "steps"
+							}
+						}
+					],
+					"$style": "$border-shadow $space-padding-top"
+				}
+			],
+			"$sticky": "top"
+        },
+        
+        {
+            "$type": "html",
+            "$html": "Les images suivantes sont présentes juste pour montrer le comportement de l'assistant lors d'un scroll.<br>L'assistant en dessous de ces images est une alternative à celui-ci.<br><br>",
+            "$style": "bs-widget-p accession-p",
+            "$items": []
+        },
+        {
+            "$type": "accordion",
+            "$widget": "none",
+            "$bind": "wizard",
+            "$bindPages": "wizard",
             "$items": [
                 {
-                    "$bind": "wizard",
-                    "$widget": "steppers",
-                    "options": {}
+                    "opened": true,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$bind": "image",
+                            "$widget": "imageurl",
+                            "options": {
+                                "titleIsHidden": false
+                            }
+                        },
+                        {
+                            "$bind": "image",
+                            "$widget": "imageurl",
+                            "options": {
+                                "titleIsHidden": true
+                            }
+                        }
+                       
+                    ],
+                    "$title": {
+                        "value": "Tiers"
+                    },
+                    "$name": "T"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Lots"
+                    },
+                    "$name": "L"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Prix"
+                    },
+                    "$name": "P"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Dates"
+                    },
+                    "$name": "D"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Commentaire"
+                    },
+                    "$name": "C"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Récapitulatif"
+                    },
+                    "$name": "R"
+                }
+            ]
+        },
+
+
+        {
+            "$type": "accordion",
+            "$widget": "tabs",
+            "$bind": "wizard",
+            "$bindPages": "wizard",
+            "$items": [
+                {
+                    "opened": true,
+                    "$type": "accordion-group",
+                    "$items": [
+                        
+                    ],
+                    "$title": {
+                        "value": "Tiers"
+                    },
+                    "$name": "T"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Lots"
+                    },
+                    "$name": "L"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Prix"
+                    },
+                    "$name": "P"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Dates"
+                    },
+                    "$name": "D"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Commentaire"
+                    },
+                    "$name": "C"
+                },
+                {
+                    "opened": false,
+                    "$type": "accordion-group",
+                    "$items": [
+                        {
+                            "$type": "block",
+                            "$items": [
+                                
+                            ]
+                        }
+                    ],
+                    "$title": {
+                        "value": "Récapitulatif"
+                    },
+                    "$name": "R"
                 }
             ]
         }
-        
     ],
     "form": true
 }

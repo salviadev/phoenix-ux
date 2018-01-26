@@ -1,5 +1,5 @@
 {
-    "name": "wizard",
+    "name": "detail-tile",
     "$menus": {
         "left": "detail"
     },
@@ -8,9 +8,9 @@
             "$config": {
                 "$titleIsHidden": true,
                 "form": {
-                    "name": "ergo/forms/wizard",
-                    "meta": "ergo/metas/wizard",
-                    "controller": "phoenix.empty.controller"
+                    "name": "ergo/forms/detail-tile",
+                    "meta": "ergo/metas/detail-tile",
+                    "controller": "ergo.detail-tile.controller"
                 },
                 "$type": "form"
             }

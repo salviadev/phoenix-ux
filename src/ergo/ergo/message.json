@@ -1,5 +1,5 @@
 {
-	"name": "tile-view",
+	"name": "message",
 	"$menus": {
 		"left": "detail"
 	},
@@ -8,9 +8,9 @@
 			"$config": {
 				"$titleIsHidden": true,
 				"form": {
-					"name": "ergo/forms/tile-view",
-					"meta": "ergo/metas/tile-view",
-					"controller": "ergo.view-tile.controller"
+					"name": "ergo/forms/message",
+					"meta": "ergo/metas/message",
+					"controller": "phoenix.empty.controller"
 				},
 				"$type": "form"
 			}

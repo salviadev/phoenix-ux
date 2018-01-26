@@ -1,0 +1,42 @@
+{
+    "name": "detail-tile",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/detail-tile.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "$links.back",
+                            "$widget": "title-button",
+                            "options": {
+                                "size": "lg",
+                                "icon": "arrow-left",
+                                "styles": "bs-widget-title no-x-padding"
+                            }
+                        },
+                        {
+                            "$bind": "image",
+                            "$widget": "imageurl",
+                            "options": {
+                                "titleIsHidden": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "form": true
+}

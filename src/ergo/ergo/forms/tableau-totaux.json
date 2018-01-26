@@ -326,7 +326,8 @@
                 {
                     "$bind": "$links.valid",
                     "options": {
-                        "right": true
+                        "right": true,
+						"type": "success"
                     }
                 },
                 {

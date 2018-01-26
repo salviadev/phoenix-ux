@@ -1,0 +1,44 @@
+{
+    "name": "message",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/message1.png",
+                "image2": "../shared/img/message2.png",
+                "image3": "../shared/img/message3.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "image",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                },
+                {
+                    "$bind": "image2",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                },
+                {
+                    "$bind": "image3",
+                    "$widget": "imageurl",
+                    "options": {
+                        "titleIsHidden": true
+                    }
+                }
+            ]
+        }
+    ],
+    "form": true
+}

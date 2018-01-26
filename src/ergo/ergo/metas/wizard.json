@@ -1,9 +1,8 @@
 {
 	"type": "object",
-	"properties": {
-		"image": {
-			"type": "string"
-		},
+	"properties": {"image": {
+		"type": "string"
+	},
 		"wizard": {
 			"ux": true,
 			"emitChanging": true,
@@ -25,12 +24,18 @@
 				"Commentaire",
 				"Récapitulatif"
 			]
+		},
+		"status": {
+			"type": "string"
 		}
-
 	},
 	"links": {
-		"link1": { "title": "Toggle disabled" },
-		"link2": { "title": "Toggle hidden" }
-
+		"accessPortal": {
+			"title": "Accès au portail tiers",
+			"isHidden": true
+		},
+		"close": {
+			"title": "Fermer"
+		}
 	}
 }

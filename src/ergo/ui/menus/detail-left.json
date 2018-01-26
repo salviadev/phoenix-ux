@@ -75,12 +75,18 @@
 					]
 				},
 				{
-					"$title": "Tableaux de bord (widgets)",
+					"$title": "Tableaux de bord (Tuiles)",
 					"$items": [
 						{
 							"$title": "Tableaux",
 							"$link": {
 								"$page": "ergo/tile-view"
+							}
+						},
+						{
+							"$title": "Détail d'un tableau",
+							"$link": {
+								"$page": "ergo/detail-tile"
 							}
 						}
 					]
@@ -131,6 +137,12 @@
 							"$title": "Fenêtres modales",
 							"$link": {
 								"$page": "ergo/modal"
+							}
+						},
+						{
+							"$title": "Message d'information",
+							"$link": {
+								"$page": "ergo/message"
 							}
 						}
 					]
