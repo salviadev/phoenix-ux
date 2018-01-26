@@ -1,0 +1,20 @@
+{
+	"name": "modal",
+	"$menus": {
+		"left": "detail"
+	},
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "ergo/forms/modal",
+					"meta": "ergo/metas/modal",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

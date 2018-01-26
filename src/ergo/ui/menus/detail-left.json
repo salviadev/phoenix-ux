@@ -130,7 +130,7 @@
 						{
 							"$title": "Fenêtres modales",
 							"$link": {
-								"$page": "xxxx"
+								"$page": "ergo/modal"
 							}
 						}
 					]
@@ -152,7 +152,7 @@
 						{
 							"$title": "Paramétrage",
 							"$link": {
-								"$page": "xxxx"
+								"$page": "ergo/param"
 							}
 						}
 					]

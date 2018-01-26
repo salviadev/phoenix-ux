@@ -1,3 +1,36 @@
 {
-    
+    "name": "menu",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/menu.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$title": {
+                        "value": "Pour tester le fonctionnement du menu, vous pouvez vous reporter sur le menu situé à gauche de cet écran qui est le même que celui de l'image ci-desoous.",
+                        "$style": "$spo-h2",
+                        "size": 4
+                    },
+                    "$type": "block",
+                    "$items": [
+                        {
+                            "$bind": "image",
+                            "$widget": "imageurl",
+                            "options": {}
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "form": true
 }

@@ -1,0 +1,27 @@
+{
+    "name": "param",
+    "$type": "block",
+    "datasets": {
+        "main": {
+            "$type": "basic",
+            "$data": {
+                "image": "../shared/img/buttons.png"
+            },
+            "$output": "$data"
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "html",
+                    "$html": "N'existe pas pour le moment.<br><br>",
+                    "$style": "bs-widget-p accession-p",
+                    "$items": []
+                }
+            ]
+        }
+    ],
+    "form": true
+}

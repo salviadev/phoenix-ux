@@ -68,5 +68,16 @@
 			"isDisabled": true
 		}
 	},
-	"links": {}
+    "links": {
+		"save": {
+            "title": "Enregistrer",
+            "data": {
+                "closeOnSuccess": false
+            }
+		},
+		"close": {
+            "title": "Annuler",
+            "after": "$action.$back"
+		}
+	}
 }

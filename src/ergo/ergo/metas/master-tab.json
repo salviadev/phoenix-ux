@@ -2,53 +2,97 @@
 	"type": "object",
 	"name": "parent",
 	"properties": {
-		"OAT": { "title": "OAT", "type": "boolean" },
-		"SWAP": { "title": "SWAP", "type": "boolean" },
-		"Name": { "title": "Nom", "type": "string" },
+		"OAT": {
+			"title": "OAT",
+			"type": "boolean"
+		},
+		"SWAP": {
+			"title": "SWAP",
+			"type": "boolean"
+		},
+		"Name": {
+			"title": "Nom",
+			"type": "string"
+		},
 		"Offres": {
 			"type": "array",
 			"description": "This is a table",
+			"links": {
+				"remove": {},
+				"$addLine": {
+					"title": "Ajouter"
+				}
+			},
 			"items": {
 				"type": "object",
 				"name": "child",
 				"primaryKey": "Type,Date",
 				"properties": {
-					"Type": { "type": "string", "title": "Type", "enum": ["oat", "swap"], "enumNames": ["OAT", "SWAP"], "default": "oat" },
+					"Type": {
+						"type": "string",
+						"title": "Type",
+						"enum": [
+							"oat",
+							"swap"
+						],
+						"enumNames": [
+							"OAT",
+							"SWAP"
+						],
+						"default": "oat"
+					},
 					"caracTA": {
 						"type": "object",
 						"properties": {
 							"Price": {
-								"type": "number", "title": "Price", "format": "money"
+								"type": "number",
+								"title": "Price",
+								"format": "money"
 							}
 						}
-
 					},
-					"Date": { "type": "string", "title": "Date", "format": "date" },
-					"Libelle": { "type": "string", "title": "Libelle" },
-					"VAT": { "type": "number", "title": "VAT", "decimals": 2 },
-					"email": { "type": "string", "title": "Email", "format": "email" },
-					"Selected": { "type": "boolean", "title": "Selected" }
+					"Date": {
+						"type": "string",
+						"title": "Date",
+						"format": "date"
+					},
+					"Libelle": {
+						"type": "string",
+						"title": "Libelle"
+					},
+					"VAT": {
+						"type": "number",
+						"title": "VAT",
+						"decimals": 2
+					},
+					"email": {
+						"type": "string",
+						"title": "Email",
+						"format": "email"
+					},
+					"Selected": {
+						"type": "boolean",
+						"title": "Selected"
+					}
 				},
-				"links": {
-					"remove": {}
-				},
+				
 				"states": {
-					"Libelle": { "isMandatory": true },
-					"Type": { "isMandatory": true },
-					"Date": { "isMandatory": true }
+					"Libelle": {
+						"isMandatory": true
+					},
+					"Type": {
+						"isMandatory": true
+					},
+					"Date": {
+						"isMandatory": true
+					}
 				}
-
-
 			}
 		}
-
 	},
 	"states": {
-		"Name": { "isMandatory": true }
-	},
-	"links": {
-		"setData": { "title": "Reload" },
-		"addLine": { "title": "Ajouter" }
+		"Name": {
+			"isMandatory": true
+		}
 	}
-
 }

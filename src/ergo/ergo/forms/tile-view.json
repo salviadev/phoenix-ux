@@ -27,7 +27,7 @@
 					}
 				},
 				"id": 4,
-				"image": "../shared/img/tile-view.png",
+				"image": "../shared/img/new-tuile.png",
 				"tiles": [
 					{
 						"$states": {

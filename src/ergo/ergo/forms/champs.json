@@ -8,7 +8,6 @@
 				"libelle3": "Champs lecture seule",
 				"checkbox": true,
 				"checkbox2": true
-				
 			},
 			"$output": "$data"
 		}
@@ -33,25 +32,25 @@
 					"$items": [
 						{
 							"$bind": "libelle1",
-							"options":{
+							"options": {
 								"maxWidth": "40em"
 							}
-						},	
+						},
 						{
 							"$bind": "libelle1",
-							"options":{
+							"options": {
 								"maxWidth": "40em"
 							}
 						},
 						{
 							"$bind": "libelle2",
-							"options":{
+							"options": {
 								"maxWidth": "40em"
 							}
 						},
 						{
 							"$bind": "libelle3",
-							"options":{
+							"options": {
 								"maxWidth": "40em"
 							}
 						},
@@ -63,7 +62,6 @@
 						}
 					]
 				}
-				
 			]
 		},
 		{
@@ -79,7 +77,7 @@
 					"$items": [
 						{
 							"$bind": "deroulant",
-							"options":{
+							"options": {
 								"maxWidth": "40em"
 							}
 						}
@@ -137,6 +135,32 @@
 				"columns": true,
 				"labelCol": 2
 			}
+		},
+		{
+			"$title": {
+				"value": "Sticky-footer",
+				"$style": "$spo-h3",
+				"size": 5
+			},
+			"$type": "block",
+			"$style": "$white",
+			"$inline": true,
+			"$sticky": "bottom",
+			"$items": [
+				{
+					"$bind": "$links.save",
+					"options": {
+						"right": true,
+						"type": "success"
+					}
+				},
+				{
+					"$bind": "$links.close",
+					"options": {
+						"right": true
+					}
+				}
+			]
 		}
 	],
 	"form": true

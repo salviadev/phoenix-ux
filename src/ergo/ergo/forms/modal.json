@@ -1,0 +1,1 @@
+{"name":"modal","$type":"block","datasets":{"main":{"$type":"basic","$data":{"image":"../shared/img/buttons.png"},"$output":"$data"}},"$items":[{"$type":"block","$items":[{"$type":"html","$html":"Pas implémenté pour le moment.<br><br>","$style":"bs-widget-p accession-p","$items":[]}]}],"form":true}
