@@ -6,6 +6,7 @@ var schemaUtils = require('phoenix-seed').schemaUtils;
 var toolboxUtils = require('phoenix-seed').toolboxUtils;
 var initRootPath = require('phoenix-seed').initRootPath;
 var copyJsonFiles = require('phoenix-seed').copyJsonFiles;
+const sass = require('node-sass');
 
 
 
@@ -402,8 +403,8 @@ module.exports = function (grunt) {
                             'libs/phoenix-app/*dist/img/*.*',
                             'libs/phoenix-app/*dist/font/*.*',
 							'libs/popper.js/dist/umd/*.*',
-							'libs/bootstrap4-datetimepicker/build/*.*',
-							'libs/bootstrap4-datetimepicker/min/*.*'
+                            'libs/bootstrap4-datetimepicker/build/**/*.*',
+                            'libs/moment/min/**/*.*'
                         ],
                         dest: '<%= releasePath %>'
                     },
@@ -462,6 +463,7 @@ module.exports = function (grunt) {
         },
         sass: {
             options: {
+                implementation: sass,
                 includePaths: ['scss'],
                 precision: 6,
                 sourceComments: false,
@@ -635,7 +637,6 @@ module.exports = function (grunt) {
                             cwd: '<%= htmlPath %>',
                             files: [
                                 '<%= bowerPath %>/es6-promise/dist/es6-promise.min.js',
-                                '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js',
                                 '<%= bowerPath %>/popper.js/dist/umd/popper.js',
                                 '<%= bowerPath %>/phoenix-cli/dist/bootstrap-theme/js/bootstrap.min.js',
                                 '<%= bowerPath %>/ismobilejs/isMobile.min.js',
@@ -754,11 +755,12 @@ module.exports = function (grunt) {
         var application = grunt.config.get('application');
         var dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
         var pagesPath = grunt.config.get('distPath') + '/' + application.name + '/ui/pages/';
+        var srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
         initRootPath(grunt.config.get('srcRootPath'));
         dsutils.integrateDatasets(pagesPath, dsPath, function (err) {
             if (err)
                 return grunt.fail.fatal(err);
-            layoutUtils.integrateSubLayouts(application.name, pagesPath, function (err) {
+            layoutUtils.integrateSubLayouts(application.name, pagesPath, srcPath, function (err) {
                 if (err)
                     return grunt.fail.fatal(err);
                 done();
@@ -771,11 +773,13 @@ module.exports = function (grunt) {
         var application = grunt.config.get('application');
         var dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
         var formsPath = grunt.config.get('distPath') + '/' + application.name + '/ui/forms/';
+        var srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
+
         initRootPath(grunt.config.get('srcRootPath'));
         dsutils.integrateFormDatasets(formsPath, dsPath, function (err) {
             if (err)
                 return grunt.fail.fatal(err);
-            layoutUtils.integrateSubLayouts(application.name, formsPath, function (err) {
+            layoutUtils.integrateSubLayouts(application.name, formsPath, srcPath, function (err) {
                 if (err)
                     return grunt.fail.fatal(err);
 
