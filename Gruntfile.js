@@ -85,7 +85,30 @@ function _build(grunt, moduleName) {
         grunt.task.run('mergeSchemas');
         // deploy
         grunt.task.run('createToolbox');
+
+        let tpl = grunt.config.get('third_party_libs');
+        if (tpl && tpl.deploy && tpl.deploy.length) {
+            const toAdd = {
+                expand: true,
+                cwd: '<%= distPath %>',
+                src: [
+                ],
+                dest: '<%= releasePath %>'
+            }
+            const cc =  grunt.config.get('copy');
+            const files = cc.deploy.files;
+            files.push(toAdd);
+            tpl.deploy.forEach(packageName => {
+                toAdd.src.push('libs/' + packageName + '/**/*');
+            });
+            grunt.config.set('copy', cc);
+        }        
         grunt.task.run('copy:deploy');
+        var co = grunt.config.getRaw('compress');
+        let dd = new Date();
+        ss = dd.toISOString().substr(0, 10);
+        co.main.options.archive = 'SPO_AccessionUX_' + ss + '.zip';
+        grunt.task.run('compress:main');
 
     }
 }
@@ -202,6 +225,18 @@ module.exports = function (grunt) {
                 }
             }
 
+        },
+        compress: {
+            main: {
+                options: {
+                    mode: 'zip',
+                    archive: 'SPO_AccessionUX.zip'
+                },
+                expand: true,
+                cwd: 'dist/',
+                src: ['**/*'],
+                dest: '.'
+            }
         },
         concat: {
             options: {
@@ -402,7 +437,7 @@ module.exports = function (grunt) {
                             'libs/phoenix-app/dist/**/*.json',
                             'libs/phoenix-app/*dist/img/*.*',
                             'libs/phoenix-app/*dist/font/*.*',
-							'libs/popper.js/dist/umd/*.*',
+                            'libs/popper.js/dist/umd/*.*',
                             'libs/bootstrap4-datetimepicker/build/**/*.*',
                             'libs/moment/min/**/*.*'
                         ],
@@ -640,7 +675,7 @@ module.exports = function (grunt) {
                                 '<%= bowerPath %>/popper.js/dist/umd/popper.js',
                                 '<%= bowerPath %>/phoenix-cli/dist/bootstrap-theme/js/bootstrap.min.js',
                                 '<%= bowerPath %>/ismobilejs/isMobile.min.js',
-                                '//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js'
+                                '<%= bowerPath %>/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'
                             ]
                         },
                         angular: {
@@ -685,7 +720,7 @@ module.exports = function (grunt) {
                         third_party: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css'
+                                '<%= bowerPath %>/bootstrap-datepicker/dist/css/bootstrap-datepicker.css'
 
                             ]
                         },
@@ -840,14 +875,21 @@ module.exports = function (grunt) {
         var done = this.async();
         var ic = grunt.option('install-client');
         if (ic) {
-            var tpl = grunt.config.get('third_party_libs');
+            let tpl = grunt.config.get('third_party_libs');
             if (tpl && tpl.dependencies) {
                 let deps = Object.keys(tpl.dependencies);
                 if (deps.length) {
-                    var cc = grunt.config.getRaw('copy');
+                    let cc = grunt.config.getRaw('copy');
                     list = cc.install_client.files[0].src;
                     deps.forEach(function (pkName) {
-                        list.push(pkName + '/**/*.*');
+                        if (pkName === 'highcharts') {
+                            list.push(pkName + '/highstock.js')
+                            list.push(pkName + '/modules/data.js')
+                        } else if (pkName === 'bootstrap-datepicker') {
+                            list.push(pkName + '/dist/bootstrap-datepicker.js')
+                            list.push(pkName + '/dist/bootstrap-datepicker.css')
+
+                        } else list.push(pkName + '/**/*.*');
                     });
                     grunt.config.set('copy', cc);
                 }
@@ -870,8 +912,9 @@ module.exports = function (grunt) {
             grunt.task.run('htmlbuild:redirect-release');
             grunt.task.run('copy:app_config');
             var deploy = grunt.option('deploy');
-            if (deploy)
+            if (deploy) {
                 grunt.task.run('copy:deploy-root-index');
+            }
 
             var mdSrc = grunt.config.get('srcRootPath');
             fs.readdir(mdSrc, function (err, files) {

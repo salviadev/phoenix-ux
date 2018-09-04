@@ -1,0 +1,17 @@
+{
+	"name": "grid-totals",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-totals",
+					"meta": "demos/metas/grid-totals",
+					"controller": "demos.grid-totals.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

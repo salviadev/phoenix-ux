@@ -1,0 +1,272 @@
+{
+	"name": "grid-totals",
+	"$type": "block",
+	"datasets": {
+		"data": {
+			"$type": "basic",
+			"$data": {
+				"Pokemons": [
+					{
+						"Name": "Taupiqueur",
+						"Type": "ground",
+						"DateOfBirth": "2004-12-16",
+						"PV": 150,
+						"Price": 350
+					},
+					{
+						"Name": "Reptincel",
+						"Type": "fire",
+						"DateOfBirth": "1986-12-04",
+						"PV": 220,
+						"Price": 600
+					},
+					{
+						"Name": "Locklass",
+						"Type": "water",
+						"DateOfBirth": "1983-06-06",
+						"PV": 300,
+						"Price": 1050
+					},
+					{
+						"Name": "Florizare",
+						"Type": "grass",
+						"DateOfBirth": "2008-12-01",
+						"PV": 330,
+						"Price": 1860
+					},
+					{
+						"Name": "Machoc",
+						"Type": "ground",
+						"DateOfBirth": "2000-02-14",
+						"PV": 80,
+						"Price": 250
+					},
+					{
+						"Name": "Sabelette",
+						"Type": "ground",
+						"DateOfBirth": "1985-08-27",
+						"PV": 120,
+						"Price": 360
+					},
+					{
+						"Name": "Noadkoko",
+						"Type": "grass",
+						"DateOfBirth": "2001-06-02",
+						"PV": 180,
+						"Price": 630
+					},
+					{
+						"Name": "Feunard",
+						"Type": "fire",
+						"DateOfBirth": "1996-05-13",
+						"PV": 280,
+						"Price": 1200
+					},
+					{
+						"Name": "Arcanin",
+						"Type": "fire",
+						"DateOfBirth": "2003-01-31",
+						"PV": 420,
+						"Price": 1520
+					},
+					{
+						"Name": "Hypocéan",
+						"Type": "water",
+						"DateOfBirth": "2001-09-03",
+						"PV": 290,
+						"Price": 800
+					},
+					{
+						"Name": "Pyroli",
+						"Type": "fire",
+						"DateOfBirth": "2004-05-04",
+						"PV": 250,
+						"Price": 1000
+					}
+				],
+				"Summary": [
+					{
+						"Name": "Total One",
+						"PV": 5872,
+						"Price": 25368
+					},
+					{
+						"Name": "Total Two",
+						"PV": 700,
+						"Price": 8000
+					}
+				],
+				"SummaryObj": {
+					"Name": "Total Title",
+					"PV": 500000,
+					"Price": 5000
+				}
+			}
+		}
+	},
+	"$items": [
+		{
+			"$type": "block",
+			"$items": []
+		},
+		{
+			"$type": "block",
+			"$title": {
+				"value": "Totals array",
+				"$style": "$spo-h2",
+				"size": 4
+			},
+			"$items": [
+				{
+					"$bind": "Pokemons",
+					"$widget": "basicgrid",
+					"options": {
+						"height": "250px",
+						"scrolling": {
+							"vertical": true
+						},
+						"total": {
+							"property": "Summary",
+							"firstTotal": "PV",
+							"field": "Name"
+						},
+						"selecting": {
+							"row": true
+						},
+						"border": true,
+						"columns": [
+							{
+								"$bind": "$index",
+								"options": {
+									"width": 50
+								}
+							},
+							{
+								"$bind": "Name",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "Type",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "DateOfBirth",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "PV",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "Price",
+								"options": {
+									"width": 200
+								}
+							}
+						],
+						"striped": true,
+						"allowColumnMove": true,
+						"align": "middle"
+					}
+				}
+			]
+		},
+		{
+			"$type": "block",
+			"$inline": true,
+			"$items": [
+				{
+					"$bind": "$links.set",
+					"options": {
+						"right": true
+					}
+				},
+				{
+					"$bind": "$links.upd",
+					"options": {
+						"right": true
+					}
+				}
+			]
+		},
+		{
+			"$type": "block",
+			"$title": {
+				"value": "Totals object",
+				"$style": "$spo-h2",
+				"size": 4
+			},
+			"$items": [
+				{
+					"$bind": "Pokemons",
+					"$widget": "basicgrid",
+					"options": {
+						"height": "250px",
+						"scrolling": {
+							"vertical": true
+						},
+						"total": {
+							"property": "SummaryObj",
+							"firstTotal": "PV",
+							"field": "Name"
+						},
+						"selecting": {
+							"row": true
+						},
+						"border": true,
+						"columns": [
+							{
+								"$bind": "$index",
+								"options": {
+									"width": 50
+								}
+							},
+							{
+								"$bind": "Name",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "Type",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "DateOfBirth",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "PV",
+								"options": {
+									"width": 200
+								}
+							},
+							{
+								"$bind": "Price",
+								"options": {
+									"width": 200
+								}
+							}
+						],
+						"striped": true,
+						"allowColumnMove": true,
+						"align": "middle"
+					}
+				}
+			]
+		}
+	],
+	"form": true
+}

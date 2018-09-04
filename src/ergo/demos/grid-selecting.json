@@ -1,0 +1,17 @@
+{
+	"name": "grid-selecting",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-selecting",
+					"meta": "demos/metas/grid-selecting",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}
