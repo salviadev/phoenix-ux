@@ -104,11 +104,12 @@ function _build(grunt, moduleName) {
             grunt.config.set('copy', cc);
         }        
         grunt.task.run('copy:deploy');
-        var co = grunt.config.getRaw('compress');
+        /* var co = grunt.config.getRaw('compress');
         let dd = new Date();
         ss = dd.toISOString().substr(0, 10);
         co.main.options.archive = 'SPO_AccessionUX_' + ss + '.zip';
         grunt.task.run('compress:main');
+        */
 
     }
 }
