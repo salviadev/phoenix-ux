@@ -1,0 +1,17 @@
+{
+	"name": "grid-inline-editing",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-inline-editing",
+					"meta": "demos/metas/offre",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

@@ -1,0 +1,314 @@
+{
+	"name": "grid-columns-visibility",
+	"$type": "block",
+	"datasets": {
+		"data": {
+			"$type": "basic",
+			"$data": {
+				"datasets": {
+					"htttc": [
+						{
+							"code": "ht",
+							"title": "HT"
+						},
+						{
+							"code": "ttc",
+							"title": "TTC"
+						}
+					]
+				},
+				"Offres": [
+					{
+						"id": 1,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 11999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 2,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 333,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 3,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 85.22,
+						"Selected": false,
+						"PriceHT": 58.22
+					},
+					{
+						"id": 4,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 9999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 5,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 33,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 6,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 45.22,
+						"Selected": false,
+						"PriceHT": 99.22
+					},
+					{
+						"id": 7,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 9999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 8,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2012-05-11",
+						"PriceTTC": 33,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 9,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 45.22,
+						"Selected": false,
+						"PriceHT": 958.77
+					},
+					{
+						"id": 10,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 9999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 11,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 33,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 12,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 45.22,
+						"Selected": false,
+						"PriceHT": 88.88
+					},
+					{
+						"id": 13,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 9999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 14,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 33,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 15,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 45.22,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 16,
+						"title": "Offre BP",
+						"Type": "oat",
+						"Imported": false,
+						"Date": "2001-05-11",
+						"PriceTTC": 9999.253,
+						"Selected": false,
+						"PriceHT": 9999.77
+					},
+					{
+						"id": 17,
+						"title": "Offre CL",
+						"Type": "swap",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 33,
+						"Selected": true,
+						"PriceHT": 102.5
+					},
+					{
+						"id": 18,
+						"title": "Offre CE",
+						"Type": "oat",
+						"Imported": true,
+						"Date": "2001-05-11",
+						"PriceTTC": 45.22,
+						"Selected": false,
+						"PriceHT": 302.5
+					}
+				],
+				"ht": "ht"
+			}
+		}
+	},
+	"$items": [
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$title": {
+						"value": "Controlling grid columns visibility",
+						"$style": "$spo-h2",
+						"size": 4
+					},
+					"$type": "block",
+					"$inline": true,
+					"$items": [
+						{
+							"$bind": "ht",
+							"$widget": "grpbtn",
+							"options": {
+								"binary": true,
+								"titleIsHidden": true
+							}
+						}
+					]
+				},
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "Offres",
+							"$widget": "basicgrid",
+							"$name": "g112",
+							"options": {
+								"autofocus": true,
+								"selecting": {
+									"multiselect": false,
+									"row": true
+								},
+								"sorting": true,
+								"total": {
+									"property": "total",
+									"firstTotal": "VAT"
+								},
+								"height": "250px",
+								"align": "middle",
+								"border": true,
+								"allowColumnResize": true,
+								"headerIsHidden": false,
+								"scrolling": {
+									"horizontal": true,
+									"vertical": true
+								},
+								"editing": false,
+								"columns": [
+									{
+										"$bind": "title",
+										"options": {
+											"width": 200,
+											"frozen": false
+										}
+									},
+									{
+										"$bind": "Type",
+										"options": {
+											"editing": false,
+											"selecting": false,
+											"width": 120,
+											"frozen": false
+										}
+									},
+									{
+										"$bind": "Date",
+										"options": {
+											"width": "8em"
+										}
+									},
+									{
+										"$bind": "PriceHT",
+										"options": {
+											"width": "10em",
+											"align": "right",
+											"bindVisibility": "ht",
+											"bindVisibilityValue": "ht"
+
+										}
+									},
+									{
+										"$bind": "PriceTTC",
+										"options": {
+											"width": "10em",
+											"align": "right",
+											"bindVisibility": "ht",
+											"bindVisibilityValue": "ttc"
+										}
+									},
+									{
+										"$bind": "Imported",
+										"options": {
+											"width": "4em"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"form": true
+}

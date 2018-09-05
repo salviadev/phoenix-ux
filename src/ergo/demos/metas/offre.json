@@ -1,0 +1,80 @@
+{
+	"type": "object",
+	"properties": {
+		"datasets": {
+			"type": "object",
+			"properties": {}
+		},
+		"Offres": {
+			"autoSelect": true,
+			"syncSelected": false,
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Item"
+			}
+		},
+		"ht": {
+			"type": "string",
+			"title": "Show",
+			"enum": {
+				"arrayProperty": "datasets.htttc",
+				"code": "code",
+				"title": "title"
+			}
+		}
+	},
+	"definitions": {
+		"Item": {
+			"name": "Item",
+			"type": "object",
+			"primaryKey": "id",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"title": "Id."
+				},
+				"Type": {
+					"type": "string",
+					"title": "Type",
+					"enum": [
+						"oat",
+						"swap"
+					],
+					"enumNames": [
+						"OAT",
+						"SWAP"
+					],
+					"default": "oat"
+				},
+				"PriceHT": {
+					"type": "number",
+					"title": "Price (HT)",
+					"format": "money"
+				},
+				"PriceTTC": {
+					"type": "number",
+					"title": "Price (TTC)",
+					"format": "money"
+				},
+				"Imported": {
+					"type": "boolean",
+					"title": "Imported"
+				},
+				"Date": {
+					"type": "string",
+					"title": "Date",
+					"format": "date"
+				},
+				"title": {
+					"type": "string",
+					"title": "Libelle",
+					"maxLength": 50
+				},
+				"Selected": {
+					"type": "boolean",
+					"title": "Selected"
+				}
+			}
+		}
+	}
+}
