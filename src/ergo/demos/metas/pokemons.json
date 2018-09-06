@@ -1,0 +1,71 @@
+{
+	"type": "object",
+	"properties": {
+		"pokemons": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Pokemon"
+			}
+		},
+		"Summary": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Pokemon"
+			}
+		},
+		"SummaryObj": {
+			"$ref": "#/definitions/Pokemon"
+		}
+	},
+	"links": {
+		"set": {
+			"title": "Set Summary"
+		},
+		"upd": {
+			"title": "Update Summary (+32 PV / +20€)"
+		}
+	},
+	"definitions": {
+		"Pokemon": {
+			"name": "Pokemon",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"type": "string",
+					"title": "Name"
+				},
+				"Type": {
+					"type": "string",
+					"title": "Type",
+					"enum": [
+						"fire",
+						"grass",
+						"ground",
+						"water"
+					],
+					"enumNames": [
+						"Fire",
+						"Grass",
+						"Ground",
+						"Water"
+					],
+					"default": "ground"
+				},
+				"DateOfBirth": {
+					"type": "string",
+					"title": "Date of birth",
+					"format": "date"
+				},
+				"PV": {
+					"type": "integer",
+					"title": "PV"
+				},
+				"Price": {
+					"type": "number",
+					"format": "money",
+					"title": "Price"
+				}
+			}
+		}
+	}
+}

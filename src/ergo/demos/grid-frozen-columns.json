@@ -1,0 +1,17 @@
+{
+	"name": "grid-frozen-columns",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-frozen-columns",
+					"meta": "demos/metas/offre",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

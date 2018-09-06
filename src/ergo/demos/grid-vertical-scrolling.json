@@ -1,0 +1,17 @@
+{
+	"name": "grid-vertical-scrolling",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-vertical-scrolling",
+					"meta": "demos/metas/pokemons",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}
