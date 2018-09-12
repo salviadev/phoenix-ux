@@ -5,6 +5,30 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/Pokemon"
+			},
+			"links": {
+				"add": {
+					"title": "Pokemon"
+				},
+				"$remove": {
+					"title": "Remove",
+					"select": {
+						"multiselect": false
+					}
+				},
+				"favorite": {
+					"title": "Mark as favorite",
+					"select": {
+						"multiselect": true
+					}
+				},
+				"powerUp": {
+					"title": "Power Up",
+					"select": {
+						"multiselect": false
+					}
+				}
+	
 			}
 		},
 		"Summary": {
@@ -23,12 +47,19 @@
 		},
 		"upd": {
 			"title": "Update Summary (+32 PV / +20€)"
+		},
+		"save": {
+			"title": "Save"
+		},
+		"cancel": {
+			"title": "Cancel"
 		}
 	},
 	"definitions": {
 		"Pokemon": {
 			"name": "Pokemon",
 			"type": "object",
+			"primaryKey": "Name",
 			"properties": {
 				"Name": {
 					"type": "string",
