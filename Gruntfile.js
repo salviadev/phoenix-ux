@@ -42,7 +42,7 @@ function _build(grunt, moduleName) {
     application.name = moduleName;
     var deploy = grunt.option('deploy');
     if (deploy) {
-        grunt.config.set('deploy', { release: 'true', authMode: 'admin' });
+        grunt.config.set('deploy', { release: 'true', authMode: 'admin',  releaseVersion: compileVersion});
     }
 
     grunt.config.set('application', application);
