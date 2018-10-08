@@ -1,25 +1,21 @@
-var fs = require('fs');
-var path = require('path');
-var dsutils = require('phoenix-seed').dsutils;
-var layoutUtils = require('phoenix-seed').layoutUtils;
-var schemaUtils = require('phoenix-seed').schemaUtils;
-var toolboxUtils = require('phoenix-seed').toolboxUtils;
-var initRootPath = require('phoenix-seed').initRootPath;
-var copyJsonFiles = require('phoenix-seed').copyJsonFiles;
+let fs = require('fs');
+let path = require('path');
+let dsutils = require('phoenix-seed').dsutils;
+let layoutUtils = require('phoenix-seed').layoutUtils;
+let schemaUtils = require('phoenix-seed').schemaUtils;
+let toolboxUtils = require('phoenix-seed').toolboxUtils;
+let initRootPath = require('phoenix-seed').initRootPath;
+let copyJsonFiles = require('phoenix-seed').copyJsonFiles;
 const sass = require('node-sass');
 
+const date = new Date();
+const compileVersion = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDay(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCMilliseconds()) + '';
 
 
-function _buildHelp(grunt) {
-    var deploy = grunt.option('deploy');
-    if (deploy)
-        grunt.task.run('help-deploy');
-    else
-        grunt.task.run('help');
-}
+
 
 function _buildLib(grunt) {
-    var deploy = grunt.option('deploy');
+    let deploy = grunt.option('deploy');
     if (deploy)
         grunt.task.run('lib-deploy');
     else
@@ -29,18 +25,16 @@ function _buildLib(grunt) {
 
 function _build(grunt, moduleName) {
     if (moduleName === "core") return;
-    if (moduleName === "help") {
-        return _buildHelp(grunt);
-    } else if (moduleName === "shared") {
+    if (moduleName === "shared") {
         return _buildLib(grunt);
     }
 
-    var src = grunt.config.get('srcRootPath');
-    var application = grunt.config.get('application');
-    var cfg = src + '/' + moduleName + '/' + 'config.json';
-    var moduleConfig = grunt.file.readJSON(cfg);
+    let src = grunt.config.get('srcRootPath');
+    let application = grunt.config.get('application');
+    let cfg = src + '/' + moduleName + '/' + 'config.json';
+    let moduleConfig = grunt.file.readJSON(cfg);
 
-    var glbCfg = grunt.config.get('glbCfg');
+    let glbCfg = grunt.config.get('glbCfg');
     grunt.config.set('glbCfg', glbCfg);
     if (!moduleConfig)
         return grunt.fail.fatal("File not found: " + cfg);
@@ -95,21 +89,20 @@ function _build(grunt, moduleName) {
                 ],
                 dest: '<%= releasePath %>'
             }
-            const cc =  grunt.config.get('copy');
+            const cc = grunt.config.get('copy');
             const files = cc.deploy.files;
             files.push(toAdd);
             tpl.deploy.forEach(packageName => {
                 toAdd.src.push('libs/' + packageName + '/**/*');
             });
             grunt.config.set('copy', cc);
-        }        
+        }
         grunt.task.run('copy:deploy');
-        /* var co = grunt.config.getRaw('compress');
+        var co = grunt.config.getRaw('compress');
         let dd = new Date();
         ss = dd.toISOString().substr(0, 10);
         co.main.options.archive = 'SPO_AccessionUX_' + ss + '.zip';
         grunt.task.run('compress:main');
-        */
 
     }
 }
@@ -139,7 +132,9 @@ module.exports = function (grunt) {
         prefixHtmlRoot: '',
         deploy: {
             release: "false",
-            authMode: 'dev'
+            authMode: 'dev',
+            releaseVersion: compileVersion
+
         },
         rootPath: './public',
         replace: {
@@ -316,28 +311,6 @@ module.exports = function (grunt) {
                         cwd: '<%= srcRootPath %>/core/ui/',
                         src: ['**/*.*'],
                         dest: '<%= srcRootPath %>/<%= application.name %>/ui/'
-                    }
-                ]
-            },
-            help: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= srcRootPath %>/help',
-                        src: ['./**/*.*'],
-                        dest: '<%= distPath %>/help/',
-                        filter: 'isFile'
-                    }
-                ]
-            },
-            "help-deploy": {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= srcRootPath %>/help',
-                        src: ['./**/*.*'],
-                        dest: '<%= releasePath %>/help/',
-                        filter: 'isFile'
                     }
                 ]
             },
@@ -647,6 +620,7 @@ module.exports = function (grunt) {
                 options: {
                     beautify: true,
                     relative: false,
+                    suffix: 'release=' + compileVersion,
                     scripts: {
                         core: {
                             cwd: '<%= htmlPath %>',
@@ -750,14 +724,8 @@ module.exports = function (grunt) {
 
 
         clean: {
-            help: [
-                '<%= distPath %>/help'
-            ],
             lib: [
                 '<%= distPath %>/shared'
-            ],
-            "help-deploy": [
-                '<%= releasePath %>/help'
             ],
             "lib-deploy": [
                 '<%= releasePath %>/shared'
@@ -850,8 +818,6 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('compile', ['clean:before', 'clean:temp', 'clean:dist', 'clean:release', 'copy:core', 'replace', 'ts:all', 'sass:application', 'ngtemplates', 'concat:application', 'uglify:application', 'cssmin:app', 'copy:app', 'copy-json-files']);
-    grunt.registerTask('help', ['clean:help', 'copy:help']);
-    grunt.registerTask('help-deploy', ['clean:help-deploy', 'copy:help-deploy']);
 
     grunt.registerTask('lib', ['clean:lib', 'ts:lib', 'sass:lib', 'copy:libimg', 'cssmin:lib', 'uglify:lib']);
     grunt.registerTask('lib-deploy', ['clean:lib', 'clean:lib-deploy', 'ts:lib', 'sass:lib', 'copy:libimg', 'cssmin:lib', 'uglify:lib', 'copy:lib-deploy']);
