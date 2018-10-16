@@ -1,0 +1,112 @@
+{
+	"name": "labels",
+	"$type": "block",
+	"$items": [
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$type": "block",
+					"$items": [
+						{
+							"$bind": "firstName",
+							"$widget": "label"
+						},
+						{
+							"$bind": "firstName"
+						}
+					]
+				}
+			],
+			"$title": {
+				"value": "Vertical",
+				"size": 4,
+				"$style": "$spo-h2"
+			}
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$type": "row",
+					"$items": [
+						{
+							"$items": [
+								{
+									"$bind": "firstName",
+									"$widget": "label",
+									"options": {
+										"columns": true
+
+									}
+								}
+							],
+							"$colSize": 3
+						},
+						{
+							"$items": [
+								{
+									"$bind": "firstName",
+									"options": {
+										"titleIsHidden": true
+									}
+								}
+							],
+							"$colSize": 9
+						}
+					]
+				},
+				{
+					"$type": "row",
+					"$items": [
+						{
+							"$items": [
+								{
+									"$bind": "firstName",
+									"$widget": "label",
+									"options": {
+										"columns": true
+
+									}
+								}
+							],
+							"$colSize": 3
+						},
+						{
+							"$items": [
+							],
+							"$colSize": 9
+						}
+					]
+				}
+			],
+			"$title": {
+				"value": "Table cell",
+				"size": 4,
+				"$style": "$spo-h2"
+			}
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "firstName",
+					"$widget": "label"
+				},
+				{
+					"$bind": "firstName",
+					"options": {
+						"titleIsHidden": true
+					}
+				}
+			],
+			"$title": {
+				"value": "Inline",
+				"size": 4,
+				"$style": "$spo-h2"
+			},
+			"$inline": true
+		}
+	],
+	"form": true
+}

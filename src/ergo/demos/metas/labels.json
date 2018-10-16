@@ -1,0 +1,37 @@
+{
+	"type": "object",
+	"properties": {
+		"firstName": {
+			"title": "First Name",
+			"type": "string"
+		},
+		"lastName": {
+			"title": "Last Name",
+			"type": "string"
+		},
+		"birthDay": {
+			"title": "Birthday",
+			"type": "string",
+			"format": "date"
+		},
+		"age": {
+			"title": "Age",
+			"type": "integer"
+		},
+		"email": {
+			"title": "Email",
+			"type": "string",
+			"format": "email"
+		}
+	},
+	"states": {
+		"firstName": {
+			"isMandatory": true
+		}
+	},
+	"links": {
+		"save": {
+			"title": "Save"
+		}
+	}
+}
