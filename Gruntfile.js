@@ -1,11 +1,11 @@
 let fs = require('fs');
 let path = require('path');
-let dsutils = require('phoenix-seed').dsutils;
-let layoutUtils = require('phoenix-seed').layoutUtils;
-let schemaUtils = require('phoenix-seed').schemaUtils;
-let toolboxUtils = require('phoenix-seed').toolboxUtils;
-let initRootPath = require('phoenix-seed').initRootPath;
-let copyJsonFiles = require('phoenix-seed').copyJsonFiles;
+let dsutils = require('@phoenix/phoenix-seed').dsutils;
+let layoutUtils = require('@phoenix/phoenix-seed').layoutUtils;
+let schemaUtils = require('@phoenix/phoenix-seed').schemaUtils;
+let toolboxUtils = require('@phoenix/phoenix-seed').toolboxUtils;
+let initRootPath = require('@phoenix/phoenix-seed').initRootPath;
+let copyJsonFiles = require('@phoenix/phoenix-seed').copyJsonFiles;
 const sass = require('node-sass');
 
 const date = new Date();
@@ -42,7 +42,7 @@ function _build(grunt, moduleName) {
     application.name = moduleName;
     var deploy = grunt.option('deploy');
     if (deploy) {
-        grunt.config.set('deploy', { release: 'true', authMode: 'admin',  releaseVersion: compileVersion});
+        grunt.config.set('deploy', { release: 'true', authMode: 'admin', releaseVersion: compileVersion });
     }
 
     grunt.config.set('application', application);
@@ -101,7 +101,7 @@ function _build(grunt, moduleName) {
         var co = grunt.config.getRaw('compress');
         let dd = new Date();
         ss = dd.toISOString().substr(0, 10);
-        co.main.options.archive = 'SPO_AccessionUX_' + ss + '.zip';
+        co.main.options.archive = 'PhoenixUX_' + ss + '.zip';
         grunt.task.run('compress:main');
 
     }
@@ -226,7 +226,7 @@ module.exports = function (grunt) {
             main: {
                 options: {
                     mode: 'zip',
-                    archive: 'SPO_AccessionUX.zip'
+                    archive: 'YourApplicationName.zip'
                 },
                 expand: true,
                 cwd: 'dist/',
@@ -404,13 +404,13 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= distPath %>',
                         src: [
-                            'libs/phoenix-app/**/*.min.*',
-                            'libs/phoenix-cli/dist/**/*',
+                            'libs/@phoenix/phoenix-app/**/*.min.*',
+                            'libs/@phoenix/phoenix-cli/dist/**/*',
                             'libs/ismobilejs/**/*.min.*',
                             'libs/es6-promise/**/*.min.*',
-                            'libs/phoenix-app/dist/**/*.json',
-                            'libs/phoenix-app/*dist/img/*.*',
-                            'libs/phoenix-app/*dist/font/*.*',
+                            'libs/@phoenix/phoenix-app/dist/**/*.json',
+                            'libs/@phoenix/phoenix-app/*dist/img/*.*',
+                            'libs/@phoenix/phoenix-app/*dist/font/*.*',
                             'libs/popper.js/dist/umd/*.*',
                             'libs/bootstrap4-datetimepicker/build/**/*.*',
                             'libs/moment/min/**/*.*'
@@ -433,8 +433,8 @@ module.exports = function (grunt) {
                         cwd: '<%= node_modules %>',
                         src: [
                             'jquery/dist/*.*',
-                            'phoenix-app/dist/**/*.*',
-                            'phoenix-cli/dist/**/*.*',
+                            '@phoenix/phoenix-app/dist/**/*.*',
+                            '@phoenix/phoenix-cli/dist/**/*.*',
                             'es6-promise/dist/*.*',
                             'popper.js/dist/umd/*.*',
                             'ismobilejs/*.*',
@@ -521,15 +521,15 @@ module.exports = function (grunt) {
                         core: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-app/dist/js/app.js'
+                                '<%= bowerPath %>/@phoenix/phoenix-app/dist/js/app.js'
                             ]
                         },
                         phoenix: {
                             cwd: '<%= htmlPath %>',
-                            files: ['<%= bowerPath %>/phoenix-cli/dist/js/phoenix.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.widgets.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.angular.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.widgets.angular.js'
+                            files: ['<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.widgets.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.angular.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.widgets.angular.js'
                             ]
                         },
                         jquery: {
@@ -543,7 +543,7 @@ module.exports = function (grunt) {
                             files: [
                                 '<%= bowerPath %>/es6-promise/dist/es6-promise.js',
                                 '<%= bowerPath %>/popper.js/dist/umd/popper.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/bootstrap-theme/js/bootstrap.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/bootstrap-theme/js/bootstrap.js',
                                 '<%= bowerPath %>/ismobilejs/isMobile.js',
                                 '<%= bowerPath %>/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'
                             ]
@@ -577,14 +577,14 @@ module.exports = function (grunt) {
                         phoenix: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.widgets.css',
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.css'
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.widgets.css',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.css'
                             ]
                         },
                         phoenix_fonts: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.fonts.css'
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.fonts.css'
                             ]
                         },
                         third_party: {
@@ -600,7 +600,7 @@ module.exports = function (grunt) {
                         },
                         core: {
                             cwd: '<%= htmlPath %>',
-                            files: ['<%= bowerPath %>/phoenix-app/dist/css/app.css']
+                            files: ['<%= bowerPath %>/@phoenix/phoenix-app/dist/css/app.css']
                         },
                         application: {
                             cwd: '<%= htmlPath %>',
@@ -625,16 +625,16 @@ module.exports = function (grunt) {
                         core: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-app/dist/js/app.min.js'
+                                '<%= bowerPath %>/@phoenix/phoenix-app/dist/js/app.min.js'
                             ]
                         },
                         phoenix: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.widgets.min.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.angular.min.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/js/phoenix.widgets.angular.min.js'
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.widgets.min.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.angular.min.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/js/phoenix.widgets.angular.min.js'
                             ]
                         },
                         jquery: {
@@ -648,7 +648,7 @@ module.exports = function (grunt) {
                             files: [
                                 '<%= bowerPath %>/es6-promise/dist/es6-promise.min.js',
                                 '<%= bowerPath %>/popper.js/dist/umd/popper.js',
-                                '<%= bowerPath %>/phoenix-cli/dist/bootstrap-theme/js/bootstrap.min.js',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/bootstrap-theme/js/bootstrap.min.js',
                                 '<%= bowerPath %>/ismobilejs/isMobile.min.js',
                                 '<%= bowerPath %>/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'
                             ]
@@ -682,14 +682,14 @@ module.exports = function (grunt) {
                         phoenix: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.widgets.min.css',
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.min.css'
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.widgets.min.css',
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.min.css'
                             ]
                         },
                         phoenix_fonts: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '<%= bowerPath %>/phoenix-cli/dist/css/phoenix.fonts.min.css'
+                                '<%= bowerPath %>/@phoenix/phoenix-cli/dist/css/phoenix.fonts.min.css'
                             ]
                         },
                         third_party: {
@@ -706,7 +706,7 @@ module.exports = function (grunt) {
                         },
                         core: {
                             cwd: '<%= htmlPath %>',
-                            files: ['<%= bowerPath %>/phoenix-app/dist/css/app.min.css']
+                            files: ['<%= bowerPath %>/@phoenix/phoenix-app/dist/css/app.min.css']
                         },
                         application: {
                             cwd: '<%= htmlPath %>',
@@ -805,7 +805,7 @@ module.exports = function (grunt) {
         var done = this.async();
         var application = grunt.config.get('application');
         var toolboxFile = grunt.config.get('distPath') + '/' + application.name + '/ui/toolboxes/default.json';
-        var phoenixPath = grunt.config.get('distPath') + '/libs/phoenix-cli/dist/js/';
+        var phoenixPath = grunt.config.get('distPath') + '/libs/@phoenix/phoenix-cli/dist/js/';
         var widgetPath = grunt.config.get('srcRootPath') + '/' + application.name + '/widgets/';
         toolboxUtils.updateToolBoxFile(application.name, phoenixPath, widgetPath, toolboxFile, function (err) {
             if (err)
@@ -839,9 +839,10 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', "Build task", function () {
-        var done = this.async();
-        var ic = grunt.option('install-client');
-        if (ic) {
+        let done = this.async();
+        let deploy = grunt.option('deploy');
+        let ic = grunt.option('install-client');
+        if (ic || deploy) {
             let tpl = grunt.config.get('third_party_libs');
             if (tpl && tpl.dependencies) {
                 let deps = Object.keys(tpl.dependencies);
@@ -863,8 +864,10 @@ module.exports = function (grunt) {
             }
             grunt.task.run('clean:bower');
             grunt.task.run('copy:install_client');
-            done();
-            return;
+            if (!deploy) {
+                done();
+                return;
+            }
         }
 
         var moduleName = grunt.option('module');
@@ -878,7 +881,6 @@ module.exports = function (grunt) {
             grunt.task.run('htmlbuild:redirect-debug');
             grunt.task.run('htmlbuild:redirect-release');
             grunt.task.run('copy:app_config');
-            var deploy = grunt.option('deploy');
             if (deploy) {
                 grunt.task.run('copy:deploy-root-index');
             }

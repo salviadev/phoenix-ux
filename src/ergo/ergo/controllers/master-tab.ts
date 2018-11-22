@@ -1,4 +1,4 @@
-/// <reference types="phoenix-cli" />
+/// <reference types="@phoenix/phoenix-cli" />
 
 namespace Ergo {
     const _p = Phoenix, _customData = _p.customData, _dom = _p.dom, _dsPlugin = _p.DatasetPlugin, _link = _p.link, _data = _p.data;

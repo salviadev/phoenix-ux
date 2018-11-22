@@ -1,4 +1,4 @@
-/// <reference types="phoenix-cli" />
+/// <reference types="@phoenix/phoenix-cli" />
 namespace Phoenix {
     let _application = application;
     // Init application

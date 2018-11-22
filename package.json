@@ -32,10 +32,10 @@
     "jquery": "latest",
     "load-grunt-tasks": "latest",
     "node-sass": "^4.9.3",
-    "phoenix-app": "git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-app#master",
-    "phoenix-cli": "git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-cli#master",
-    "phoenix-seed": "git+https://salvia.visualstudio.com/DefaultCollection/PhenixJS/_git/phoenix-seed#master",
+    "@phoenix/phoenix-app": "^2.0.0",
+    "@phoenix/phoenix-cli": "^2.0.0",
+    "@phoenix/phoenix-seed": "^1.0.0",
     "popper.js": "^1.14.4",
-    "typescript": "2.x.x"
+    "typescript": "3.x.x"
   }
 }

@@ -1,4 +1,4 @@
-/// <reference types="phoenix-cli" />
+/// <reference types="@phoenix/phoenix-cli" />
 namespace PhoenixLib {
     const _p = Phoenix;
     let item_render = {
