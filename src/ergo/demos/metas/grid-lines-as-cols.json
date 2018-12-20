@@ -1,0 +1,95 @@
+{
+	"type": "object",
+	"properties": {
+		"documents": {
+			"syncSelected": false,
+			"autoSelect": false,
+			"children": "children",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Population"
+			}
+		},
+		"totals": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Population"
+			}
+		}
+	},
+	"links": {
+		"action": {
+			"title": "Change California Area"
+		},
+		"unselect": {
+			"title": "Clear selection"
+		},
+		"remove": {
+			"title": "Remove selected"
+		},
+		"selectItems": {
+			"title": "Select By Patch"
+		}
+	},
+	"definitions": {
+		"size": {
+			"name": "Population",
+			"type": "object",
+			"primaryKey": "id",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"title": "Id"
+				},
+				"code": {
+					"type": "string",
+					"title": "Code"
+				},
+				"value": {
+					"type": "number",
+					"decimals": 2,
+					"title": "Value"
+				}
+			}
+		},
+		"Population": {
+			"name": "Population",
+			"type": "object",
+			"primaryKey": "id",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"title": "Id"
+				},
+				"Name": {
+					"type": "string",
+					"title": "Name"
+				},
+				"Description": {
+					"type": "string",
+					"title": "Description"
+				},
+				"sizes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/size"
+					}
+				},
+				"children": {
+					"type": "array",
+					"syncSelected": false,
+					"autoSelect": false,
+					"children": "children",
+					"items": {
+						"$ref": "#/definitions/Population"
+					}
+				}
+			},
+			"links": {
+				"$remove": {
+					"confirm": "Are you sure you want to remove this item ?"
+				}
+			}
+		}
+	}
+}

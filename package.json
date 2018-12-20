@@ -32,10 +32,12 @@
     "jquery": "latest",
     "load-grunt-tasks": "latest",
     "node-sass": "^4.9.3",
-    "@phoenix/phoenix-app": "^2.0.0",
-    "@phoenix/phoenix-cli": "^2.0.0",
-    "@phoenix/phoenix-seed": "^1.0.0",
     "popper.js": "^1.14.4",
     "typescript": "3.x.x"
+  },
+  "dependencies": {
+    "@phoenix/phoenix-app": "^3.0.0",
+    "@phoenix/phoenix-cli": "^3.0.0",
+    "@phoenix/phoenix-seed": "^1.0.0"
   }
 }

@@ -1,0 +1,559 @@
+{
+	"name": "grid-lines-as-cols",
+	"$type": "block",
+	"datasets": {
+		"data": {
+			"$type": "basic",
+			"$data": {
+				"sizesCols": [
+					{
+						"name": "sizes[code='area'].value",
+						"title": "Area"
+					},
+					{
+						"name": "sizes[code='population'].value",
+						"title": "Population"
+					}
+				],
+				"documents": [
+					{
+						"id": 1,
+						"Name": "United States of America",
+						"Description": "United States of America",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 9826675
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 318212000
+							}
+						],
+						"TimeZone": "UTC -5 to -10",
+						"children": [
+							{
+								"Name": "California",
+								"id": 2,
+								"Description": "The Tech State",
+								"TimeZone": "Pacific Time",
+								"sizes": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": 423970
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": 38340000
+									}
+								],
+								"children": [
+									{
+										"Name": "San Francisco",
+										"id": 3,
+										"Description": "The happening city",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 231
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 837442
+											}
+										],
+										"TimeZone": "PST"
+									},
+									{
+										"id": 4,
+										"Name": "Los Angeles",
+										"Description": "Disco city",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 503
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 3904657
+											}
+										],
+										"TimeZone": "PST"
+									}
+								]
+							},
+							{
+								"Name": "Illinois",
+								"id": 5,
+								"Description": "Not so cool",
+								"TimeZone": "Central Time Zone",
+								"sizes": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": 57914
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": 12882135
+									}
+								],
+								"children": [
+									{
+										"id": 6,
+										"DemographicId": 6,
+										"ParentId": 5,
+										"Name": "Chicago",
+										"Description": "Financial City",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 234
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 2695598
+											}
+										],
+										"TimeZone": "CST"
+									}
+								]
+							},
+							{
+								"Name": "Texas",
+								"id": 7,
+								"Description": "Rances, Oil & Gas",
+								"sizes": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": 268581
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": 26448193
+									}
+								],
+								"TimeZone": "Mountain"
+							},
+							{
+								"Name": "New York",
+								"id": 8,
+								"Description": "The largest diverse city",
+								"sizes": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": 141300
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": 19651127
+									}
+								],
+								"TimeZone": "Eastern Time Zone",
+								"children": [
+									{
+										"id": 9,
+										"Name": "Manhattan",
+										"Description": "Time Square is the place",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 269.40
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 0
+											}
+										],
+										"TimeZone": "EST",
+										"children": [
+											{
+												"id": 10,
+												"Name": "Manhattan City",
+												"Description": "Manhattan island",
+												"sizes": [
+													{
+														"id": 1,
+														"code": "area",
+														"value": 33.77
+													},
+													{
+														"id": 2,
+														"code": "population",
+														"value": 0
+													}
+												],
+												"TimeZone": "EST"
+											},
+											{
+												"id": 11,
+												"Name": "Time Square",
+												"Description": "Time Square for new year",
+												"sizes": [
+													{
+														"id": 1,
+														"code": "area",
+														"value": 269.4
+													},
+													{
+														"id": 2,
+														"code": "population",
+														"value": 0
+													}
+												],
+												"TimeZone": "EST"
+											}
+										]
+									},
+									{
+										"id": 12,
+										"Name": "Niagra water fall",
+										"Description": "Close to Canada",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 65
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 0
+											}
+										],
+										"TimeZone": "EST"
+									},
+									{
+										"id": 13,
+										"Name": "Long Island",
+										"Description": "Harbour to Atlantic",
+										"sizes": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": 362
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": 0
+											}
+										],
+										"TimeZone": "EST"
+									}
+								]
+							},
+							{
+								"id": 14,
+								"DemographicId": 51,
+								"ParentId": 1,
+								"Name": "All_Other",
+								"Description": "All_Other demographics",
+								"Area": 0,
+								"Population": 0,
+								"TimeZone": 0
+							}
+						]
+					},
+					{
+						"id": 15,
+						"Name": "France",
+						"Description": "France",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 675000
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 67314000
+							}
+						],
+						"TimeZone": "UTC+1",
+						"children": [
+							{
+								"id": 16,
+								"Name": "Île-de-France",
+								"Description": "Île-de-France",
+								"sizes": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": 12011
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": 11959807
+									}
+								],
+								"TimeZone": "UTC+1"
+							}
+						]
+					},
+					{
+						"id": 17,
+						"Name": "Germany",
+						"Description": "Germany",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 357168
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 81770900
+							}
+						],
+						"TimeZone": "UTC+1"
+					},
+					{
+						"id": 18,
+						"Name": "Italy",
+						"Description": "Italian Republic",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 5545
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 60674003
+							}
+						],
+						"TimeZone": "UTC+1"
+					},
+					{
+						"id": 19,
+						"Name": "Poland",
+						"Description": "Republic of Poland",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 312679
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 38483957
+							}
+						],
+						"TimeZone": "UTC+1"
+					},
+					{
+						"id": 20,
+						"Name": "Spain",
+						"Description": "Kingdom of Spain",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 505990
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 46423064
+							}
+						],
+						"TimeZone": "UTC+1"
+					},
+					{
+						"id": 21,
+						"Name": "Portugal",
+						"Description": "Portuguese Republic",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 92391
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 81770900
+							}
+						],
+						"TimeZone": "UTC+0"
+					},
+					{
+						"id": 22,
+						"Name": "Great Britain",
+						"Description": "United Kingdom",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 209331
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 5969056
+							}
+						],
+						"TimeZone": "UTC0"
+					},
+					{
+						"id": 23,
+						"Name": "India",
+						"Description": "Hydrabad tech city",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 9826675
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 318212000
+							}
+						],
+						"TimeZone": "IST"
+					},
+					{
+						"id": 24,
+						"Name": "Bangladesh",
+						"Description": "Country of love",
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 9826675
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 3182
+							}
+						],
+						"TimeZone": "BST"
+					}
+				],
+				"totals": [
+					{
+						"Area": 209331555,
+						"Population": 5969056888,
+						"sizes": [
+							{
+								"id": 1,
+								"code": "area",
+								"value": 88421512121
+							},
+							{
+								"id": 2,
+								"code": "population",
+								"value": 8855212121
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"$items": [
+		{
+			"$type": "block",
+			"$inline": true,
+			"$items": [
+				{
+					"$bind": "documents",
+					"$widget": "columns-array",
+					"options": {
+						"gridName": "grille-prix"
+					}
+				}
+			]
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "documents",
+					"$name": "grille-prix",
+					"$widget": "basicgrid",
+					"options": {
+						"height": 300,
+						"scrolling": {
+							"vertical": true
+						},
+						"selecting": {
+							"row": true,
+							"cell": true,
+							"multiselect": false,
+							"selectAll": false
+						},
+						"total": {
+							"property": "totals"
+						},
+						"expandingProperty": "children",
+						"sorting": true,
+						"editing": true,
+						"expanding": {
+							"selectChildren": true
+						},
+						"border": true,
+						"allowColumnResize": true,
+						"allowFrozenColumns": true,
+						"linesAsColumns": "sizesCols",
+						"linesAsColumnsInsertAfter": "Description",
+						"columns": [
+							{
+								"$bind": "$expand",
+								"options": {
+									"editing": false,
+									"width": 250,
+									"display": "Name",
+									"frozen": true
+								}
+							},
+							{
+								"$bind": "Description",
+								"options": {
+									"editing": false,
+									"width": 200
+								}
+							},
+							{
+								"$bind": "$links.$remove",
+								"options": {
+									"width": 50,
+									"outline": true,
+									"icon": "trash",
+									"button": true,
+									"type": "default"
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"form": true
+}

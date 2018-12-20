@@ -1,0 +1,17 @@
+{
+	"name": "grid-lines-as-cols",
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-lines-as-cols",
+					"meta": "demos/metas/grid-lines-as-cols",
+					"controller": "phoenix.empty.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

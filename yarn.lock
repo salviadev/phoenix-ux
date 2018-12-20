@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@phoenix/phoenix-app@^2.0.0":
-  version "2.0.0"
-  resolved "http://verdaccio/@phoenix%2fphoenix-app/-/phoenix-app-2.0.0.tgz#82d70aee6b4d7373104970e1b5594da67dbd8dfc"
-  integrity sha512-+Lgzr8Cwr5fC/7voqqg3biF+7dzaZA7yiXdR4mvXlMS5XF4SceDhHj+EcHmX0Ph3Rh89hBOcyryOq1bp586c/Q==
+"@phoenix/phoenix-app@^3.0.0":
+  version "3.0.0"
+  resolved "http://verdaccio/@phoenix%2fphoenix-app/-/phoenix-app-3.0.0.tgz#b6a39e230deab03ca211ee920afd6a0d10b1a13f"
+  integrity sha512-v6jiPEN1iDNXNCkBmKpIUNuDmT2/qEZIVTPX+cC5B0gWFFVvFSks/5VhKjizllqdlT6jjNVK5vCZCOXomwEF5Q==
 
-"@phoenix/phoenix-cli@^2.0.0":
-  version "2.0.7"
-  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-2.0.7.tgz#9b0cf79684259d89d0725b1aacb31f9367a52375"
-  integrity sha512-O5bZCWh56fC8jISDHfTLOAkFjIruYamBdhEfH4Dn2Om4W+BwfpcwisprdkitkSSn3CeJJEuXKtSZ9GrSylYIvQ==
+"@phoenix/phoenix-cli@^3.0.0":
+  version "3.0.1"
+  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-3.0.1.tgz#2688483dc0b960f3a80f822209533c78c237ca82"
+  integrity sha512-iicjACJnXYab/keMj26WLH/MmShHPOcdU56X+GDUe2WPMGNuTlopE///jKJkG9LAV1H6eMCQP22sCAs9vnDONw==
 
 "@phoenix/phoenix-seed@^1.0.0":
   version "1.0.0"
