@@ -2,38 +2,22 @@
 	"type": "object",
 	"properties": {
 		"documents": {
-			"syncSelected": false,
-			"autoSelect": false,
 			"children": "children",
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/Population"
+				"$ref": "#/definitions/State"
 			}
 		},
 		"totals": {
 			"type": "array",
 			"items": {
-				"$ref": "#/definitions/Population"
+				"$ref": "#/definitions/State"
 			}
 		}
 	},
-	"links": {
-		"action": {
-			"title": "Change California Area"
-		},
-		"unselect": {
-			"title": "Clear selection"
-		},
-		"remove": {
-			"title": "Remove selected"
-		},
-		"selectItems": {
-			"title": "Select By Patch"
-		}
-	},
 	"definitions": {
-		"size": {
-			"name": "Population",
+		"Size": {
+			"name": "Size",
 			"type": "object",
 			"primaryKey": "id",
 			"properties": {
@@ -52,8 +36,8 @@
 				}
 			}
 		},
-		"Population": {
-			"name": "Population",
+		"State": {
+			"name": "State",
 			"type": "object",
 			"primaryKey": "id",
 			"properties": {
@@ -72,22 +56,19 @@
 				"sizes": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/size"
+						"$ref": "#/definitions/Size"
 					}
 				},
 				"children": {
 					"type": "array",
-					"syncSelected": false,
-					"autoSelect": false,
 					"children": "children",
 					"items": {
-						"$ref": "#/definitions/Population"
+						"$ref": "#/definitions/State"
 					}
 				}
 			},
 			"links": {
 				"$remove": {
-					"confirm": "Are you sure you want to remove this item ?"
 				}
 			}
 		}
