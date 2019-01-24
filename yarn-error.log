@@ -2,27 +2,27 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js upgrade
 
 PATH: 
-  C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Boxstarter;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Python\Python37-32;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\misto\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\curl;C:\Users\misto\AppData\Roaming\npm;C:\Users\misto\AppData\Local\Yarn\bin;C:\Users\misto\AppData\Local\Programs\Microsoft VS Code\bin
+  C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Boxstarter;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Python\Python37-32;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\misto\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\curl;C:\Users\misto\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\misto\AppData\Local\Yarn\bin;C:\Users\misto\AppData\Roaming\npm
 
 Yarn version: 
-  1.12.3
+  1.13.0
 
 Node version: 
-  10.13.0
+  11.6.0
 
 Platform: 
   win32 x64
 
 Trace: 
   Invariant Violation: expected manifest
-      at invariant (C:\Program Files (x86)\Yarn\lib\cli.js:2308:15)
-      at PackageResolver.getStrictResolvedPattern (C:\Program Files (x86)\Yarn\lib\cli.js:63236:5)
-      at add (C:\Program Files (x86)\Yarn\lib\cli.js:89388:33)
-      at add (C:\Program Files (x86)\Yarn\lib\cli.js:89429:9)
-      at PackageHoister.prepass (C:\Program Files (x86)\Yarn\lib\cli.js:89462:7)
-      at PackageHoister.seed (C:\Program Files (x86)\Yarn\lib\cli.js:88854:10)
-      at PackageLinker.getFlatHoistedTree (C:\Program Files (x86)\Yarn\lib\cli.js:47574:13)
-      at PackageLinker.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:47589:27)
+      at invariant (C:\Program Files (x86)\Yarn\lib\cli.js:2168:15)
+      at PackageResolver.getStrictResolvedPattern (C:\Program Files (x86)\Yarn\lib\cli.js:63592:5)
+      at add (C:\Program Files (x86)\Yarn\lib\cli.js:89933:33)
+      at add (C:\Program Files (x86)\Yarn\lib\cli.js:89974:9)
+      at PackageHoister.prepass (C:\Program Files (x86)\Yarn\lib\cli.js:90007:7)
+      at PackageHoister.seed (C:\Program Files (x86)\Yarn\lib\cli.js:89399:10)
+      at PackageLinker.getFlatHoistedTree (C:\Program Files (x86)\Yarn\lib\cli.js:47683:13)
+      at PackageLinker.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:47698:27)
       at Generator.next (<anonymous>)
       at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
 
@@ -85,9 +85,9 @@ Lockfile:
     integrity sha512-v6jiPEN1iDNXNCkBmKpIUNuDmT2/qEZIVTPX+cC5B0gWFFVvFSks/5VhKjizllqdlT6jjNVK5vCZCOXomwEF5Q==
   
   "@phoenix/phoenix-cli@^3.0.0":
-    version "3.0.0"
-    resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-3.0.0.tgz#53ca2792f81cdd6c9e70399e59311bfe41acd180"
-    integrity sha512-T9+v1o7/wUKRnR5QCOXplauZJSCZlRxS8zUrLuZK96fXr2dMWOXRdRCA74wngDW+j0iUfeXNA7iQI/Aibogvpg==
+    version "3.0.1"
+    resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-3.0.1.tgz#2688483dc0b960f3a80f822209533c78c237ca82"
+    integrity sha512-iicjACJnXYab/keMj26WLH/MmShHPOcdU56X+GDUe2WPMGNuTlopE///jKJkG9LAV1H6eMCQP22sCAs9vnDONw==
   
   "@phoenix/phoenix-seed@^1.0.0":
     version "1.0.0"

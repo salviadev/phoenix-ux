@@ -1,8 +1,17 @@
 {
 	"type": "object",
 	"properties": {
+		"firstName": {
+			"type": "string",
+			"title": "First Name"
+		},
+		"lastName": {
+			"type": "string",
+			"title": "Last Name"
+		},
 		"documents": {
 			"children": "children",
+			"expanded": true,
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/State"
@@ -45,6 +54,10 @@
 					"type": "integer",
 					"title": "Id"
 				},
+				"readOnly": {
+					"type": "boolean"
+				},
+		
 				"Name": {
 					"type": "string",
 					"title": "Name"
@@ -61,6 +74,7 @@
 				},
 				"children": {
 					"type": "array",
+					"expanded": true,
 					"children": "children",
 					"items": {
 						"$ref": "#/definitions/State"
@@ -68,8 +82,7 @@
 				}
 			},
 			"links": {
-				"$remove": {
-				}
+				"$remove": {}
 			}
 		}
 	}

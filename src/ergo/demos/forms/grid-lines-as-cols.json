@@ -20,6 +20,7 @@
 						"id": 1,
 						"Name": "United States of America",
 						"Description": "United States of America",
+						"readOnly": true,
 						"sizes": [
 							{
 								"id": 1,
@@ -39,6 +40,7 @@
 								"id": 2,
 								"Description": "The Tech State",
 								"TimeZone": "Pacific Time",
+								"readOnly": true,
 								"sizes": [
 									{
 										"id": 1,
@@ -174,7 +176,7 @@
 											{
 												"id": 1,
 												"code": "area",
-												"value": 269.40
+												"value": 269.4
 											},
 											{
 												"id": 2,
@@ -408,12 +410,23 @@
 							{
 								"id": 1,
 								"code": "area",
-								"value": 209331
+								"value": 209331,
+								"$states": {
+									"value": {
+										"decimals": 0
+									}
+								}
 							},
 							{
 								"id": 2,
 								"code": "population",
-								"value": 5969056
+								"value": 5969056,
+								"$states": {
+									"value": {
+										"decimals": 0
+									}
+								}
+
 							}
 						],
 						"TimeZone": "UTC0"
@@ -426,12 +439,23 @@
 							{
 								"id": 1,
 								"code": "area",
-								"value": 9826675
+								"value": 9826675,
+								"$states": {
+									"value": {
+										"decimals": 1
+									}
+								}
 							},
 							{
 								"id": 2,
 								"code": "population",
-								"value": 318212000
+								"value": 318212000,
+								"$states": {
+									"value": {
+										"decimals": 1
+									}
+								}
+
 							}
 						],
 						"TimeZone": "IST"
@@ -444,12 +468,22 @@
 							{
 								"id": 1,
 								"code": "area",
-								"value": 9826675
+								"value": 9826675,
+								"$states": {
+									"value": {
+										"decimals": 3
+									}
+								}
 							},
 							{
 								"id": 2,
 								"code": "population",
-								"value": 3182
+								"value": 3182,
+								"$states": {
+									"value": {
+										"decimals": 3
+									}
+								}
 							}
 						],
 						"TimeZone": "BST"
@@ -478,79 +512,111 @@
 	},
 	"$items": [
 		{
-			"$type": "block",
-			"$inline": true,
+			"$type": "row",
 			"$items": [
 				{
-					"$bind": "documents",
-					"$widget": "columns-array",
-					"options": {
-						"gridName": "grille-prix"
-					}
-				}
-			]
-		},
-		{
-			"$type": "block",
-			"$items": [
+					"$items": [
+						{
+							"$type": "block",
+							"$inline": true,
+							"$items": [
+								{
+									"$bind": "documents",
+									"$widget": "columns-array",
+									"options": {
+										"gridName": "grille-prix"
+									}
+								}
+							]
+						},
+						{
+							"$type": "block",
+							"$items": [
+								{
+									"$bind": "documents",
+									"$name": "grille-prix",
+									"$widget": "basicgrid",
+									"options": {
+										"striped": false,
+										"scrolling": {
+											"vertical": false
+										},
+										"selecting": {
+											"row": true,
+											"cell": true,
+											"multiselect": false,
+											"selectAll": false
+										},
+										"total": {
+											"property": "totals"
+										},
+										"expandingProperty": "children",
+										"sorting": true,
+										"editing": {
+											"readOnlyRow": "readOnly"
+										},
+										"expanding": {
+											"styledLevels": true,
+											"selectChildren": false
+										},
+										"border": true,
+										"allowColumnResize": true,
+										"allowFrozenColumns": true,
+										"linesAsColumns": "sizesCols",
+										"linesAsColumnsInsertAfter": "Description",
+										"columns": [
+											{
+												"$bind": "$expand",
+												"options": {
+													"editing": false,
+													"width": 250,
+													"display": "Name",
+													"frozen": true
+												}
+											},
+											{
+												"$bind": "Description",
+												"options": {
+													"editing": false,
+													"width": 200
+												}
+											},
+											{
+												"$bind": "$links.$remove",
+												"options": {
+													"width": 50,
+													"outline": true,
+													"icon": "trash",
+													"button": true,
+													"type": "default"
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					],
+					"$colSize": 9
+				},
 				{
-					"$bind": "documents",
-					"$name": "grille-prix",
-					"$widget": "basicgrid",
-					"options": {
-						"height": 300,
-						"scrolling": {
-							"vertical": true
-						},
-						"selecting": {
-							"row": true,
-							"cell": true,
-							"multiselect": false,
-							"selectAll": false
-						},
-						"total": {
-							"property": "totals"
-						},
-						"expandingProperty": "children",
-						"sorting": true,
-						"editing": true,
-						"expanding": {
-							"selectChildren": true
-						},
-						"border": true,
-						"allowColumnResize": true,
-						"allowFrozenColumns": true,
-						"linesAsColumns": "sizesCols",
-						"linesAsColumnsInsertAfter": "Description",
-						"columns": [
-							{
-								"$bind": "$expand",
-								"options": {
-									"editing": false,
-									"width": 250,
-									"display": "Name",
-									"frozen": true
+					"$items": [
+						{
+							"$type": "block",
+							"$items": [
+								{
+									"$bind": "firstName"
+								},
+								{
+									"$bind": "lastName"
 								}
-							},
-							{
-								"$bind": "Description",
-								"options": {
-									"editing": false,
-									"width": 200
-								}
-							},
-							{
-								"$bind": "$links.$remove",
-								"options": {
-									"width": 50,
-									"outline": true,
-									"icon": "trash",
-									"button": true,
-									"type": "default"
-								}
-							}
-						]
-					}
+							],
+							"$sticky": ""
+						}
+					],
+					"$style": "left-sm-field-margin",
+					"$colSize": 3,
+					"$sticky": "top"
 				}
 			]
 		}
