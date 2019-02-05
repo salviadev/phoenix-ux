@@ -7,12 +7,32 @@
 			"$data": {
 				"sizesCols": [
 					{
-						"name": "sizes[code='area'].value",
-						"title": "Area"
+						"title": "Area",
+						"name": [
+							{
+								"name": "sizes[code='area'].value",
+								"type": "number"
+							},
+							{
+								"name": "descriptions[code='area'].value",
+								"type": "string"
+							}
+						],
+						"type": "typeLigne"
 					},
 					{
-						"name": "sizes[code='population'].value",
-						"title": "Population"
+						"name": [
+							{
+								"name": "sizes[code='population'].value",
+								"type": "number"
+							},
+							{
+								"name": "descriptions[code='population'].value",
+								"type": "string"
+							}
+						],
+						"title": "Population",
+						"type": "typeLigne"
 					}
 				],
 				"documents": [
@@ -21,10 +41,12 @@
 						"Name": "United States of America",
 						"Description": "United States of America",
 						"readOnly": true,
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
 								"code": "area",
+								"text": "eeee",
 								"value": 9826675
 							},
 							{
@@ -39,6 +61,7 @@
 								"Name": "California",
 								"id": 2,
 								"Description": "The Tech State",
+								"typeLigne": "number",
 								"TimeZone": "Pacific Time",
 								"readOnly": true,
 								"sizes": [
@@ -58,6 +81,7 @@
 										"Name": "San Francisco",
 										"id": 3,
 										"Description": "The happening city",
+										"typeLigne": "string",
 										"sizes": [
 											{
 												"id": 1,
@@ -70,12 +94,25 @@
 												"value": 837442
 											}
 										],
+										"descriptions": [
+											{
+												"id": 1,
+												"code": "area",
+												"value": "Data Not available"
+											},
+											{
+												"id": 2,
+												"code": "population",
+												"value": "Under construction"
+											}
+										],
 										"TimeZone": "PST"
 									},
 									{
 										"id": 4,
 										"Name": "Los Angeles",
 										"Description": "Disco city",
+										"typeLigne": "number",
 										"sizes": [
 											{
 												"id": 1,
@@ -97,6 +134,7 @@
 								"id": 5,
 								"Description": "Not so cool",
 								"TimeZone": "Central Time Zone",
+								"typeLigne": "number",
 								"sizes": [
 									{
 										"id": 1,
@@ -116,6 +154,7 @@
 										"ParentId": 5,
 										"Name": "Chicago",
 										"Description": "Financial City",
+										"typeLigne": "number",
 										"sizes": [
 											{
 												"id": 1,
@@ -136,6 +175,7 @@
 								"Name": "Texas",
 								"id": 7,
 								"Description": "Rances, Oil & Gas",
+								"typeLigne": "number",
 								"sizes": [
 									{
 										"id": 1,
@@ -154,6 +194,7 @@
 								"Name": "New York",
 								"id": 8,
 								"Description": "The largest diverse city",
+								"typeLigne": "number",
 								"sizes": [
 									{
 										"id": 1,
@@ -172,6 +213,7 @@
 										"id": 9,
 										"Name": "Manhattan",
 										"Description": "Time Square is the place",
+										"typeLigne": "number",
 										"sizes": [
 											{
 												"id": 1,
@@ -190,6 +232,7 @@
 												"id": 10,
 												"Name": "Manhattan City",
 												"Description": "Manhattan island",
+												"typeLigne": "number",
 												"sizes": [
 													{
 														"id": 1,
@@ -208,6 +251,7 @@
 												"id": 11,
 												"Name": "Time Square",
 												"Description": "Time Square for new year",
+												"typeLigne": "number",
 												"sizes": [
 													{
 														"id": 1,
@@ -228,6 +272,7 @@
 										"id": 12,
 										"Name": "Niagra water fall",
 										"Description": "Close to Canada",
+										"typeLigne": "number",
 										"sizes": [
 											{
 												"id": 1,
@@ -246,6 +291,7 @@
 										"id": 13,
 										"Name": "Long Island",
 										"Description": "Harbour to Atlantic",
+										"typeLigne": "number",
 										"sizes": [
 											{
 												"id": 1,
@@ -269,8 +315,21 @@
 								"Name": "All_Other",
 								"Description": "All_Other demographics",
 								"Area": 0,
+								"typeLigne": "string",
 								"Population": 0,
-								"TimeZone": 0
+								"TimeZone": 0,
+								"descriptions": [
+									{
+										"id": 1,
+										"code": "area",
+										"value": "Data Not available"
+									},
+									{
+										"id": 2,
+										"code": "population",
+										"value": "Under construction"
+									}
+								]
 							}
 						]
 					},
@@ -278,6 +337,7 @@
 						"id": 15,
 						"Name": "France",
 						"Description": "France",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -296,6 +356,7 @@
 								"id": 16,
 								"Name": "Île-de-France",
 								"Description": "Île-de-France",
+								"typeLigne": "number",
 								"sizes": [
 									{
 										"id": 1,
@@ -316,6 +377,7 @@
 						"id": 17,
 						"Name": "Germany",
 						"Description": "Germany",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -334,6 +396,7 @@
 						"id": 18,
 						"Name": "Italy",
 						"Description": "Italian Republic",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -352,6 +415,7 @@
 						"id": 19,
 						"Name": "Poland",
 						"Description": "Republic of Poland",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -370,6 +434,7 @@
 						"id": 20,
 						"Name": "Spain",
 						"Description": "Kingdom of Spain",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -388,6 +453,7 @@
 						"id": 21,
 						"Name": "Portugal",
 						"Description": "Portuguese Republic",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -406,6 +472,7 @@
 						"id": 22,
 						"Name": "Great Britain",
 						"Description": "United Kingdom",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -426,7 +493,6 @@
 										"decimals": 0
 									}
 								}
-
 							}
 						],
 						"TimeZone": "UTC0"
@@ -435,6 +501,7 @@
 						"id": 23,
 						"Name": "India",
 						"Description": "Hydrabad tech city",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -455,7 +522,6 @@
 										"decimals": 1
 									}
 								}
-
 							}
 						],
 						"TimeZone": "IST"
@@ -464,6 +530,7 @@
 						"id": 24,
 						"Name": "Bangladesh",
 						"Description": "Country of love",
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -493,6 +560,7 @@
 					{
 						"Area": 209331555,
 						"Population": 5969056888,
+						"typeLigne": "number",
 						"sizes": [
 							{
 								"id": 1,
@@ -605,10 +673,10 @@
 							"$type": "block",
 							"$items": [
 								{
-									"$bind": "firstName"
+									"$bind": "lastName"
 								},
 								{
-									"$bind": "lastName"
+									"$bind": "firstName"
 								}
 							],
 							"$sticky": ""

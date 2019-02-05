@@ -8,9 +8,9 @@
   integrity sha512-v6jiPEN1iDNXNCkBmKpIUNuDmT2/qEZIVTPX+cC5B0gWFFVvFSks/5VhKjizllqdlT6jjNVK5vCZCOXomwEF5Q==
 
 "@phoenix/phoenix-cli@^3.0.0":
-  version "3.3.6"
-  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-3.3.6.tgz#02a8093cbbcae028e2b2717ba78f233d04f9bd02"
-  integrity sha512-ieJlMUw+zmK20v5LbZ1m+kuduZh9o/LHdB74ZUnyc3luUV50oserLoCpaYN5rWebr1lfsjNNJ8tcn+OfyPp2lw==
+  version "3.3.10"
+  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-3.3.10.tgz#00eafa45ab6d36879d72e4bdaa3ea1b8dad46229"
+  integrity sha512-wJUmRJrWB1+lqT/A+VIi7nwUYxj5SpjC1JcitaISFjxWtk+72sJMBpJOHUQCUgaEVvWdaMl5xDDBUyQrzAIgZg==
 
 "@phoenix/phoenix-seed@^1.0.0":
   version "1.0.0"
@@ -36,13 +36,6 @@
   integrity sha512-0QEFiR8ljcHp9bAbWxecjVRuAMr16ivPiGOw6KFQBVrVd0RQIcM3xKdRisH2EDWgVWujiYtHwhSkSUoAAGzH7Q==
   dependencies:
     commander "*"
-
-"@types/es6-promise@latest":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@types/es6-promise/-/es6-promise-3.3.0.tgz#61b55e554fd807b563f158a7986ee53d3a5a5a9d"
-  integrity sha512-ixCIAEkLUKv9movnHKCzx2rzAJgEnSALDXPrOSSwOjWwXFs0ssSZKan+O2e3FExPPCbX+DfA9NcKsbvLuyUlNA==
-  dependencies:
-    es6-promise "*"
 
 "@types/jquery@^3.3.6":
   version "3.3.6"
@@ -1099,7 +1092,7 @@ error@^7.0.0:
     string-template "~0.2.1"
     xtend "~4.0.0"
 
-es6-promise@*, es6-promise@^4.1.1, es6-promise@^4.2.5:
+es6-promise@^4.1.1, es6-promise@^4.2.5:
   version "4.2.5"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.5.tgz#da6d0d5692efb461e082c14817fe2427d8f5d054"
   integrity sha512-n6wvpdE43VFtJq+lUDYDBFUwV8TZbuGXLV4D6wKafg13ldznKsyEvatubnmUe31zcvelSzOHF+XbaT+Bl9ObDg==

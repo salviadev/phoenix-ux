@@ -6,7 +6,6 @@
   "main": "app.js",
   "devDependencies": {
     "@types/angular": "^1.6.50",
-    "@types/es6-promise": "latest",
     "@types/jquery": "^3.3.6",
     "angular": "1.6.x",
     "angular-route": "1.6.x",

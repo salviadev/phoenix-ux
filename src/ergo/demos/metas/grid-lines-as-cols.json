@@ -45,6 +45,26 @@
 				}
 			}
 		},
+		"description": {
+			"name": "Size",
+			"type": "object",
+			"primaryKey": "id",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"title": "Id"
+				},
+				"code": {
+					"type": "string",
+					"title": "Code"
+				},
+				"value": {
+					"type": "String",
+					"decimals": 2,
+					"title": "Description"
+				}
+			}
+		},
 		"State": {
 			"name": "State",
 			"type": "object",
@@ -57,10 +77,12 @@
 				"readOnly": {
 					"type": "boolean"
 				},
-		
 				"Name": {
 					"type": "string",
 					"title": "Name"
+				},
+				"typeLigne":{
+					"type": "string"
 				},
 				"Description": {
 					"type": "string",
@@ -70,6 +92,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/Size"
+					}
+				},
+				"descriptions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/description"
 					}
 				},
 				"children": {

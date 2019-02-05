@@ -20,7 +20,11 @@
 		"Pokemon": {
 			"name": "Pokemon",
 			"type": "object",
+			"primaryKey": ["Name"],
 			"properties": {
+				"id": {
+					"type": "integer"
+				},
 				"Name": {
 					"type": "string",
 					"title": "Name"
