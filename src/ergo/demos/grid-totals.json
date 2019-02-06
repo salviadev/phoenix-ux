@@ -1,5 +1,8 @@
 {
 	"name": "grid-totals",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

@@ -1,5 +1,8 @@
 {
 	"name": "grid-columns-visibility",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

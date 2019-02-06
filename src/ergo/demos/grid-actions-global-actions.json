@@ -1,5 +1,8 @@
 {
 	"name": "grid-actions-global-actions",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

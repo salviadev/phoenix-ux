@@ -1,1 +1,20 @@
-{"name":"param","$menus":{"left":"detail"},"$items":[{"$config":{"$titleIsHidden":true,"form":{"name":"ergo/forms/param","meta":"ergo/metas/param","controller":"phoenix.empty.controller"},"$type":"form"}}],"$type":"block"}
+{
+    "name": "param",
+    "$menus": {
+        "left": "detail"
+    },
+    "$items": [
+        {
+            "$config": {
+                "$titleIsHidden": true,
+                "form": {
+                    "name": "ergo/forms/param",
+                    "meta": "ergo/metas/param",
+                    "controller": "phoenix.empty.controller"
+                },
+                "$type": "form"
+            }
+        }
+    ],
+    "$type": "block"
+}

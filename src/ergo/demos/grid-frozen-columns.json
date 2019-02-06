@@ -1,5 +1,8 @@
 {
 	"name": "grid-frozen-columns",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

@@ -168,6 +168,71 @@
 							}
 						}
 					]
+				},
+				{
+					"$title": "Demos Grid",
+					"$items": [
+						{
+							"$title": "Lines as columns",
+							"$link": {
+								"$page": "demos/grid-lines-as-cols"
+							}
+						},
+						{
+							"$title": "Actions",
+							"$link": {
+								"$page": "demos/grid-actions-global-actions"
+							}
+						},
+						{
+							"$title": "Selecting",
+							"$link": {
+								"$page": "demos/grid-selecting"
+							}
+						},
+						{
+							"$title": "Totals",
+							"$link": {
+								"$page": "demos/grid-totals"
+							}
+						},
+						{
+							"$title": "Vertical scrolling",
+							"$link": {
+								"$page": "demos/grid-vertical-scrolling"
+							}
+						},
+						{
+							"$title": "Editing",
+							"$link": {
+								"$page": "demos/grid-inline-editing"
+							}
+						},
+						{
+							"$title": "Fixed columns",
+							"$link": {
+								"$page": "demos/grid-frozen-columns"
+							}
+						},
+						{
+							"$title": "Columns visibility",
+							"$link": {
+								"$page": "demos/grid-columns-visibility"
+							}
+						}
+						
+					]
+				},
+				{
+					"$title": "Demos Controls",
+					"$items": [
+						{
+							"$title": "Labels",
+							"$link": {
+								"$page": "demos/labels"
+							}
+						}
+					]
 				}
 			]
 		}

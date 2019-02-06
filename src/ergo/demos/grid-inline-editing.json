@@ -1,5 +1,8 @@
 {
 	"name": "grid-inline-editing",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

@@ -160,11 +160,6 @@
 												"id": 1,
 												"code": "area",
 												"value": 234
-											},
-											{
-												"id": 2,
-												"code": "population",
-												"value": 2695598
 											}
 										],
 										"TimeZone": "CST"
@@ -621,7 +616,10 @@
 										"expandingProperty": "children",
 										"sorting": true,
 										"editing": {
-											"readOnlyRow": "readOnly"
+											"readOnlyRow": "readOnly",
+											"nulls": {
+												"actionName": "addValue"
+											}
 										},
 										"expanding": {
 											"styledLevels": true,

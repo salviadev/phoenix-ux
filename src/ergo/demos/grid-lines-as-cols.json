@@ -1,5 +1,8 @@
 {
 	"name": "grid-lines-as-cols",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {

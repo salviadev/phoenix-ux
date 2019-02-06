@@ -1,5 +1,8 @@
 {
 	"name": "grid-selecting",
+    "$menus": {
+        "left": "detail"
+    },
 	"$items": [
 		{
 			"$config": {
