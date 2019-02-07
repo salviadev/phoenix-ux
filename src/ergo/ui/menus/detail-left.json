@@ -219,6 +219,12 @@
 							"$link": {
 								"$page": "demos/grid-columns-visibility"
 							}
+						},
+						{
+							"$title": "Hyperlink",
+							"$link": {
+								"$page": "demos/grid-column-link"
+							}
 						}
 						
 					]

@@ -11,6 +11,11 @@
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/Item"
+			},
+			"links": {
+				"detail": {
+					"ux": true
+				}
 			}
 		},
 		"ht": {

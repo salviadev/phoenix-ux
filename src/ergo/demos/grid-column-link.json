@@ -1,0 +1,20 @@
+{
+	"name": "grid-column-link",
+	"$menus": {
+        "left": "detail"
+    },
+	"$items": [
+		{
+			"$config": {
+				"$titleIsHidden": true,
+				"form": {
+					"name": "demos/forms/grid-column-link",
+					"meta": "demos/metas/offre",
+					"controller": "demos.grid-link.controller"
+				},
+				"$type": "form"
+			}
+		}
+	],
+	"$type": "block"
+}

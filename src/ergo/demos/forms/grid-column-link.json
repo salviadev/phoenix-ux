@@ -1,5 +1,6 @@
+
 {
-	"name": "grid-columns-visibility",
+	"name": "grid-column-link",
 	"$type": "block",
 	"datasets": {
 		"data": {
@@ -216,14 +217,6 @@
 					"$type": "block",
 					"$inline": true,
 					"$items": [
-						{
-							"$bind": "ht",
-							"$widget": "grpbtn",
-							"options": {
-								"binary": true,
-								"titleIsHidden": true
-							}
-						}
 					]
 				},
 				{
@@ -259,7 +252,9 @@
 										"$bind": "title",
 										"options": {
 											"width": 200,
-											"frozen": false
+											"$link": {
+												"action": "detail"
+											}
 										}
 									},
 									{
@@ -284,6 +279,7 @@
 											"align": "right",
 											"bindVisibility": "ht",
 											"bindVisibilityValue": "ht"
+
 										}
 									},
 									{

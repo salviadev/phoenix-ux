@@ -604,6 +604,10 @@
 										"scrolling": {
 											"vertical": false
 										},
+										"contextMenu": {
+											
+
+										},
 										"selecting": {
 											"row": true,
 											"cell": true,
