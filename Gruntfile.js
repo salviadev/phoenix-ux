@@ -174,7 +174,6 @@ module.exports = function (grunt) {
                     }
                 ],
                 options: {
-                    fast: "never",
                     sourceMap: false,
                     comments: false,
                     lib: ["es2016", "dom"],
