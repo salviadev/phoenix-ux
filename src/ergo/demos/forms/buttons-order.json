@@ -6,7 +6,7 @@
 			"$type": "block",
 			"$items": [],
 			"$title": {
-				"value": "Buttons above ",
+				"value": "Grid buttons",
 				"size": 4,
 				"$style": "$spo-h2"
 			}
