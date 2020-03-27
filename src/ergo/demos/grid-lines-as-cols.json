@@ -10,7 +10,7 @@
 				"form": {
 					"name": "demos/forms/grid-lines-as-cols",
 					"meta": "demos/metas/grid-lines-as-cols",
-					"controller": "phoenix.empty.controller"
+					"controller": "demos.grid-lines-as-cols.controller"
 				},
 				"$type": "form"
 			}

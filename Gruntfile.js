@@ -6,6 +6,7 @@ let schemaUtils = require('@phoenix/phoenix-seed').schemaUtils;
 let toolboxUtils = require('@phoenix/phoenix-seed').toolboxUtils;
 let initRootPath = require('@phoenix/phoenix-seed').initRootPath;
 let copyJsonFiles = require('@phoenix/phoenix-seed').copyJsonFiles;
+const translate = require('@phoenix/phoenix-seed').translate;
 const sass = require('node-sass');
 
 const date = new Date();
@@ -79,6 +80,8 @@ function _build(grunt, moduleName) {
         grunt.task.run('mergeSchemas');
         // deploy
         grunt.task.run('createToolbox');
+        // translate
+        grunt.task.run('translate');
 
         let tpl = grunt.config.get('third_party_libs');
         if (tpl && tpl.deploy && tpl.deploy.length) {
@@ -98,10 +101,8 @@ function _build(grunt, moduleName) {
             grunt.config.set('copy', cc);
         }
         grunt.task.run('copy:deploy');
-        var co = grunt.config.getRaw('compress');
-        let dd = new Date();
-        ss = dd.toISOString().substr(0, 10);
-        co.main.options.archive = 'PhoenixUX_' + ss + '.zip';
+        const co = grunt.config.getRaw('compress');
+        co.main.options.archive = 'SPO_AccessionUX.zip';
         grunt.task.run('compress:main');
 
     }
@@ -123,6 +124,7 @@ module.exports = function (grunt) {
         srcLibRootPath: './src/shared',
         distPath: './public',
         node_modules: './node_modules',
+        private_libs: './private-libs',
         bowerPath: '../libs',
         bowerDirPath: './public/libs',
         releasePath: './dist',
@@ -177,7 +179,8 @@ module.exports = function (grunt) {
                     sourceMap: false,
                     comments: false,
                     lib: ["es2016", "dom"],
-                    noResolve: false
+                    noResolve: false,
+                    fast: 'never'
                 }
             },
             lib: {
@@ -195,8 +198,12 @@ module.exports = function (grunt) {
                     noResolve: false,
                     declaration: false,
                     lib: ["es2016", "dom"],
-                    sourceMap: false
+                    sourceMap: false,
+                    fast: 'never'
                 }
+            },
+            options: {
+                fast: 'never'
             }
 
         },
@@ -387,6 +394,12 @@ module.exports = function (grunt) {
                         flatten: true,
                         src: ['<%= srcRootPath %>/<%= application.name %>/model.html'],
                         dest: '<%= distPath %>/<%= application.name %>'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['<%= srcRootPath %>/empty.html'],
+                        dest: '<%= distPath %>/<%= application.name %>'
                     }
 
                 ]
@@ -421,8 +434,13 @@ module.exports = function (grunt) {
                         cwd: '<%= srcRootPath %>',
                         src: ['Web.config'],
                         dest: '<%= releasePath %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: './prod_config',
+                        src: ['**/*'],
+                        dest: '<%= releasePath %>'
                     }
-
                 ]
             },
             install_client: {
@@ -440,6 +458,14 @@ module.exports = function (grunt) {
                             'angular/*.*',
                             'angular-route/*.*',
                             'bootstrap-datepicker/dist/**/*.*'
+                        ],
+                        dest: '<%= bowerDirPath %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= private_libs %>',
+                        src: [
+                            'gantt/build/**/*.*'
                         ],
                         dest: '<%= bowerDirPath %>'
                     }
@@ -639,7 +665,7 @@ module.exports = function (grunt) {
                         jquery: {
                             cwd: '<%= htmlPath %>',
                             files: [
-                                '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+                                '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
                             ]
                         },
                         third_party: {
@@ -754,50 +780,51 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['build']);
 
     grunt.registerTask('integrateDatasets', [], function () {
-        var done = this.async();
-        var application = grunt.config.get('application');
-        var dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
-        var pagesPath = grunt.config.get('distPath') + '/' + application.name + '/ui/pages/';
-        var srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
+        const done = this.async();
+        const application = grunt.config.get('application');
+        const dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
+        const pagesPath = grunt.config.get('distPath') + '/' + application.name + '/ui/pages/';
+        const srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
         initRootPath(grunt.config.get('srcRootPath'));
-        dsutils.integrateDatasets(pagesPath, dsPath, function (err) {
-            if (err)
-                return grunt.fail.fatal(err);
-            layoutUtils.integrateSubLayouts(application.name, pagesPath, srcPath, function (err) {
-                if (err)
-                    return grunt.fail.fatal(err);
+        dsutils.integrateDatasets(pagesPath, dsPath).then(() => {
+            layoutUtils.integrateSubLayouts(application.name, pagesPath, srcPath).then(() => {
                 done();
+            }).catch((err) => {
+                grunt.fail.fatal(err);
             });
+        }).catch((err) => {
+            grunt.fail.fatal(err);
         });
+
     });
 
     grunt.registerTask('integrateSubForms', [], function () {
-        var done = this.async();
-        var application = grunt.config.get('application');
-        var dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
-        var formsPath = grunt.config.get('distPath') + '/' + application.name + '/ui/forms/';
-        var srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
+        const done = this.async();
+        const application = grunt.config.get('application');
+        const dsPath = grunt.config.get('srcRootPath') + '/' + application.name + '/ui/datasets/';
+        const formsPath = grunt.config.get('distPath') + '/' + application.name + '/ui/forms/';
+        const srcPath = grunt.config.get('srcRootPath') + '/' + application.name + '/';
 
         initRootPath(grunt.config.get('srcRootPath'));
-        dsutils.integrateFormDatasets(formsPath, dsPath, function (err) {
-            if (err)
-                return grunt.fail.fatal(err);
-            layoutUtils.integrateSubLayouts(application.name, formsPath, srcPath, function (err) {
-                if (err)
-                    return grunt.fail.fatal(err);
-
+        dsutils.integrateFormDatasets(formsPath, dsPath).then(() => {
+            layoutUtils.integrateSubLayouts(application.name, formsPath, srcPath).then(() => {
                 done();
+            }).catch((err) => {
+                grunt.fail.fatal(err);
             });
+        }).catch((err) => {
+            grunt.fail.fatal(err);
         });
+
     });
     grunt.registerTask('mergeSchemas', [], function () {
         var done = this.async();
         var application = grunt.config.get('application');
         var schemasPath = grunt.config.get('distPath') + '/' + application.name + '/ui/forms/meta/';
-        schemaUtils.mergeSchemas(schemasPath, function (err) {
-            if (err)
-                return grunt.fail.fatal(err);
+        schemaUtils.mergeSchemas(schemasPath).then(() => {
             done();
+        }).catch((err) => {
+            grunt.fail.fatal(err);
         });
     });
     grunt.registerTask('createToolbox', [], function () {
@@ -806,10 +833,10 @@ module.exports = function (grunt) {
         var toolboxFile = grunt.config.get('distPath') + '/' + application.name + '/ui/toolboxes/default.json';
         var phoenixPath = grunt.config.get('distPath') + '/libs/@phoenix/phoenix-cli/dist/js/';
         var widgetPath = grunt.config.get('srcRootPath') + '/' + application.name + '/widgets/';
-        toolboxUtils.updateToolBoxFile(application.name, phoenixPath, widgetPath, toolboxFile, function (err) {
-            if (err)
-                return grunt.fail.fatal(err);
+        toolboxUtils.updateToolBoxFile(application.name, phoenixPath, widgetPath, toolboxFile).then(() => {
             done();
+        }).catch((err) => {
+            grunt.fail.fatal(err);
         });
     });
 
@@ -827,15 +854,32 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('copy-json-files', "Copy Json files", function () {
-        var done = this.async();
-        var application = grunt.config.get('application');
-        var src = grunt.config.get('srcRootPath');
+        const done = this.async();
+        const application = grunt.config.get('application');
+        let src = grunt.config.get('srcRootPath');
         src = path.join(src, application.name);
-        var dst = grunt.config.get('distPath');
+        let dst = grunt.config.get('distPath');
         dst = path.join(dst, application.name);
         let uidst = path.join(dst, 'ui')
-        copyJsonFiles(src, path.join(dst, 'ui', 'locales'), path.join(uidst, 'forms'), path.join(uidst, 'pages'), path.join(uidst, 'forms', 'meta'), done);
+        copyJsonFiles(src, path.join(dst, 'ui', 'locales'), path.join(uidst, 'forms'), path.join(uidst, 'pages'), path.join(uidst, 'forms', 'meta')).then(() => {
+            done();
+        }).catch((err) => {
+            grunt.fail.fatal(err);
+        });
     });
+
+    grunt.registerTask('translate', "translates", function() {
+        const done = this.async();
+        const application = grunt.config.get('application');
+        let dst = grunt.config.get('distPath');
+        dst = path.join(dst, application.name);
+        translate(application.name, dst).then(() => {
+            done();
+        }).catch((err) => {
+            grunt.fail.fatal(err);
+        });
+    });
+
 
     grunt.registerTask('build', "Build task", function () {
         let done = this.async();
@@ -849,7 +893,9 @@ module.exports = function (grunt) {
                     let cc = grunt.config.getRaw('copy');
                     list = cc.install_client.files[0].src;
                     deps.forEach(function (pkName) {
-                        if (pkName === 'highcharts') {
+                        if (pkName === 'gantt') {
+                            list.push('../private-libs/gantt/build//**/*.*')
+                        } else if (pkName === 'highcharts') {
                             list.push(pkName + '/highstock.js')
                             list.push(pkName + '/modules/data.js')
                         } else if (pkName === 'bootstrap-datepicker') {

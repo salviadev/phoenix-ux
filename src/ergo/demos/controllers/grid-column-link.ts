@@ -1,3 +1,4 @@
+/// <reference types="@phoenix/phoenix-cli" />
 
 namespace Ergo {
     const _p = Phoenix,

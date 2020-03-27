@@ -240,10 +240,6 @@
 									"row": true
 								},
 								"sorting": true,
-								"total": {
-									"property": "total",
-									"firstTotal": "VAT"
-								},
 								"height": "250px",
 								"align": "middle",
 								"border": true,

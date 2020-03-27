@@ -111,8 +111,13 @@
 	"definitions": {
 		"Population": {
 			"name": "Population",
-			"type": "object",
+            "type": "object",
+            "primaryKey": "id",
 			"properties": {
+                "id": {
+					"type": "integer",
+					"title": "id"
+				},
 				"Name": {
 					"type": "string",
 					"title": "Name"
