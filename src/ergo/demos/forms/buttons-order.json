@@ -1,0 +1,67 @@
+{
+	"name": "buttons-order",
+	"$type": "block",
+	"$items": [
+		{
+			"$type": "block",
+			"$items": [],
+			"$title": {
+				"value": "Buttons above ",
+				"size": 4,
+				"$style": "$spo-h2"
+			}
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+					"$bind": "$links.addOrder"
+				},
+				{
+					"$bind": "$links.actionRemove"
+				},
+				{
+					"$bind": "$links.actionRemoveOrder"
+				},
+				{
+					"$bind": "$links.duplicate"
+				},
+				{
+					"$bind": "$links.purge"
+				},
+				{
+					"$bind": "$links.goToCustomers"
+				}
+			],
+			"$inline": true
+		},
+		{
+			"$type": "block",
+			"$items": [],
+			"$title": {
+				"value": "Global Buttons",
+				"size": 4,
+				"$style": "$spo-h2"
+			}
+		},
+		{
+			"$type": "block",
+			"$items": [
+				{
+                    "$bind": "$links.actionSave",
+                    "options": {
+                        "right": true
+                    }
+				},
+				{
+					"$bind": "$links.cancel",
+                    "options": {
+                        "right": true
+                    }
+				}
+			],
+			"$inline": true
+		}
+	],
+	"form": true
+}

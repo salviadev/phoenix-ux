@@ -1,0 +1,534 @@
+{
+    "name": "buttons-schema",
+    "$type": "block",
+    "datasets": {
+        "data": {
+            "$type": "basic",
+            "$data": {
+                "info1": "{\"$links\":{ \"actionSave\":{\"isSave\":true}}}",
+                "info2": "{\"$bind\":\"$links.actionSave\"}",
+                "info4": "{\"$bind\":\"$links.actionSearch\"}",
+                "info3": "{\"$links\":{ \"actionSearch\": {\"isApply\":true}}}",
+                "info5": "{\"$links\":{ \"actionRemove\":{\"isRemove\":true, \"confirmation\": true}}}",
+                "info6": "{\"$bind\":\"$links.actionRemove\"}",
+                "info7": "{\"$links\":{ \"actionRemoveOrder\":{\"isRemove\":true, \"title\": \"Remove order\", \"confirmation\": true}}}",
+                "info8": "{\"$bind\":\"$links.actionRemoveOrder\"}",
+                "info9": "{\"$links\":{ \"addOrder\":{\"isNew\":true, \"title\": \"Order\"}}}",
+                "info10": "{\"$bind\":\"$links.addOrder\"}",
+                "info11": "{\"$links\":{ \"goToCustomers\":{\"isNavigation\":true, \"title\": \"Customers\"}}}",
+                "info12": "{\"$bind\":\"$links.goToCustomers\"}",
+                "info13": "{\"$links\":{ \"duplicate\":{\"isAction\":true, \"title\": \"Duplicate\"}}}",
+                "info14": "{\"$bind\":\"$links.duplicate\"}",
+                "info15": "{\"$links\":{ \"purge\":{\"isImportant\":true, \"title\": \"Purge\"}}}",
+                "info16": "{\"$bind\":\"$links.purge\"}",
+                "info17": "{\"$links\":{ \"cancel\":{\"isCancel\":true}}}",
+                "info18": "{\"$bind\":\"$links.cancel\"}",
+                "info19": "{\"$links\":{ \"attach\":{\"title\": \"Attach\"}}}",
+                "info20": "{\"$bind\":\"$links.attach\", \"options\":{\"type\":\"link-secondary\",\"titleIsHidden\":true,\"icon\":\"question-circle\",\"outline\":true}}",
+                "info21": "{\"$links\":{ \"export\":{\"title\": \"Export\"}}}",
+                "info22": "{\"$bind\":\"$links.export\", \"options\":{\"type\":\"link-success\",\"titleIsHidden\":true,\"icon\":\"question-circle\",\"outline\":true}}"
+                
+            }
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.actionSave"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.actionSearch"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info1",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info2",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info3",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info4",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Save & Apply",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.addOrder"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                               
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info9",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles":"ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info10",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Add",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.actionRemove"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.actionRemoveOrder"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info5",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles":"ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info6",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info7",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "mr-1"
+                                    }
+                                },
+                                {
+                                    "$bind": "info8",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "mr-1"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Remove",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.goToCustomers"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                               
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info11",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles":"ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info12",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Navigation",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.duplicate"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.purge"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info13",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info14",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info15",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info16",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Action",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.cancel"
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                               
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info17",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles":"ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info18",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Buttons Cancel",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.attach", 
+                                    "options": {
+                                        "icon": "paperclip",
+                                        "titleIsHiden": true,
+                                        "outline": true,
+                                        "type": "link-secondary"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "$links.export",
+                                    "options": {
+                                        "icon": "cloud-download",
+                                        "titleIsHiden": true,
+                                        "outline": true,
+                                        "type": "link-success"
+                                       
+                                    }
+                                }
+                            ],
+                            "$colSize": 6,
+                            "$inline": true
+                        }
+                    ]
+                },
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info19",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info20",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "info21",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                },
+                                {
+                                    "$bind": "info22",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "ml-2 mr-2"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ],
+            "$title": {
+                "value": "Borderless Buttons",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        }
+    ],
+    "form": true
+}

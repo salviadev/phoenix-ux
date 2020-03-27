@@ -1,0 +1,130 @@
+{
+	"type": "object",
+	"properties": {
+        "info1": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info2": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info3": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info4": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info5": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info6": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info7": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info8": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info9": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info10": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info11": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info12": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info13": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info14": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info15": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info16": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info17": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info18": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info19": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info20": {
+            "type": "string",
+            "title": "Form"
+        },
+        "info21": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "info22": {
+            "type": "string",
+            "title": "Form"
+        }
+	},
+	"links": {
+        "actionSave": {
+            "isSave": true
+        },
+        "actionSearch": {
+            "isApply": true
+        },
+        "actionRemove": {
+            "isRemove": true,
+            "confirm": true
+        },
+        "actionRemoveOrder": {
+            "title": "Remove Order",
+            "isRemove": true,
+			"confirm": true
+        },
+        "addOrder": {
+            "isNew": true,
+            "title": "Order"
+        },
+        "goToCustomers": {
+            "title": "Customer",
+            "isNavigation": true
+        },
+        "duplicate": {
+            "title": "Duplicate",
+            "isAction": true
+        },
+        "purge": {
+            "title": "Purge",
+            "isImportant": true
+        },
+        "cancel": {
+            "isCancel": true
+        }
+        
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"type": "object",
+	"properties": {
+        "schema": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "layout": {
+            "title": "Layout",
+            "type": "string"
+        }
+	},
+	"links": {
+		"primary": {
+			"title": "Primary"
+        },
+        "secondary": {
+			"title": "Secondary"
+        },
+        "info": {
+			"title": "Info"
+        },
+        "success": {
+			"title": "Success"
+        },
+        "warning": {
+			"title": "Warning"
+		},
+        "danger": {
+			"title": "Danger"
+        },
+        "link": {
+			"title": "Link"
+        },
+        "important": {
+			"title": "Important"
+		},
+        "export": {
+			"title": "Export"
+		},
+        "attach": {
+			"title": "Attach"
+		}
+	}
+}

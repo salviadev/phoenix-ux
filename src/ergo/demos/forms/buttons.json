@@ -1,0 +1,277 @@
+{
+    "name": "buttons",
+    "$type": "block",
+    "datasets": {
+        "data": {
+            "$type": "basic",
+            "$data": {
+                "layout": "{\"$bind\":\"$links.info\", \"options\":{\"type\":\"info\",\"titleIsHidden\":false,\"icon\":\"plus-circle\",\"outline\":true}}",
+                "schema": "{\"$bind\":\"$links.info\", \"options\":{\"type\":\"link-danger\",\"titleIsHidden\":true,\"icon\":\"question-circle\",\"outline\":true}}"
+            }
+        }
+    },
+    "$items": [
+        {
+            "$type": "block",
+            "$items": [],
+            "$title": {
+                "value": "Filled Buttons",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "$links.primary",
+                    "options": {
+                        "type": "primary"
+                    }
+                },
+                {
+                    "$bind": "$links.secondary",
+                    "options": {
+                        "type": "secondary",
+                        "outline": false
+                    }
+                },
+                {
+                    "$bind": "$links.important",
+                    "options": {
+                        "type": "important"
+                    }
+                },
+                {
+                    "$bind": "$links.info",
+                    "options": {
+                        "type": "info"
+                    }
+                },
+                {
+                    "$bind": "$links.danger",
+                    "options": {
+                        "type": "danger"
+                    }
+                },
+                {
+                    "$bind": "$links.success",
+                    "options": {
+                        "type": "success"
+                    }
+                },
+                {
+                    "$bind": "$links.warning",
+                    "options": {
+                        "type": "warning"
+                    }
+                },
+                {
+                    "$bind": "$links.link",
+                    "options": {
+                        "type": "link"
+                    }
+                }
+            ],
+            "$inline": true
+        },
+        {
+            "$type": "block",
+            "$items": [],
+            "$title": {
+                "value": "Outline Buttons",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "$links.primary",
+                    "options": {
+                        "type": "primary",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.secondary",
+                    "options": {
+                        "type": "secondary",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.important",
+                    "options": {
+                        "type": "important",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.info",
+                    "options": {
+                        "type": "info",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.danger",
+                    "options": {
+                        "type": "danger",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.success",
+                    "options": {
+                        "type": "success",
+                        "outline": true
+                    }
+                },
+                {
+                    "$bind": "$links.warning",
+                    "options": {
+                        "type": "warning",
+                        "outline": true
+                    }
+                }
+            ],
+            "$inline": true
+        },
+        {
+            "$type": "block",
+            "$items": [],
+            "$title": {
+                "value": "Buttons with icons",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$bind": "$links.info",
+                    "options": {
+                        "type": "info",
+                        "outline": true,
+                        "icon": "plus-circle"
+                    }
+                },
+                {
+                    "$bind": "$links.danger",
+                    "options": {
+                        "type": "danger",
+                        "outline": true,
+                        "icon": "trash"
+                    }
+                },
+                {
+                    "$bind": "$links.secondary",
+                    "options": {
+                        "titleIsHidden": true,
+                        "type": "secondary",
+                        "icon": "question-circle"
+                    }
+                },
+                {
+                    "$bind": "$links.important",
+                    "options": {
+                        "type": "important",
+                        "icon": "question-circle"
+                    }
+                },
+                {
+                    "$bind": "$links.important",
+                    "options": {
+                        "type": "link-danger",
+                        "titleIsHidden": "true",
+                        "icon": "question-circle",
+                        "outline": true
+                    }
+                }
+            ],
+            "$inline": true
+        },
+        {
+            "$type": "block",
+            "$items": [],
+            "$title": {
+                "value": "Definition",
+                "size": 4,
+                "$style": "$spo-h2"
+            }
+        },
+        {
+            "$type": "row",
+            "$items": [
+                {
+                    "$items": [
+                        {
+                            "$bind": "$links.info",
+                            "options": {
+                                "type": "info",
+                                "outline": true,
+                                "icon": "plus-circle"
+                            }
+                        }
+                    ],
+                    "$colSize": 6,
+                    "$inline": true
+                },
+                {
+                    "$items": [
+                        {
+                            "$bind": "$links.important",
+                            "options": {
+                                "type": "link-danger",
+                                "titleIsHidden": "true",
+                                "icon": "question-circle",
+                                "outline": true
+                            }
+                        }
+                    ],
+                    "$colSize": 6,
+                    "$inline": true
+                }
+            ]
+        },
+        {
+            "$type": "block",
+            "$items": [
+                {
+                    "$type": "row",
+                    "$items": [
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "layout",
+                                    "$widget": "json",
+                                    "options": {
+                                        "styles": "mr-1",
+                                        "titleIsHidden": "true"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        },
+                        {
+                            "$items": [
+                                {
+                                    "$bind": "schema",
+                                    "$widget": "json",
+                                    "options": {
+                                        "titleIsHidden": "true"
+                                    }
+                                }
+                            ],
+                            "$colSize": 6
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "form": true
+}
