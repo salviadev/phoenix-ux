@@ -1,102 +1,152 @@
 {
-	"type": "object",
-	"properties": {
-		"pokemons": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/Pokemon"
-			},
-			"links": {
-				"add": {
-					"title": "Pokemon"
-				},
-				"$remove": {
-					"title": "Remove",
-					"select": {
-						"multiselect": false
-					}
-				},
-				"favorite": {
-					"title": "Mark as favorite",
-					"select": {
-						"multiselect": true
-					}
-				},
-				"powerUp": {
+    "type": "object",
+    "properties": {
+        "search": {
+            "type": "string"
+        },
+        "info01": {
+            "title": "Grid Toolbar",
+            "type": "string"
+        },
+        "info02": {
+            "title": "Schema",
+            "type": "string"
+        },
+        "pokemons": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Pokemon"
+            },
+            "links": {
+                "add": {
+                    "isNew": true,
+                    "title": "Pokemon"
+                },
+                "$remove": {
+                    "title": "Remove",
+                    "select": {
+                        "multiselect": false
+                    }
+                },
+                "remove": {
+                    "isRemove": true,
+                    "confirm": true,
+                    "select": {
+                    }
+                },
+                "removeAll": {
+                    "title": "Remove All",
+                    "description": "Remove All",
+                    "isRemove": true,
+                    "confirm": true
+                 },
+                "moveToTrainer": {
+                    "title": "Transfer",
+                    "description": "Transfer pokemon to trainer",
+                    "isImportant": true,
+                    "select": {
+                    }
+                },
+                "attach": {
+                    "title": "Attach",
+                    "description": "Attach a file",
+                    "select": {
+                        "multiselect": true
+                    },
+                    "isAction": true
+                },
+                "favorite": {
+                    "title": "Mark as favorite",
+                    "select": {
+                        "multiselect": true
+                    },
+                    "isAction": true
+                },
+                "history": {
+                    "title": "History",
+                    "isNavigation": true
+                },
+                "powerUp": {
+                    "isAction": true,
 					"title": "Power Up",
 					"select": {
 						"multiselect": false
 					}
 				}
-	
-			}
-		},
-		"Summary": {
-			"type": "array",
-			"items": {
-				"$ref": "#/definitions/Pokemon"
-			}
-		},
-		"SummaryObj": {
-			"$ref": "#/definitions/Pokemon"
-		}
-	},
-	"links": {
-		"set": {
-			"title": "Set Summary"
-		},
-		"upd": {
-			"title": "Update Summary (+32 PV / +20€)"
-		},
-		"save": {
-			"title": "Save"
-		},
-		"cancel": {
-			"title": "Cancel"
-		}
-	},
-	"definitions": {
-		"Pokemon": {
-			"name": "Pokemon",
-			"type": "object",
-			"primaryKey": "Name",
-			"properties": {
-				"Name": {
-					"type": "string",
-					"title": "Name"
-				},
-				"Type": {
-					"type": "string",
-					"title": "Type",
-					"enum": [
-						"fire",
-						"grass",
-						"ground",
-						"water"
-					],
-					"enumNames": [
-						"Fire",
-						"Grass",
-						"Ground",
-						"Water"
-					],
-					"default": "ground"
-				},
-				"DateOfBirth": {
-					"type": "string",
-					"title": "Date of birth",
-					"format": "date"
-				},
-				"PV": {
-					"type": "integer",
-					"title": "PV"
-				},
-				"Price": {
-					"type": "number",
-					"format": "money",
-					"title": "Price"
-				}
-			}
-		}
-	}
+            }
+        },
+        "Summary": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Pokemon"
+            }
+        },
+        "SummaryObj": {
+            "$ref": "#/definitions/Pokemon"
+        }
+    },
+    "links": {
+        "set": {
+            "title": "Set Summary"
+        },
+        "upd": {
+            "title": "Update Summary (+32 PV / +20€)"
+        },
+        "save": {
+            "title": "Save"
+        },
+        "actionSave": {
+            "isSave": true
+        },
+        "cancel": {
+            "isCancel": true
+        },
+        "excel": {
+            "ux": true
+        }
+    },
+    "definitions": {
+        "Pokemon": {
+            "name": "Pokemon",
+            "type": "object",
+            "primaryKey": "Name",
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "Type": {
+                    "type": "string",
+                    "title": "Type",
+                    "enum": [
+                        "fire",
+                        "grass",
+                        "ground",
+                        "water"
+                    ],
+                    "enumNames": [
+                        "Fire",
+                        "Grass",
+                        "Ground",
+                        "Water"
+                    ],
+                    "default": "ground"
+                },
+                "DateOfBirth": {
+                    "type": "string",
+                    "title": "Date of birth",
+                    "format": "date"
+                },
+                "PV": {
+                    "type": "integer",
+                    "title": "PV"
+                },
+                "Price": {
+                    "type": "number",
+                    "format": "money",
+                    "title": "Price"
+                }
+            }
+        }
+    }
 }

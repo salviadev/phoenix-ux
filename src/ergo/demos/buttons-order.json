@@ -9,7 +9,7 @@
 				"$titleIsHidden": true,
 				"form": {
 					"name": "demos/forms/buttons-order",
-					"meta": "demos/metas/buttons-schema",
+					"meta": "demos/metas/pokemons",
 					"controller": "phoenix.empty.controller"
 				},
 				"$type": "form"
