@@ -6,7 +6,7 @@
             "$type": "basic",
             "$data": {
                 "layout": "{\"$bind\":\"$links.info\", \"options\":{\"type\":\"info\",\"titleIsHidden\":false,\"icon\":\"plus-circle\",\"outline\":true}}",
-                "schema": "{\"$bind\":\"$links.info\", \"options\":{\"type\":\"link-danger\",\"titleIsHidden\":true,\"icon\":\"question-circle\",\"outline\":true}}"
+                "schema": "{\"$bind\":\"$links.info\", \"options\":{\"type\":\"link-danger\",\"titleIsHidden\":true,\"icon\":\"question-circle\"}}"
             }
         }
     },
@@ -187,8 +187,7 @@
                     "options": {
                         "type": "link-danger",
                         "titleIsHidden": "true",
-                        "icon": "question-circle",
-                        "outline": true
+                        "icon": "question-circle"
                     }
                 }
             ],
@@ -227,8 +226,7 @@
                             "options": {
                                 "type": "link-danger",
                                 "titleIsHidden": "true",
-                                "icon": "question-circle",
-                                "outline": true
+                                "icon": "question-circle"
                             }
                         }
                     ],

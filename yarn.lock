@@ -8,9 +8,9 @@
   integrity sha512-WC8uopNM3YSM2RguP6zx7YM1Rl9UxRdr9JpwK1cMqaxuv03XPQ4XphHsSBUr3ERbskWf/+gGTLkewS+ZNGPXkQ==
 
 "@phoenix/phoenix-cli@^4.0.0":
-  version "4.0.56"
-  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-4.0.56.tgz#692c4d711025486bfb9fdc4b5ba696061630d512"
-  integrity sha512-hmTC1NqCkcG1bXKroziO9muDyA/EBTteUSk6cohwBPAYBiLmY5npynIkPlSgxEqs2BlY7bmjzdL2aR5mwX/N8w==
+  version "4.0.57"
+  resolved "http://verdaccio/@phoenix%2fphoenix-cli/-/phoenix-cli-4.0.57.tgz#88304579f3e781db3daf967729b57ab899ab4c8d"
+  integrity sha512-wTSDkZRxVexz42cDHHdxSRQy/vy52wXnCNGTvgE88XsqMjNCGnOEa6nCCPsUqWQRi/stlQxVlWyGIu3Zmr0fug==
 
 "@phoenix/phoenix-seed@^2.0.0":
   version "2.0.4"

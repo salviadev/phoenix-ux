@@ -24,9 +24,9 @@
                 "info17": "{\"$links\":{ \"cancel\":{\"isCancel\":true}}}",
                 "info18": "{\"$bind\":\"$links.cancel\"}",
                 "info19": "{\"$links\":{ \"attach\":{\"title\": \"Attach\"}}}",
-                "info20": "{\"$bind\":\"$links.attach\", \"options\":{\"type\":\"link-secondary\",\"titleIsHidden\":true,\"icon\":\"paperclip\",\"outline\":true}}",
+                "info20": "{\"$bind\":\"$links.attach\", \"options\":{\"type\":\"link-secondary\",\"titleIsHidden\":true,\"icon\":\"paperclip\"}}",
                 "info21": "{\"$links\":{ \"export\":{\"title\": \"Export\"}}}",
-                "info22": "{\"$bind\":\"$links.export\", \"options\":{\"type\":\"link-success\",\"titleIsHidden\":true,\"icon\":\"cloud-download\",\"outline\":true}}"
+                "info22": "{\"$bind\":\"$links.export\", \"options\":{\"type\":\"link-success\",\"titleIsHidden\":true,\"icon\":\"cloud-download\"}}"
                 
             }
         }
@@ -453,7 +453,6 @@
                                     "options": {
                                         "icon": "paperclip",
                                         "titleIsHiden": true,
-                                        "outline": true,
                                         "type": "link-secondary"
                                     }
                                 }
@@ -468,7 +467,6 @@
                                     "options": {
                                         "icon": "cloud-download",
                                         "titleIsHiden": true,
-                                        "outline": true,
                                         "type": "link-success"
                                        
                                     }
